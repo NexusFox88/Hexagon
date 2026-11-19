@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 128 128" role="img" aria-label="Loading">
+<style>
+.module { animation-duration:2.4s; animation-iteration-count:infinite; animation-timing-function:cubic-bezier(.65,0,.25,1); }
+.left { transform-origin:30px 64px; animation-name:fleet-left; }
+.right { transform-origin:98px 64px; animation-name:fleet-right; }
+.core { transform-origin:64px 64px; animation-name:fleet-core; }
+@keyframes fleet-left {
+  0%,12%,88%,100% { transform:translate(0,0) rotate(0deg) scaleX(1); }
+  40%,58% { transform:translate(34px,-24px) rotate(90deg) scaleX(.32); }
+}
+@keyframes fleet-core {
+  0%,20%,84%,100% { transform:scale(1,1); }
+  45%,63% { transform:scale(3.68,.45); }
+}
+@keyframes fleet-right {
+  0%,24%,96%,100% { transform:translate(0,0) rotate(0deg) scaleX(1); }
+  48%,66% { transform:translate(-34px,24px) rotate(90deg) scaleX(.32); }
+}
+@media(prefers-reduced-motion:reduce) { .module { animation:none; } }
+</style><g fill="#111111">
+<path class="module left" d="M16 36 44 19.834V108.166L16 92Z"/>
+<path class="module core" d="M52 54H76V74H52Z"/>
+<path class="module right" d="M84 19.834 112 36V92L84 108.166Z"/>
+</g></svg>

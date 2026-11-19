@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 128 128" role="img" aria-label="Loading">
+<style>
+.hexagon-loading-core { transform-origin:64px 64px; animation:hexagon-loading-pulse 1.2s ease-in-out infinite; }
+@keyframes hexagon-loading-pulse {
+  0%, 50%, 100% { transform:scaleX(1); opacity:1; }
+  20% { transform:scaleX(.5); opacity:.45; }
+}
+@media (prefers-reduced-motion:reduce) { .hexagon-loading-core { animation:none; } }
+</style>
+<g fill="#F5F5F5">
+<path d="M16 36 44 19.834V108.166L16 92ZM84 19.834 112 36V92L84 108.166Z"/>
+<path class="hexagon-loading-core" d="M52 54H76V74H52Z"/>
+</g>
+</svg>

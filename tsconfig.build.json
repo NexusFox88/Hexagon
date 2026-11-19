@@ -1,0 +1,6 @@
+{
+ "extends":"./tsconfig.json",
+ "compilerOptions":{"rootDir":".","outDir":".local/build","declaration":false},
+ "include":["apps/**/*.ts","modules/**/*.ts","runtime/**/*.ts","integrations/**/*.ts","protocols/**/*.ts","tooling/local.ts","tooling/migrate.ts"],
+ "exclude":["**/*.test.ts","node_modules","sdk/**","testing/**"]
+}

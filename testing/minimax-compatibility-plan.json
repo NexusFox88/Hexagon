@@ -1,0 +1,7464 @@
+{
+  "model": "MiniMax-M3",
+  "note": "Plan only. Unverified is not passed. Evidence must match provider, executable, protocol and client.",
+  "rows": [
+    {
+      "sandbox": "instabox",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "instabox",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "boat",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "fly-machines",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "freestyle",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "agent37",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "e2b",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "modal",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "blaxel",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "vercel",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "upstash",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "builtin:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "builtin:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:codex",
+      "version": "0.169.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:hermes",
+      "version": "2026.9.24",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:openclaw",
+      "version": "2026.11.5",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:deepseek",
+      "version": "0.2.2-rc.1",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:opencode",
+      "version": "1.2.27",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_oci_provider",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:aider",
+      "version": "0.86.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:pi",
+      "version": "1.5.2",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:claude-code",
+      "version": "2.1.327",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "anthropic-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unverified_build_required",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-compatible",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    },
+    {
+      "sandbox": "sprites",
+      "harness": "oci:custom-python",
+      "version": "1.0.0",
+      "protocol": "openai-responses",
+      "clients": [
+        "python",
+        "typescript"
+      ],
+      "status": "unsupported_model_protocol",
+      "scenarios": [
+        "conversation",
+        "continuation",
+        "upload",
+        "env",
+        "remote_tool",
+        "artifacts",
+        "event_replay",
+        "cleanup"
+      ]
+    }
+  ]
+}

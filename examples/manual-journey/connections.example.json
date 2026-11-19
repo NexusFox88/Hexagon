@@ -1,0 +1,6 @@
+{
+  "sandbox_connection_id": "COPY_SANDBOX_CONNECTION_ID_FROM_GUI",
+  "model_connection_id": "COPY_MODEL_CONNECTION_ID_FROM_GUI",
+  "http_connection_id": "COPY_HTTP_CONNECTION_ID_FROM_GUI",
+  "http_path": "/v1/models"
+}

@@ -1,0 +1,661 @@
+{
+  "scope": "All 82 planned assets, both languages; draft is not completed acceptance",
+  "items": [
+    {
+      "id": "E01",
+      "title": "文档首页",
+      "target": "/",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Six-block bilingual homepage, literal first-session source excerpt, task and role paths, deployment diagram and evidence links; full project tutorial draft linked; its real-cloud acceptance remains pending, no fabricated result or publication claim. Editorial/render acceptance pending."
+    },
+    {
+      "id": "E02",
+      "title": "仓库 README",
+      "target": "README.md",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Revised both root READMEs against existing entry docs, license and release policy; source setup, actual example links and boundaries preserved; clean-checkout journey and editorial review pending."
+    },
+    {
+      "id": "E03",
+      "title": "编程 Agent 集成阅读指南",
+      "target": "/agents",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Linked existing sources and product guides; durable journal pseudocode includes stable submission key, committed event cursor, unknown-result and cleanup branches. No hosted machine endpoint or executed workflow claimed; editorial acceptance pending."
+    },
+    {
+      "id": "E04",
+      "title": "更新记录与升级提示",
+      "target": "/changelog",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Release policy and dated evidence reviewed; source changes separated from publication and documentation changes; actual migration impact linked; no fresh operational acceptance claimed."
+    },
+    {
+      "id": "S01",
+      "title": "Hexagon 是什么",
+      "target": "/start/overview",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "bilingual content aligned; launcher and installation sources reviewed; clean installation/cloud not rerun"
+    },
+    {
+      "id": "S02",
+      "title": "适用场景、选择依据与产品边界",
+      "target": "/start/use-cases",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "bilingual content aligned; launcher and installation sources reviewed; clean installation/cloud not rerun"
+    },
+    {
+      "id": "S03",
+      "title": "安装并启动本地控制平面",
+      "target": "/start/install",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "bilingual content aligned; launcher and installation sources reviewed; clean installation/cloud not rerun"
+    },
+    {
+      "id": "S04",
+      "title": "创建你的第一个 Agent Session",
+      "target": "/start/first-session",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed; example syntax/types and fake-SDK success/rerun guards passed; real cloud pending"
+    },
+    {
+      "id": "S05",
+      "title": "理解刚才发生的事",
+      "target": "/start/what-happened",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed; example syntax/types and fake-SDK success/rerun guards passed; real cloud pending"
+    },
+    {
+      "id": "S06",
+      "title": "完成一个真实项目任务",
+      "target": "/start/project-task",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Bilingual staged project tutorial, shared immutable test fixture, independent Python/TypeScript programs and saved journals. Local syntax/type and baseline checks only; real-cloud tests, event review, browser behavior, cleanup and retention acceptance remain pending."
+    },
+    {
+      "id": "B01",
+      "title": "将 Agent 接入你的后端",
+      "target": "/build/backend-integration",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against Run submission, input upload and SDK contracts; cloud acceptance pending"
+    },
+    {
+      "id": "B02",
+      "title": "给任务提供文件与上下文",
+      "target": "/build/project-context",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against Run submission, input upload and SDK contracts; cloud acceptance pending"
+    },
+    {
+      "id": "B03",
+      "title": "在同一个 Session 中连续工作",
+      "target": "/build/multi-turn",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against Run submission, input upload and SDK contracts; cloud acceptance pending"
+    },
+    {
+      "id": "B04",
+      "title": "将 Run 事件显示到你的应用",
+      "target": "/build/stream-events",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: stream route, artifact capture and preview grants; real-cloud/browser verification pending"
+    },
+    {
+      "id": "B05",
+      "title": "为 Agent 绑定 Tools 与 MCP",
+      "target": "/build/tools",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: Tool/MCP docs, approval transaction and application token route allowlist; real account/cloud tests pending"
+    },
+    {
+      "id": "B06",
+      "title": "处理工具授权与重新授权",
+      "target": "/build/tool-authorization",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: Tool/MCP docs, approval transaction and application token route allowlist; real account/cloud tests pending"
+    },
+    {
+      "id": "B07",
+      "title": "在你的产品中加入人工审批",
+      "target": "/build/approvals",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: Tool/MCP docs, approval transaction and application token route allowlist; real account/cloud tests pending"
+    },
+    {
+      "id": "B08",
+      "title": "获取、保留和交付任务产物",
+      "target": "/build/artifacts",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: stream route, artifact capture and preview grants; real-cloud/browser verification pending"
+    },
+    {
+      "id": "B09",
+      "title": "安全地预览 Agent 创建的 Web 应用",
+      "target": "/build/private-preview",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: stream route, artifact capture and preview grants; real-cloud/browser verification pending"
+    },
+    {
+      "id": "B10",
+      "title": "让空闲 Session 休眠并自动唤醒",
+      "target": "/build/idle-and-wake",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against lifecycle, recovery, Agent revisions and SDK; fresh cloud validation pending"
+    },
+    {
+      "id": "B11",
+      "title": "处理断线、重试、取消与不确定结果",
+      "target": "/build/recovery",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against lifecycle, recovery, Agent revisions and SDK; fresh cloud validation pending"
+    },
+    {
+      "id": "B12",
+      "title": "使用可复用的 Agent 配置",
+      "target": "/build/agent-templates",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against lifecycle, recovery, Agent revisions and SDK; fresh cloud validation pending"
+    },
+    {
+      "id": "B13",
+      "title": "更换连接并管理既有 Session",
+      "target": "/build/connection-lifecycle",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: connection lifecycle, Session schema and compatibility resolver; live acceptance pending"
+    },
+    {
+      "id": "B14",
+      "title": "配置 Sandbox 资源与网络策略",
+      "target": "/build/sandbox-policy",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: connection lifecycle, Session schema and compatibility resolver; live acceptance pending"
+    },
+    {
+      "id": "I01",
+      "title": "选择 Sandbox、Harness、模型与 Tools 的组合",
+      "target": "/integrations/choose",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against model adapters, Harness protocols and scoped historical matrix; no fresh endpoint validation"
+    },
+    {
+      "id": "I02",
+      "title": "Sandbox 能力总览",
+      "target": "/integrations/sandboxes",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed registry, connector capabilities, E2B configuration and lifecycle; cloud not rerun"
+    },
+    {
+      "id": "I03",
+      "title": "接入 E2B",
+      "target": "/integrations/sandboxes/e2b",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed registry, connector capabilities, E2B configuration and lifecycle; cloud not rerun"
+    },
+    {
+      "id": "I04",
+      "title": "接入 Modal",
+      "target": "/integrations/sandboxes/modal",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed Modal connector, scoped historical OCI evidence and checkpoint lifecycle; execution USER discrepancy documented; cloud not rerun"
+    },
+    {
+      "id": "I05",
+      "title": "接入 Blaxel",
+      "target": "/integrations/sandboxes/blaxel",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed Blaxel configuration, private previews, associated-resource cleanup and provider-managed standby; cloud not rerun"
+    },
+    {
+      "id": "I06",
+      "title": "接入 Fly Sprites",
+      "target": "/integrations/sandboxes/fly-sprites",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed Sprites configuration, private transport, bounded background commands, managed workspace and expiry; cloud not rerun"
+    },
+    {
+      "id": "I07",
+      "title": "接入 Upstash Box",
+      "target": "/integrations/sandboxes/upstash-box",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed persistent Box configuration, lifecycle, private exec transport and exact buffer/input limits; cloud not rerun"
+    },
+    {
+      "id": "I08",
+      "title": "接入 Vercel Sandbox",
+      "target": "/integrations/sandboxes/vercel",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed Vercel project/team binding, private transport, native credential policy and persistent lifecycle; cloud not rerun"
+    },
+    {
+      "id": "I09",
+      "title": "接入 Agent37",
+      "target": "/integrations/sandboxes/agent37",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed Agent37 fixed resources, configuration, private headers, file limits, persistent home and lifecycle; cloud not rerun"
+    },
+    {
+      "id": "I10",
+      "title": "接入 Boat",
+      "target": "/integrations/sandboxes/boat",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed Boat configuration, noEnv, snapshot TTL lifecycle, command/file limits and deletion-operation receipts; cloud not rerun"
+    },
+    {
+      "id": "I11",
+      "title": "接入 Freestyle VMs",
+      "target": "/integrations/sandboxes/freestyle",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed Freestyle SDK/configuration, root-owned file permissions, PTY bounds and native pause lifecycle; cloud not rerun"
+    },
+    {
+      "id": "I12",
+      "title": "接入 Fly Machines",
+      "target": "/integrations/sandboxes/fly-machines",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed Fly App ownership, public OCI, proxy prerequisites, lease-fenced resume and whole-App cleanup; cloud not rerun"
+    },
+    {
+      "id": "I13",
+      "title": "接入 Instabox",
+      "target": "/integrations/sandboxes/instabox",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed Instabox OpenSSH prerequisites, operation receipts, definitive quota refusal and lifecycle; cloud not rerun"
+    },
+    {
+      "id": "I14",
+      "title": "选择并配置 Harness",
+      "target": "/integrations/harnesses",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against Harness schema, protocols, SDK methods and worker; cloud not rerun"
+    },
+    {
+      "id": "I15",
+      "title": "注册并运行 OCI Harness",
+      "target": "/integrations/harnesses/oci",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against Harness schema, protocols, SDK methods and worker; cloud not rerun"
+    },
+    {
+      "id": "I16",
+      "title": "使用自定义 source-package Harness",
+      "target": "/integrations/harnesses/source-package",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against Harness schema, protocols, SDK methods and worker; cloud not rerun"
+    },
+    {
+      "id": "I17",
+      "title": "连接你自己的模型端点",
+      "target": "/integrations/models",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against model adapters, Harness protocols and scoped historical matrix; no fresh endpoint validation"
+    },
+    {
+      "id": "I18",
+      "title": "理解模型协议兼容性",
+      "target": "/integrations/model-protocols",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against model adapters, Harness protocols and scoped historical matrix; no fresh endpoint validation"
+    },
+    {
+      "id": "I19",
+      "title": "接入应用连接器",
+      "target": "/integrations/apps",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "37 application sections and all operation IDs checked against runtime registry; permissions/auth and historical evidence reviewed; account/OAuth/write acceptance not rerun"
+    },
+    {
+      "id": "I20",
+      "title": "连接受保护的 HTTP API",
+      "target": "/integrations/http-tools",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed HTTP Tool schema/request mapping and protected HTTP policy; live read/write/credential-isolation tests not rerun"
+    },
+    {
+      "id": "I21",
+      "title": "连接 Remote MCP 服务",
+      "target": "/integrations/mcp",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed MCP discovery, selected schema checks, transports, auth and pre-dispatch-only retry; historical live vs deterministic evidence distinguished; cloud not rerun"
+    },
+    {
+      "id": "I22",
+      "title": "已验证的执行组合",
+      "target": "/integrations/verified-combinations",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "derived status snapshots from both matrix JSON files; reviewed scoped evidence and E2B temporal change; no new cloud tests"
+    },
+    {
+      "id": "C01",
+      "title": "Session、Run 与 Agent 模板",
+      "target": "/concepts/sessions-runs-agents",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: connection lifecycle, Session schema and compatibility resolver; live acceptance pending"
+    },
+    {
+      "id": "C02",
+      "title": "控制平面、Runtime、Harness 与 Sandbox",
+      "target": "/concepts/execution-architecture",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against architecture, Session initialization, transaction and stream implementation; no fresh runtime acceptance"
+    },
+    {
+      "id": "C03",
+      "title": "初始化、预检与配置固定",
+      "target": "/concepts/initialization",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against architecture, Session initialization, transaction and stream implementation; no fresh runtime acceptance"
+    },
+    {
+      "id": "C04",
+      "title": "持久事件与故障恢复",
+      "target": "/concepts/events-and-recovery",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed against architecture, Session initialization, transaction and stream implementation; no fresh runtime acceptance"
+    },
+    {
+      "id": "C05",
+      "title": "工作区、对话、产物与持久化边界",
+      "target": "/concepts/persistence",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: storage, credential contract, capability resolver and lifecycle; live verification separate"
+    },
+    {
+      "id": "C06",
+      "title": "凭据、授权与信任边界",
+      "target": "/concepts/security-boundaries",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: storage, credential contract, capability resolver and lifecycle; live verification separate"
+    },
+    {
+      "id": "C07",
+      "title": "能力声明、兼容性与验证证据",
+      "target": "/concepts/capabilities-and-evidence",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: storage, credential contract, capability resolver and lifecycle; live verification separate"
+    },
+    {
+      "id": "C08",
+      "title": "Serverless Session 的生命周期",
+      "target": "/concepts/serverless-lifecycle",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: storage, credential contract, capability resolver and lifecycle; live verification separate"
+    },
+    {
+      "id": "O01",
+      "title": "管理本地工作区",
+      "target": "/operate/local-workspace",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: local launcher, deployment mode/settings and main entry; no fresh hosted deployment/cloud acceptance"
+    },
+    {
+      "id": "O02",
+      "title": "自托管控制平面",
+      "target": "/operate/self-host",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: local launcher, deployment mode/settings and main entry; no fresh hosted deployment/cloud acceptance"
+    },
+    {
+      "id": "O03",
+      "title": "配置网络入口、代理与受保护凭据通道",
+      "target": "/operate/networking",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: local launcher, deployment mode/settings and main entry; no fresh hosted deployment/cloud acceptance"
+    },
+    {
+      "id": "O04",
+      "title": "管理身份、权限与应用 Token",
+      "target": "/operate/access-control",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: Token lifecycle/permissions, managed Secrets, diagnostic filtering; operational acceptance pending"
+    },
+    {
+      "id": "O05",
+      "title": "管理和轮换受保护凭据",
+      "target": "/operate/credentials",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: Token lifecycle/permissions, managed Secrets, diagnostic filtering; operational acceptance pending"
+    },
+    {
+      "id": "O06",
+      "title": "观察运行并诊断故障",
+      "target": "/operate/observability",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: Token lifecycle/permissions, managed Secrets, diagnostic filtering; operational acceptance pending"
+    },
+    {
+      "id": "O07",
+      "title": "对账和清理不确定的云资源与 Tool 操作",
+      "target": "/operate/reconciliation",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: resource review, offline backup/restore, migration locks/checksums; fresh recovery drill pending"
+    },
+    {
+      "id": "O08",
+      "title": "升级版本与迁移数据",
+      "target": "/operate/upgrades",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: resource review, offline backup/restore, migration locks/checksums; fresh recovery drill pending"
+    },
+    {
+      "id": "O09",
+      "title": "备份和恢复控制平面",
+      "target": "/operate/backup-restore",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed: resource review, offline backup/restore, migration locks/checksums; fresh recovery drill pending"
+    },
+    {
+      "id": "O10",
+      "title": "管理容量、配额与成本",
+      "target": "/operate/capacity-and-cost",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-grounded operational synthesis; capacity measurements and incident drills not executed"
+    },
+    {
+      "id": "O11",
+      "title": "按症状排查问题",
+      "target": "/operate/troubleshooting",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-grounded operational synthesis; capacity measurements and incident drills not executed"
+    },
+    {
+      "id": "R01",
+      "title": "HTTP API 参考",
+      "target": "/reference/http",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "All 79 literal management routes assigned to bilingual source-reviewed operation drafts across 14 reference families. Navigation consolidated; route/page checks pass. Assignments do not prove exhaustive provider schemas, executable request fixtures, editorial acceptance or runtime verification."
+    },
+    {
+      "id": "R02",
+      "title": "Python SDK 参考",
+      "target": "/reference/python",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "AST-generated complete public method signatures and HTTP mapping; client/error/type behavior source-reviewed. Per-method executable examples and exhaustive response-schema audit still pending; no new cloud journey. Resource-level HTTP contract map added for exact JSON/error/permission/effect semantics; per-method runnable examples remain pending. Isolated venv editable installation, import and both example help commands passed on current machine (2026-11-20-sdk-installation-docs.json)."
+    },
+    {
+      "id": "R03",
+      "title": "TypeScript SDK 参考",
+      "target": "/reference/typescript",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Compiler-generated public signatures/inferred returns; source-reviewed runtime, types, upload, cancellation and redirect boundaries. Per-method executable examples and exhaustive response-schema audit remain pending. Resource-level HTTP contract map added for exact JSON/error/permission/effect semantics; per-method runnable examples remain pending. Actual SDK build and built ESM import passed on current machine; external installed-package path remains unverified."
+    },
+    {
+      "id": "R04",
+      "title": "配置与环境变量",
+      "target": "/reference/configuration",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Reviewed startup, mode, deployment environment precedence, local discovery and Session/env schemas; no operational changes; advanced setting completeness/editorial audit pending."
+    },
+    {
+      "id": "R05",
+      "title": "事件、状态与转换",
+      "target": "/reference/events-and-states",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Core independent states and SSE/JSON cursor semantics source-reviewed; main event payload index added. Exhaustive dynamic/native/lifecycle event inventory and per-event samples pending."
+    },
+    {
+      "id": "R06",
+      "title": "错误码与处理建议",
+      "target": "/reference/errors",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "31 common literal ExecutionError branches source-matched with statuses; HTTP/SDK shapes and preflight reasons checked; not exhaustive internal inventory or fresh fault tests; editorial acceptance pending."
+    },
+    {
+      "id": "R07",
+      "title": "限制、默认值与支持范围",
+      "target": "/reference/limits",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Limits traced to schemas and constants, encoded/decoded units separated; provider quotas not generalized; source-reviewed, boundary execution/editorial audit pending."
+    },
+    {
+      "id": "R08",
+      "title": "CLI 与本地管理命令",
+      "target": "/reference/cli",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Reviewed launcher/settings/backup/diagnostics/build source; npm run inventory exit 0 without invoking scripts. Operational and editorial acceptance remain scoped/pending."
+    },
+    {
+      "id": "R09",
+      "title": "术语表",
+      "target": "/reference/glossary",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "36 bilingual terms aligned with authored concept/integration contracts; structural links checked"
+    },
+    {
+      "id": "D01",
+      "title": "搭建开发环境并提交第一个改动",
+      "target": "/contribute/development",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Source-reviewed scripts, database isolation, installed SDK gate and acceptance scope; commands documented, not freshly executed; editorial acceptance pending."
+    },
+    {
+      "id": "D02",
+      "title": "代码地图与模块边界",
+      "target": "/contribute/codebase",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "source-reviewed module map and submission/worker/runtime/tool/artifact path; linked file targets checked"
+    },
+    {
+      "id": "D03",
+      "title": "添加一个 Sandbox 连接器",
+      "target": "/contribute/sandbox-connectors",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Source-reviewed connector, adapter, registry, Boat lifecycle and tests, Console registration; structural sketch explicitly incomplete; editorial and new-provider acceptance not claimed."
+    },
+    {
+      "id": "D04",
+      "title": "添加一个 Harness 适配器",
+      "target": "/contribute/harness-adapters",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Source-reviewed adapter, protocol registry, image registration, strict source parser and Python example; no image build or cloud execution in this documentation pass; editorial acceptance pending."
+    },
+    {
+      "id": "D05",
+      "title": "添加 Tool 或应用连接器",
+      "target": "/contribute/tool-connectors",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Source-reviewed AppDefinition, registry mapping, broker policy and reconciliation; illustrative read/write mapping and test requirements, not a new connector or live account verification; editorial acceptance pending."
+    },
+    {
+      "id": "D06",
+      "title": "运行测试与记录真实验收",
+      "target": "/contribute/testing",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "Source-reviewed scripts, database isolation, installed SDK gate and acceptance scope; commands documented, not freshly executed; editorial acceptance pending."
+    },
+    {
+      "id": "D07",
+      "title": "编写、校验和翻译文档",
+      "target": "/contribute/documentation",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "reviewed content plan, current CONTRIBUTING/PR template, structural checker scope and Console localization contract; no publishing or cloud execution"
+    },
+    {
+      "id": "D08",
+      "title": "提出设计变更并提交贡献",
+      "target": "/contribute/proposals-and-prs",
+      "zh_CN": "draft",
+      "en": "draft",
+      "verification": "reviewed content plan, current CONTRIBUTING/PR template, structural checker scope and Console localization contract; no publishing or cloud execution"
+    }
+  ]
+}

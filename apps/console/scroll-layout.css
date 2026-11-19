@@ -1,0 +1,91 @@
+/* Scroll ownership: shell -> workspace -> content region. Never size lists by guessed pixels. */
+html,body{height:100%;overflow:hidden}
+#app-shell{height:100dvh;min-height:0;overflow:hidden}
+#app-shell>main{height:100%;min-height:0;overflow:hidden}
+#app-shell .page-body{height:100%;min-height:0;display:flex;flex-direction:column;padding-top:0;padding-bottom:0}
+#workspace{flex:1;min-height:0;height:100%;overflow:hidden}
+#workspace>.heading,#workspace>.workspace-toolbar,#workspace>.section-tabs,#workspace>nav{flex-shrink:0}
+#workspace>.heading{padding:24px 0 20px;margin-bottom:16px}
+#workspace>.workspace-toolbar{margin-bottom:16px}
+#workspace>.page-footer{flex-shrink:0;margin:0;padding:12px 0;line-height:18px;min-height:42px}
+#notice{flex-shrink:0;max-height:20dvh;overflow:auto}
+#login{overflow:auto;min-height:0;max-height:100%;width:100%}
+#content{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+#content:focus-visible,[data-scroll-region]:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+#content:has(>.table-wrap),#content:has(>.resource-list),#content:has(>.harness-templates),#content:has(>.quickstart-layout),#content.session-detail{display:flex;flex-direction:column;overflow:hidden}
+#content:has(>.table-wrap)>*,#content:has(>.resource-list)>*,#content:has(>.harness-templates)>*,#content:has(>.quickstart-layout)>*,#content.session-detail>*{flex-shrink:0}
+#content>.table-wrap,#content>.resource-list,#content>.harness-templates,#content.session-detail>.conversation,#content.session-detail>.initialization{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.table-wrap{position:relative;isolation:isolate}
+.table-wrap thead th{position:sticky;top:0;z-index:2;background:var(--tone-canvas);box-shadow:0 1px 0 var(--line)}
+#content>.actions{margin:0;padding:12px 0 0;min-height:44px}
+#content>.harness-footnote{margin:10px 0 0}
+#content>.harness-templates{align-content:start}
+#content.session-detail>.session-meta{margin:0;padding:0 0 8px}
+#content.session-detail>.session-meta details[open]{max-height:20dvh;overflow:auto}
+#content.session-detail>.session-view-tabs{margin:0 0 16px}
+#content.session-detail>.conversation{padding:0 12px 16px 0}
+#content.session-detail>.initialization{max-width:none;padding-right:16px}
+#content>.quickstart-layout{flex:1;min-height:0;margin:12px 0 0;overflow:hidden;align-items:stretch}
+#content>.quickstart-layout>.quickstart-panel{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.quickstart-panel .playground-submit{position:sticky;bottom:-28px;background:var(--surface);padding:16px 0;z-index:2}
+#content:has(>.agent-layout){overflow:hidden;display:flex}
+#content>.agent-layout{flex:1;min-height:0;margin:0;overflow:hidden;align-items:stretch}
+.agent-layout>.quickstart-panel{min-height:0;overflow:auto;overscroll-behavior:contain}
+.agent-layout>.quickstart-panel:first-child{display:flex;flex-direction:column;overflow:hidden}
+.agent-layout>.quickstart-panel:first-child>button{align-self:flex-start;flex-shrink:0;margin-bottom:12px}
+.agent-records{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.resource-list{min-width:0}
+.modal-panel{overflow:hidden;min-height:0}
+.modal-panel>form{display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.modal-panel .dialog-body{overflow:auto;min-height:0;overscroll-behavior:contain}
+.modal-panel .dialog-heading,.modal-panel .dialog-footer{flex:none}
+.rail{min-height:0}.rail #main-navigation{min-height:0;overflow-y:auto;overscroll-behavior:contain}.rail>.brand,.rail>.workspace-name,.rail>.settings-entry,.rail>.rail-bottom{flex-shrink:0}
+@media(max-width:1100px){
+ #content:has(>.quickstart-layout){overflow:auto;display:block}
+ #content>.quickstart-layout{display:block;overflow:visible}
+ #content>.quickstart-layout>.quickstart-panel{overflow:visible}
+ .quickstart-panel .playground-submit{position:static}
+ #content:has(>.agent-layout){overflow:auto;display:block}
+ #content>.agent-layout{display:block;overflow:visible}
+ .agent-layout>.quickstart-panel,.agent-layout>.quickstart-panel:first-child,.agent-records{overflow:visible;display:block}
+}
+@media(max-width:520px){
+ #app-shell{display:flex;flex-direction:column}
+ #app-shell>.rail{flex:none;max-height:50dvh;overflow:auto!important}
+ #app-shell>main{flex:1;height:auto;min-height:0}
+ #workspace>.heading{padding:16px 0 12px;margin-bottom:12px;gap:8px}
+ #workspace>.page-footer{display:none}
+ #workspace>.workspace-toolbar{margin-bottom:12px}
+}
+@media(max-height:540px){#workspace>.page-footer{display:none}#workspace>.heading{padding:12px 0;margin-bottom:10px}.rail>.workspace-name{display:none}}
+
+#content>.configuration-disclosure[open]{flex-shrink:1;min-height:140px;max-height:60%;overflow:auto;overscroll-behavior:contain}
+
+.catalog-panel .catalog-filters{flex:none;padding:0 22px 12px}
+.catalog-panel .dialog-body{flex:1;min-height:0}
+.catalog-panel .catalog-options{margin-top:0}
+
+/* Scroll without permanent browser chrome; native wheel/touch/keyboard behavior remains. */
+#app-shell,#app-shell *, .modal-layer,.modal-layer *{scrollbar-width:none;scrollbar-gutter:auto}
+#app-shell::-webkit-scrollbar,#app-shell *::-webkit-scrollbar,.modal-layer::-webkit-scrollbar,.modal-layer *::-webkit-scrollbar{display:none;width:0;height:0}
+/* Pin the complete heading group, including tables with more than one heading row. */
+.table-wrap{min-height:0}
+.table-wrap thead{position:sticky;top:0;z-index:3;background:var(--surface)}
+.table-wrap thead th{position:static;background:var(--surface)}
+/* Embedded reference tables must own their vertical overflow too: an unconstrained
+   overflow-x wrapper otherwise captures sticky positioning while its parent scrolls. */
+#content .table-wrap:not(#content>.table-wrap){max-height:60dvh;overflow:auto}
+@media(forced-colors:active){
+ #app-shell,#app-shell *,.modal-layer,.modal-layer *{scrollbar-width:auto}
+ #app-shell::-webkit-scrollbar,#app-shell *::-webkit-scrollbar,.modal-layer::-webkit-scrollbar,.modal-layer *::-webkit-scrollbar{display:revert;width:revert;height:revert}
+}
+
+/* Leave room above the sticky submit footer when focusing/scrolling form fields. */
+#content>.quickstart-layout>.quickstart-panel:first-child{scroll-padding-top:20px;scroll-padding-bottom:160px}
+
+/* The submit area owns its space; fields scroll without passing behind it. */
+#content>.quickstart-layout>.quickstart-panel:has(>.playground-fields){display:flex;flex-direction:column;overflow:hidden}
+.playground-fields{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding-bottom:16px}
+.quickstart-panel:has(>.playground-fields)>.playground-submit{position:static;flex-shrink:0;padding:12px 0 0;margin-top:0}
+.playground-submit .hint{margin:8px 0 0}
+@media(max-width:760px){.playground-fields{overflow:visible;flex:none}}

@@ -1,0 +1,33 @@
+import {randomUUID} from 'node:crypto';
+import {mkdir,writeFile,readFile,unlink} from 'node:fs/promises';
+import {resolve,join} from 'node:path';
+import {openDatabase} from '../modules/storage/database.js';
+import {migrate} from '../modules/storage/migrate.js';
+import {loadLocalCipher,SecretStore} from '../modules/credentials/secret-store.js';
+import {initializeOwner} from '../modules/credentials/api-auth.js';
+import {backupLocal,restoreLocal} from '../modules/deployment/backup.js';
+const id=randomUUID().replaceAll('-',''),root=resolve('.local/beta-acceptance',id),sourceUrl=new URL(process.env.TEST_DATABASE_URL??'postgres://hexagon@127.0.0.1:55432/hexagon'),targetUrl=new URL(sourceUrl),admin=openDatabase(sourceUrl.href);
+const database='hexagon_restore_'+id;targetUrl.pathname='/'+database;targetUrl.search='';const schema='backup_'+id;sourceUrl.searchParams.set('options',`-c search_path=${schema}`);const source=openDatabase(sourceUrl.href);let target:ReturnType<typeof openDatabase>|undefined;
+const evidence:any={root,schema,database,state:'running'};
+try{
+ await mkdir(root,{recursive:true,mode:0o700});await admin.query(`CREATE SCHEMA "${schema}"`);await admin.query(`CREATE DATABASE "${database}"`);
+ await migrate(source);const data=join(root,'source');await mkdir(data,{mode:0o700});
+ const owner=await initializeOwner(source);await writeFile(join(data,'owner.json'),JSON.stringify(owner),{mode:0o600});
+ const cipher=await loadLocalCipher(join(data,'master.key')),secrets=new SecretStore(source,cipher);const secret=await secrets.save('local-workspace','backup-fixture','retained-test-value');
+ await source.query("INSERT INTO agents(tenant_id,id,name,definition) VALUES('local-workspace','backup-agent','Retained definition',$1)",[{harness:{id:'pi',version:'1.5.2'}}]);
+ await writeFile(join(data,'service.pid'),String(process.pid),{mode:0o600});
+ try{await backupLocal(sourceUrl.href,data,join(root,'live'));throw Error('live_backup_accepted');}catch(e){if((e as Error).message!=='backup_stop_service_first')throw e;}await unlink(join(data,'service.pid'));evidence.live_service_rejected=true;
+ await writeFile(join(data,'owner.json'),JSON.stringify({...owner,tenant:'foreign-workspace'}),{mode:0o600});
+ try{await backupLocal(sourceUrl.href,data,join(root,'foreign'));throw Error('foreign_identity_accepted');}catch(e){if((e as Error).message!=='backup_identity_mismatch')throw e;}await writeFile(join(data,'owner.json'),JSON.stringify(owner),{mode:0o600});evidence.foreign_identity_rejected=true;
+ evidence.backup=await backupLocal(sourceUrl.href,data,join(root,'bundle'));
+ evidence.restore=await restoreLocal(targetUrl.href,join(root,'restored'),join(root,'bundle'));
+ targetUrl.searchParams.set('options',`-c search_path=${schema}`);target=openDatabase(targetUrl.href);
+ const restoredCipher=await loadLocalCipher(join(root,'restored/master.key'));
+ if(await new SecretStore(target,restoredCipher).read('local-workspace',secret,'backup-fixture')!=='retained-test-value')throw Error('restored_secret_mismatch');
+ if((await target.query('SELECT name FROM agents WHERE id=$1',['backup-agent'])).rows[0]?.name!=='Retained definition')throw Error('restored_definition_missing');
+ await migrate(target);await migrate(target);evidence.upgrade_replay=true;
+ await target.query("INSERT INTO schema_migrations(name,checksum) VALUES('999-future','fixture')");try{await migrate(target);throw Error('newer_schema_accepted');}catch(e){if((e as Error).message!=='database_schema_newer_than_code')throw e;}await target.query("DELETE FROM schema_migrations WHERE name='999-future'");evidence.newer_schema_rejected=true;
+ await target.query("UPDATE schema_migrations SET checksum='incorrect' WHERE name='017-harness-images'");try{await migrate(target);throw Error('changed_migration_accepted');}catch(e){if(!(e as Error).message.startsWith('database_migration_changed:'))throw e;}evidence.changed_migration_rejected=true;
+ try{await restoreLocal(targetUrl.href,join(root,'occupied'),join(root,'bundle'));throw Error('nonempty_restore_accepted');}catch(e){if((e as Error).message!=='restore_database_not_empty')throw e;}evidence.overwrite_rejected=true;
+ await writeFile(join(root,'bundle/master.key'),Buffer.alloc(32));try{await restoreLocal(targetUrl.href,join(root,'tampered'),join(root,'bundle'));throw Error('tamper_accepted');}catch(e){if((e as Error).message!=='restore_integrity_failed')throw e;}evidence.tamper_rejected=true;evidence.state='verified';
+}catch(error){evidence.state='failed';evidence.error=(error as Error).message;process.exitCode=1;}finally{await target?.end();await source.end();await admin.end();await writeFile(join(root,'evidence.json'),JSON.stringify(evidence,null,2),{mode:0o600});console.log({state:evidence.state,error:evidence.error,evidence:join(root,'evidence.json')});}

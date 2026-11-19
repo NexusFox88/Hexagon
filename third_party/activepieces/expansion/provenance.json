@@ -1,0 +1,172 @@
+{
+  "license": "MIT, see ../LICENSE; community paths only",
+  "retrieved_at": "2026-11-16",
+  "revision_note": "Fetched from main; snapshots are content-pinned, not claimed as commit-pinned.",
+  "files": [
+    {
+      "provider": "asana",
+      "file": "asana.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/asana/src/lib/actions/create-task.ts",
+      "upstream_blob_sha": "8277454f03ea6d8ec80dc7159470029c80dfc8da",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "b254e82167f38ad1131668105e9419eb6f7814664a19b31456b2e28a3852436a",
+      "retained_git_blob_sha": "8277454f03ea6d8ec80dc7159470029c80dfc8da"
+    },
+    {
+      "provider": "airtable",
+      "file": "airtable.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/airtable/src/lib/actions/create-record-ai.ts",
+      "upstream_blob_sha": "c141ab6e5fd362c089522300309916aeca454af4",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "6d105e3aae1ed51b35b347b2420ea8fce4b5b17da0ae2cb6f53d10119f1e9cb0",
+      "retained_git_blob_sha": "c141ab6e5fd362c089522300309916aeca454af4"
+    },
+    {
+      "provider": "clickup",
+      "file": "clickup.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/clickup/src/lib/actions/tasks/create-task.ts",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "877d353820957ffbd94ca8c3b9d41ad8aac2a02efa7eb9b8e638ac2c270a1b08",
+      "retained_git_blob_sha": "f3233b6915e152941f0018b14fa93862e9699f6e"
+    },
+    {
+      "provider": "trello",
+      "file": "trello.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/trello/src/lib/actions/card/create-card.ts",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "0d900e53fcfdc073655ddd43c87e7ca6a84a42b41049b69eb7b7ab51ebdc4d50",
+      "retained_git_blob_sha": "d8f443e3b6b449b5c039c7197916f14a71a29ca7"
+    },
+    {
+      "provider": "discord",
+      "file": "discord.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/discord/src/lib/actions/ai-list-messages.ts",
+      "upstream_blob_sha": "b42f57ca13654fc0f89824c94b54e25e2dffbe08",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "cc29438af509c0fd90e70cafbf6daafebead4ed8d79fb70b70c8885917d29c9f",
+      "retained_git_blob_sha": "b42f57ca13654fc0f89824c94b54e25e2dffbe08"
+    },
+    {
+      "provider": "telegram-bot",
+      "file": "telegram-bot.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/telegram-bot/src/lib/action/telegram-send-message.ts",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "ed7e05cce08f202a1e2c1d0e48077f65f87e55d79c233ab4e3eda7437057d6c5",
+      "retained_git_blob_sha": "bf9db20a129a4ff491e1745ae891571842be47c1"
+    },
+    {
+      "provider": "dropbox",
+      "file": "dropbox.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/dropbox/src/lib/actions/list-a-folder.ts",
+      "upstream_blob_sha": "5c933f812a050638c19a85442b51357dddddd80e",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "8bd3085c6e67b06519e55f8f436c57ba28c554e4f7ff4eeeb49da64d1b5aa89b",
+      "retained_git_blob_sha": "5c933f812a050638c19a85442b51357dddddd80e"
+    },
+    {
+      "provider": "google-contacts",
+      "file": "google-contacts.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/google-contacts/src/lib/action/create-contact-agent.ts",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "64ab547b99f0b954b8f24e3364f8833337244d572b884824014259ac36c1090e",
+      "retained_git_blob_sha": "6feaa42c31f74c9996777e33765fb4c76e78e666"
+    },
+    {
+      "provider": "google-sheets",
+      "file": "google-sheets.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/google-sheets/src/lib/actions/sheets-append-values.ts",
+      "upstream_blob_sha": "d07568be2b1db93ddc96fad879d7428de84e0064",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "f296d8c11d7acbeb1b6c4067f61091d7470056d66a4ac12eb54b8d5a23f262bc",
+      "retained_git_blob_sha": "d07568be2b1db93ddc96fad879d7428de84e0064"
+    },
+    {
+      "provider": "google-tasks",
+      "file": "google-tasks.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/google-tasks/src/lib/actions/create-task.ts",
+      "upstream_blob_sha": "50b68e1434e77677d2bfd7e1c9334795c0c1deb3",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "ed807e2a6a6a690161a7967510e172773ad2b53ec4caa0ace4ab35af4cc7497a",
+      "retained_git_blob_sha": "50b68e1434e77677d2bfd7e1c9334795c0c1deb3"
+    },
+    {
+      "provider": "microsoft-outlook",
+      "file": "microsoft-outlook.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/microsoft-outlook/src/lib/actions/outlook-create-draft.ts",
+      "upstream_blob_sha": "661a017d83bc7ce6c3d39cef456958de825b322b",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "1cc68f3757d5e33c7db9970e6aee0297682d955e2c314f908b7a293bdae5958a",
+      "retained_git_blob_sha": "661a017d83bc7ce6c3d39cef456958de825b322b"
+    },
+    {
+      "provider": "microsoft-outlook-calendar",
+      "file": "microsoft-outlook-calendar.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/microsoft-outlook-calendar/src/lib/actions/create-event.ts",
+      "upstream_blob_sha": "5924e873a3b09bcbba7214d3b9a924acc7d6086b",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "e84e12713aac5fcdcc35728d12d97e4d91461dafd7f01fe33c71aa66d17eb3b8",
+      "retained_git_blob_sha": "5924e873a3b09bcbba7214d3b9a924acc7d6086b"
+    },
+    {
+      "provider": "microsoft-onedrive",
+      "file": "microsoft-onedrive.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/microsoft-onedrive/src/lib/actions/onedrive-list-folder-children.ts",
+      "upstream_blob_sha": "65651e84c7b6601ed54ee83004f629f93c6ea4fc",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "c8d07cd3ca14ddc37ef3454beeb484a192d3ec4ec4b8c78fd67a4a9aa5b26fa7",
+      "retained_git_blob_sha": "65651e84c7b6601ed54ee83004f629f93c6ea4fc"
+    },
+    {
+      "provider": "microsoft-todo",
+      "file": "microsoft-todo.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/microsoft-todo/src/lib/actions/create-task.ts",
+      "upstream_blob_sha": "057263f4c184cd6964455e1a407d362746114f00",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "495a1fa8e9086b111894bda15359d6bb2316f18f2b1a98d34090dc0333c6468e",
+      "retained_git_blob_sha": "057263f4c184cd6964455e1a407d362746114f00"
+    },
+    {
+      "provider": "microsoft-teams",
+      "file": "microsoft-teams.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/microsoft-teams/src/lib/actions/send-chat-message.ts",
+      "upstream_blob_sha": "5c0d5355cf8947af8b64230c3f2d5de29891534c",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "d3f6ce5c101cf72eec7dd8f4536edb5edfdbc0b41abd2311dbdd22dbc9a94b43",
+      "retained_git_blob_sha": "5c0d5355cf8947af8b64230c3f2d5de29891534c"
+    },
+    {
+      "provider": "hubspot",
+      "file": "hubspot.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/hubspot/src/lib/actions/search-objects.ts",
+      "upstream_blob_sha": "ac2530aa89f9f49d36d4f6557b08dc38a6862271",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "670cf5e9e627c3f02aacdee0dd2ca45a85e6691b5d18bfcf72adba00babe1dc6",
+      "retained_git_blob_sha": "ac2530aa89f9f49d36d4f6557b08dc38a6862271"
+    },
+    {
+      "provider": "calendly",
+      "file": "calendly.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/calendly/src/lib/actions/list-scheduled-events.ts",
+      "upstream_blob_sha": "72bcceabb31fb2fe5299022f07a9efd066dcd310",
+      "adaptation": "Request mappings adapted to Hexagon AppDefinition/ToolBroker; upstream workflow runtime and UI not imported.",
+      "sha256": "9af4a4fbb01344de0edd751a21ffcf50d22bec68874aa588796a3e1a6f345985",
+      "retained_git_blob_sha": "72bcceabb31fb2fe5299022f07a9efd066dcd310"
+    },
+    {
+      "provider": "asana",
+      "file": "asana-auth.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/asana/src/lib/auth.ts",
+      "adaptation": "OAuth endpoints; Asana granular scopes updated from official API docs rather than copying default scope.",
+      "sha256": "a7307ee2daa19298d7a9aa44926709d59d7a2f15e09529c7b53c02459a093cbd",
+      "retained_git_blob_sha": "9a86c7e3b9e9bc90fe0e6d82eb20121ff048eef0"
+    },
+    {
+      "provider": "dropbox",
+      "file": "dropbox-auth.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/dropbox/src/lib/auth.ts",
+      "adaptation": "OAuth endpoints; Asana granular scopes updated from official API docs rather than copying default scope.",
+      "sha256": "b2210abfe5d83cfae8485f8ea115c3cc3cfa3751102f366e6e0e5dbab80df876",
+      "retained_git_blob_sha": "bf4c01830ea24900710197ac6e2044c73375883d"
+    }
+  ]
+}

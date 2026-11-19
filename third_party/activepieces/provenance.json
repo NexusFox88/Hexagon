@@ -1,0 +1,34 @@
+{
+  "project": "Activepieces",
+  "license": "MIT (community paths only; enterprise directories excluded)",
+  "retrieved_at": "2026-11-16",
+  "revision_note": "Retrieved from main; exact retained content is pinned by SHA-256 below. No upstream commit claim.",
+  "files": [
+    {
+      "file": "tavily-search.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/tavily/src/lib/actions/search.ts",
+      "sha256": "58925e3d3e0717cbbf04cf4ca186f604f99a1f54ce8a80ecfdf9359addc6bf85"
+    },
+    {
+      "file": "deepl-translate.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/deepl/src/lib/actions/translate-text.ts",
+      "sha256": "04bce3f877a98620874ffbc7f22d4148f96967e057c4cd8b34bfde5b1ff30a20"
+    },
+    {
+      "file": "todoist-create-task.ts.txt",
+      "source": "https://github.com/activepieces/activepieces/blob/main/packages/pieces/community/todoist/src/lib/actions/create-task-action.ts",
+      "sha256": "b48d2051f957637100a12c3eeaedfa48ff305276c2a74fdc0ed887ba0ab86b9b"
+    },
+    {
+      "file": "LICENSE",
+      "source": "https://github.com/activepieces/activepieces/blob/main/LICENSE",
+      "sha256": "ca346afa6a018824331d10e118ff283aee21156b11f8ddd7081f53d9a6656576"
+    }
+  ],
+  "adaptations": [
+    "Todoist create-task request mapping, implemented without Activepieces runtime",
+    "Tavily search request mapping",
+    "DeepL translation request mapping"
+  ],
+  "other_connectors": "Implemented against provider APIs; not claimed as copied Activepieces connectors."
+}

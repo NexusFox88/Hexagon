@@ -1,0 +1,4 @@
+Font binaries: Google Fonts CSS API, retrieved 2026-11-19.
+Families: Funnel Display 400/500, Inter 400/500, IBM Plex Mono 400/500.
+Licenses: google/fonts repository, ofl/funneldisplay, ofl/inter, ofl/ibmplexmono.
+All fonts served locally; no runtime external font requests.

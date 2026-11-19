@@ -1,0 +1,157 @@
+/* Shared page composition. Lists fill the workspace; settings keep a readable measure. */
+:root{--detail-width:1040px;--form-width:720px;--section-space:20px}
+#workspace>.heading{padding:22px 0 16px;margin:0 0 12px;border:0;min-height:72px}
+#workspace>.page-footer{display:none}
+#workspace>.workspace-toolbar{margin:0 0 16px}
+#workspace #content>.hint:first-child{margin:0 0 16px;max-width:80ch}
+#content>.session-view-tabs{margin:0 0 16px}
+#content>.usage-heading{display:flex;align-items:baseline;gap:24px;padding:0;margin:0 0 12px;flex-wrap:wrap}
+.usage-heading p{max-width:72ch;font-size:13px}
+#workspace[data-view=settings] #content{max-width:var(--form-width);width:100%}
+#workspace[data-view=settings] .settings-link{padding:16px 4px!important;border-bottom:1px solid var(--line)}
+#workspace[data-view=tokens] #content,#workspace[data-view=overview] #content{max-width:var(--detail-width);width:100%}
+#workspace[data-view=network] #content{max-width:var(--detail-width);width:100%;grid-template-columns:minmax(0,2fr) minmax(260px,1fr);align-content:start;align-items:start;gap:32px}
+#workspace[data-view=network] #content>.quickstart-panel{height:auto;background:transparent}
+#workspace[data-view=network] .api-reference{border-left:1px solid var(--line);padding-left:24px!important}
+#workspace[data-view=network] #content>.quickstart-panel label{margin-top:20px}
+#workspace[data-view=fleet] #content>.detail{width:100%;max-width:var(--detail-width);padding:0;border:0;background:transparent}
+.detail>.back-link{display:inline-block;margin:0 0 12px}
+.detail>.detail-head{padding:0 0 16px;margin:0}
+#content>.quickstart-layout{margin-top:0;border:0;border-radius:0}
+.quickstart-layout>.quickstart-panel{padding:20px 24px;background:transparent}
+.quickstart-layout>.quickstart-panel:first-child{background:var(--tone-canvas)}
+.quickstart-layout .rest-preview>p{max-width:72ch}
+/* Snapshots are definition lists, not a stack of tall cards. */
+#content.session-detail>.initialization{width:100%;max-width:var(--detail-width);padding:20px 16px 32px 0;margin:0 auto}
+.initialization-heading{gap:16px;margin:0 0 16px;align-items:start}
+.initialization-heading>.hint{flex:1;max-width:76ch;margin:0}
+.initialization-heading>button{flex:none}
+.initialization-properties{grid-template-columns:148px minmax(0,1fr);gap:8px 20px;margin:12px 0;font-size:14px;line-height:22px}
+.initialization-group{display:grid;grid-template-columns:148px minmax(0,1fr);column-gap:20px;padding:20px 0;margin:0;border-top:1px solid var(--line);align-items:start}
+.initialization-group>h3{grid-column:1;margin:0;font-size:14px;line-height:22px}
+.initialization-group>:not(h3){grid-column:2;margin-top:0}
+.initialization-connection{padding:0 0 12px;min-width:0}
+.initialization-connection:last-child{padding-bottom:0}
+.initialization-connection>.initialization-properties{grid-template-columns:130px minmax(0,1fr);margin:10px 0}
+.initialization summary{padding:4px 0;font-size:13px}
+.initialization .reuse-code{margin:16px 0;padding:12px 0;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:0}
+.initialization .initialization-json{max-height:none}
+.initialization-raw{padding-top:12px}
+@media(max-width:760px){
+ #workspace>.heading{padding:20px 0 12px;min-height:64px}
+ #workspace[data-view=network] #content{display:block}
+ #workspace[data-view=network] .api-reference{border-left:0;border-top:1px solid var(--line);padding:20px 0!important;margin-top:24px!important}
+ .initialization-group{grid-template-columns:1fr;gap:12px}
+ .initialization-group>:not(h3){grid-column:1}
+ .initialization-properties,.initialization-connection>.initialization-properties{grid-template-columns:116px minmax(0,1fr);gap:8px 12px}
+ .initialization-properties dd{margin-bottom:0}
+ #content.session-detail>.initialization{padding-right:8px}
+ .initialization-heading{flex-direction:column}
+ .initialization-connection>.secondary{display:inline;margin-left:8px}
+}
+/* Keep pagination and final controls clear of the viewport edge, including fractional zoom. */
+#app-shell .page-body{padding-bottom:12px}
+/* Pinned initialization source: code and copy remain available while reading configuration. */
+#content.session-detail>.initialization-workspace{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,40%);gap:24px;overflow:hidden;padding-top:20px}
+.initialization-workspace>.initialization{min-height:0;min-width:0;overflow:auto;overscroll-behavior:contain;padding:0 16px 24px 0;scrollbar-gutter:stable}
+.initialization-workspace .initialization-group{grid-template-columns:112px minmax(0,1fr);column-gap:16px}
+.initialization-workspace .initialization-properties,.initialization-workspace .initialization-connection>.initialization-properties{grid-template-columns:112px minmax(0,1fr)}
+.initialization-json-sidebar{min-width:0;min-height:0;display:flex;flex-direction:column;border-left:1px solid var(--line);padding-left:20px;overflow:hidden}
+.initialization-json-toolbar{display:flex;align-items:center;gap:12px;flex-shrink:0;padding:0 0 12px}
+.initialization-json-toolbar h2{font-size:14px;line-height:20px;margin:0;flex:1}
+.initialization-json-toolbar button{flex:none}
+.initialization-json-sidebar>[role=status]:empty{display:none}
+.initialization-source{flex:1;min-height:0;overflow:auto;margin:0;padding:16px;background:var(--tone-canvas);border:1px solid var(--line);border-radius:6px;white-space:pre;font:13px/1.65 var(--font-mono,monospace);tab-size:2;overscroll-behavior:contain}
+.initialization-json-toggle{display:none}
+@media(max-width:1000px){
+ #content.session-detail>.initialization-workspace{display:flex;flex-direction:column;gap:12px;padding-top:12px}
+ .initialization-json-toggle{display:inline-flex;align-self:flex-end;flex-shrink:0}
+ .initialization-workspace>.initialization{flex:1}
+ .initialization-json-sidebar{display:none;flex:1;border:0;padding:0}
+ .initialization-workspace.show-json>.initialization{display:none}
+ .initialization-workspace.show-json>.initialization-json-sidebar{display:flex}
+ .initialization-workspace .initialization-group{grid-template-columns:1fr}
+}
+.initialization-json-sidebar>.initialization-source{max-height:none}
+.page-title-line{display:flex;align-items:center;gap:10px;min-width:0}
+.page-title-line h1{min-width:0;overflow-wrap:anywhere}
+.title-back{display:inline-flex;align-items:center;justify-content:center;flex:none;width:32px;height:36px;color:var(--ink);border-radius:6px;text-decoration:none}
+.title-back[hidden]{display:none}
+.title-back:hover{background:var(--tone-selected)}
+.title-back:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* Routed Agent editors use one readable column, never an empty master/detail grid. */
+#content>.agent-layout.has-editor{grid-template-columns:minmax(0,1fr)}
+.agent-layout.has-editor>.quickstart-panel:last-child{width:100%;max-width:800px;box-sizing:border-box;padding:0 20px 24px 0;background:transparent}
+
+/* Shared provider identity and compact, readable Harness recipes. */
+.provider-identity{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;vertical-align:middle;line-height:22px}
+.provider-identity img{width:16px;height:16px;object-fit:contain;flex:0 0 16px;border-radius:2px}
+.provider-name{display:inline;white-space:nowrap}
+/* Content budgets, not percentages: identities and statuses never compete for pixels.
+   Narrow windows scroll the labeled table region, not the application shell. */
+#content .dense-table td{height:64px;vertical-align:middle}
+#content .session-table table{min-width:1220px;table-layout:fixed}
+#content .session-table th:nth-child(1){width:auto}
+#content .session-table th:nth-child(2){width:156px}
+#content .session-table th:nth-child(3){width:164px}
+#content .session-table th:nth-child(4){width:200px}
+#content .session-table th:nth-child(5){width:168px}
+#content .session-table th:nth-child(6){width:64px}
+#content .session-table th:nth-child(7){width:192px}
+#content .session-table td:nth-child(4){white-space:normal;overflow-wrap:anywhere;line-height:20px}
+.session-row-meta{display:flex;align-items:center;gap:10px;font-size:12px;line-height:18px;color:var(--muted);margin-top:3px;white-space:nowrap}
+#content .session-row-meta>span{display:inline;overflow:visible}
+.session-row-meta code{font-size:12px}
+#content .connection-table table{min-width:1220px;table-layout:fixed}
+#content .connection-table th:nth-child(1){width:auto}
+#content .connection-table th:nth-child(2){width:180px}
+#content .connection-table th:nth-child(3){width:200px}
+#content .connection-table th:nth-child(4){width:164px}
+#content .connection-table th:nth-child(5){width:112px}
+#content .connection-table th:nth-child(6){width:192px}
+#content .connection-table th:nth-child(7){width:152px}
+#content .connection-table td:nth-child(3){white-space:normal;overflow-wrap:anywhere}
+#content .connection-table td:nth-child(3)>div>span{white-space:normal;overflow:visible}
+#content .connection-table td:nth-child(2),#content .session-table td:nth-child(3){overflow:visible;white-space:nowrap}
+#content .dense-table td:last-child{white-space:nowrap}
+.harness-templates{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-content:start;gap:12px}
+.harness-template{padding:16px;gap:6px;display:grid;grid-template-columns:28px minmax(0,1fr);align-content:start}
+.harness-template>.harness-icon{grid-row:1/3;width:28px;height:28px}
+.harness-template>h2{font-size:15px;line-height:22px}
+.harness-template>code{font-size:12px;color:var(--muted)}
+.harness-template>p,.harness-template>.row-actions{grid-column:1/-1}
+.harness-template .row-actions{padding-top:6px;flex-wrap:wrap}
+.badge.state-completed{color:var(--tone-green);background:var(--tone-green-bg);border-color:var(--tone-green-border)}
+.badge.state-failed{color:var(--tone-red);background:var(--tone-red-bg);border-color:var(--tone-red-border)}
+.badge.state-running,.badge.state-provisioning{color:var(--tone-blue);background:var(--tone-blue-bg);border-color:var(--tone-blue-border)}
+.badge.state-waiting_approval,.badge.state-waiting_authorization,.badge.state-cancelling{color:var(--tone-amber);background:var(--tone-amber-bg);border-color:var(--tone-amber-border)}
+.session-dashboard{flex:none;display:grid;grid-template-columns:180px minmax(0,1fr);gap:24px;padding:16px 0 20px}
+.session-dashboard h2{font-size:14px;font-weight:500;color:var(--muted)}
+.session-dashboard .metric{font-size:30px;line-height:40px;display:block;letter-spacing:-1px}
+.session-dashboard p{font-size:12px;color:var(--muted);margin:4px 0}
+.trend-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.trend-heading button{height:28px;padding:0 10px;font-size:12px}
+.trend-heading button[aria-pressed=true]{background:var(--tone-selected)}
+.session-trend{display:flex;align-items:end;gap:3px;height:66px;padding-top:8px}
+.session-trend span{flex:1;min-width:0;min-height:2px;background:var(--tone-blue);border-radius:2px 2px 0 0}
+.session-lifecycle-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 0}
+.session-lifecycle-actions p{font-size:13px;color:var(--muted);margin:0}
+@media(max-width:600px){.session-dashboard{grid-template-columns:100px minmax(0,1fr);gap:12px}.harness-templates{grid-template-columns:1fr}}
+.trend-scale{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:12px;margin-top:5px}
+@media(max-width:600px){.trend-scale span:nth-child(2){display:none}.session-dashboard p{line-height:1.4}}
+
+#content .cell-primary{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#content .connection-table td:nth-child(5){white-space:normal;overflow:visible}
+#content .connection-table td:nth-child(5) .secondary{white-space:normal}
+#content .harness-table table{min-width:1080px}
+#content .harness-table th:nth-child(1){width:auto}
+#content .harness-table th:nth-child(2){width:300px}
+#content .harness-table th:nth-child(3){width:180px}
+#content .harness-table th:nth-child(4){width:220px}
+#content .harness-table th:nth-child(5){width:100px}
+/* Pagination owns one compact row; generic action spacing must not pad lists. */
+#content .pagination{flex:0 0 auto;display:flex;flex-direction:row;align-items:center;justify-content:flex-end;gap:8px;height:36px;min-height:36px;margin:0;padding:2px 0;flex-wrap:nowrap}
+#content .pagination>a,#content .pagination>button{display:inline-flex;align-items:center;justify-content:center;min-height:32px;height:32px;padding:0 10px;font-size:13px;line-height:20px;white-space:nowrap}
+#app-shell .page-body:has(#content>.pagination){padding-bottom:4px}
+.environment-row{display:grid;grid-template-columns:minmax(100px,1fr) minmax(100px,1.3fr) auto;gap:8px;margin:8px 0;align-items:center}.environment-row input{min-width:0}.access-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.access-row button{margin-left:auto}.environment-rows+button{margin:8px 0}

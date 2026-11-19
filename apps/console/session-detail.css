@@ -1,0 +1,36 @@
+/* Session inspection: one toolbar, one scrolling transcript, one readable measure. */
+#workspace:has(#content.session-detail)>.heading{padding:22px 0 16px;margin:0;border:0}
+#workspace:has(#content.session-detail)>.page-footer{display:none}
+#content.session-detail>.session-view-tabs{display:flex;align-items:center;gap:24px;margin:0;min-height:48px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.session-view-tabs .session-back{margin-right:8px;color:var(--muted);border:0;font-size:13px}
+.session-back::before{content:'‹';margin-right:8px}
+.session-view-tabs .session-context{margin-left:auto;color:var(--muted);font-size:13px}
+.session-view-tabs .session-diagnostics{font-size:13px;border:0;color:var(--muted)}
+#content.session-detail>.conversation{width:100%;max-width:none;margin:0;padding:28px 24px 32px;scroll-padding-block:24px}
+.conversation>.conversation-turn{width:100%;max-width:800px;margin:0 auto;padding:0 0 32px}
+.conversation .run-transcript{gap:24px;padding:0}
+.conversation .run-transcript>.message-user{max-width:85%;min-width:0;padding:12px 16px;border:0;border-radius:12px;background:var(--tone-selected)}
+.conversation .message-user .transcript-heading{margin-bottom:4px}
+.conversation .message-user .message-text{margin:0;font-size:15px;line-height:1.65}
+.conversation .message-assistant{width:100%;padding:0}
+.conversation .message-assistant>.transcript-heading{margin:0 0 8px;gap:10px}
+.conversation .transcript-heading h2{font-size:13px;line-height:20px}
+.conversation .message-assistant .message-text{font-size:16px;line-height:1.7}
+.conversation .message-answer{margin:12px 0 16px}
+.conversation .markdown-body p{margin:0 0 12px}
+.conversation .markdown-body li{margin:6px 0}
+.conversation .markdown-body pre{max-width:100%;overflow:auto}
+.conversation .execution-trace{border:0;margin:0 0 12px;padding:0}
+.conversation .execution-trace>summary{font-size:13px;color:var(--muted);padding:4px 0}
+.conversation .turn-divider{margin:0 0 20px;font-size:12px;justify-content:center}
+.conversation .turn-divider:before,.conversation .turn-divider:after{background:var(--line)}
+#content.session-detail>.initialization{padding-top:24px}
+@media(max-width:640px){
+ #content.session-detail>.session-view-tabs{gap:16px;min-height:44px}
+ .session-view-tabs .session-context{display:none}
+ .session-view-tabs .session-diagnostics{margin-left:auto}
+ .session-view-tabs .session-back{margin-right:0}
+ #content.session-detail>.conversation{padding:20px 8px 24px}
+ .conversation .run-transcript>.message-user{max-width:94%;padding:12px 14px}
+ .conversation .message-assistant .message-text{font-size:15px}
+}

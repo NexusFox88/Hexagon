@@ -1,0 +1,73 @@
+import { localPreviewRequest } from '../../tooling/local-preview-request.js';
+import { randomUUID } from 'node:crypto';
+import Fastify from 'fastify';
+import { describe, it, expect } from 'vitest';
+import { openDatabase } from '../storage/database.js';
+import { Previews } from './previews.js';
+import type { SandboxLifecycle } from './lifecycle.js';
+import { createPreviewServer } from '../../apps/control-plane/preview-server.js';
+
+describe.skipIf(!process.env.TEST_DATABASE_URL)('Isolated preview origins', () => {
+  it('proxies authenticated apps without provider secrets and rejects expired, revoked or closed grants', async () => {
+    const pool = openDatabase(process.env.TEST_DATABASE_URL!);
+    const tenant = `preview-${randomUUID()}`, session = randomUUID();
+    const upstream = Fastify(); let received: any;
+    upstream.get('/', async (request, reply) => { received = request.headers; return reply.header('set-cookie', 'provider-secret=hidden').type('text/html').send('<h1>Real upstream fixture</h1><script src="/app.js"></script>'); });
+    upstream.get('/app.js', async () => 'window.preview=true');
+    upstream.post('/echo', async request => request.body);
+    upstream.get('/redirect', async (_request, reply) => reply.redirect('https://outside.example.test/'));
+    const base = await upstream.listen({ host: '127.0.0.1', port: 0 });
+    const lifecycle = { access: async () => ({ preview: async () => ({ url: base, headers: { 'x-private-provider-token': 'private-fixture' } }) }) } as unknown as SandboxLifecycle;
+    const previews = new Previews(pool, lifecycle);
+    const app = createPreviewServer(previews);
+    try {
+      await pool.query('INSERT INTO tenants(id,name) VALUES($1,$1)', [tenant]);
+      await pool.query("INSERT INTO connections(tenant_id,id,kind,provider,name) VALUES($1,'s','sandbox','fixture','fixture'),($1,'m','model','fixture','fixture')", [tenant]);
+      await pool.query("INSERT INTO agents(tenant_id,id,name,definition) VALUES($1,'a','fixture','{}')", [tenant]);
+      await pool.query("INSERT INTO sessions(tenant_id,id,agent_id,sandbox_connection_id,model_connection_id,definition,sandbox) VALUES($1,$2,'a','s','m','{}','{\"id\":\"fixture-cloud\",\"state\":\"running\"}')", [tenant, session]);
+      await expect(previews.create('another-tenant', session, { port: 3000 })).rejects.toMatchObject({ status: 404 });
+      await expect(previews.create(tenant, session, { port: 8765 })).rejects.toThrow();
+      const grant = await previews.create(tenant, session, { port: 3000 });
+      const url = new URL(grant.url), host = url.host;
+      expect((await app.inject({ url: '/', headers: { host } })).statusCode).toBe(401);
+      const entry = await app.inject({ url: url.pathname + url.search, headers: { host } });
+      const proxyBase = await app.listen({ host: '127.0.0.1', port: 0 });
+      const networkEntry = await localPreviewRequest(url, Number(new URL(proxyBase).port), url.pathname + url.search);
+      expect(networkEntry.status).toBe(302);
+      expect(entry.statusCode).toBe(302); expect(entry.headers.location).toBe('/');
+      const setCookie = String(entry.headers['set-cookie']);
+      expect(setCookie).toContain('HttpOnly'); expect(setCookie).not.toContain('Domain=');
+      const cookie = setCookie.split(';')[0]!;
+      const page = await app.inject({ url: '/', headers: { host, cookie, authorization: 'Bearer should-not-forward' } });
+      expect(page.statusCode).toBe(200); expect(page.body).toContain('Real upstream fixture');
+      expect(page.headers['set-cookie']).toBeUndefined();
+      expect(received['x-private-provider-token']).toBe('private-fixture');
+      expect(received.authorization).toBeUndefined(); expect(received.cookie).toBeUndefined();
+      expect(page.headers['content-security-policy']).toContain("frame-ancestors 'none'");
+      expect((await app.inject({ url: '/app.js', headers: { host, cookie } })).body).toContain('window.preview');
+      expect((await app.inject({ method: 'POST', url: '/echo', headers: { host, cookie, origin: `http://${host}`, 'content-type': 'application/json' }, payload: { value: 'app interaction' } })).json()).toEqual({ value: 'app interaction' });
+      expect((await app.inject({ method: 'POST', url: '/echo', headers: { host, cookie, origin: 'http://another.localhost:8788' }, payload: 'no' })).statusCode).toBe(403);
+      expect((await app.inject({ url: '/redirect', headers: { host, cookie } })).statusCode).toBe(502);
+      const other = await previews.create(tenant, session, { port: 3000 });
+      expect((await app.inject({ url: '/', headers: { host: new URL(other.url).host, cookie } })).statusCode).toBe(401);
+      await expect(previews.revoke('another-tenant', grant.id)).rejects.toMatchObject({ status: 404 });
+      await pool.query("UPDATE preview_grants SET expires_at=now()-interval '1 second' WHERE id=$1", [grant.id]);
+      expect((await app.inject({ url: '/', headers: { host, cookie } })).statusCode).toBe(401);
+      const revoked = new URL(other.url);
+      await previews.revoke(tenant, other.id);
+      expect((await app.inject({ url: revoked.pathname + revoked.search, headers: { host: revoked.host } })).statusCode).toBe(401);
+      const closing = new URL((await previews.create(tenant, session, { port: 3000 })).url);
+      await pool.query("INSERT INTO resource_operations(tenant_id,id,session_id,kind,detail) VALUES($1,'expired',$2,'create',jsonb_build_object('expiry','control_plane','expires_at',(now()-interval '1 second')::text))", [tenant,session]);
+      expect((await app.inject({url:closing.pathname+closing.search,headers:{host:closing.host}})).statusCode).toBe(401);
+      await expect(previews.create(tenant,session,{port:3000})).rejects.toMatchObject({code:'preview_session_unavailable'});
+      await pool.query('DELETE FROM resource_operations WHERE tenant_id=$1',[tenant]);
+      await pool.query("UPDATE sessions SET state='closed' WHERE tenant_id=$1 AND id=$2", [tenant, session]);
+      expect((await app.inject({ url: closing.pathname + closing.search, headers: { host: closing.host } })).statusCode).toBe(401);
+      await expect(previews.create(tenant, session, { port: 3000 })).rejects.toMatchObject({ code: 'preview_session_unavailable' });
+    } finally {
+      await app.close(); await upstream.close();
+      for (const table of ['resource_operations','preview_grants','sessions','agents','connections','tenants']) await pool.query(`DELETE FROM ${table} WHERE ${table === 'tenants' ? 'id' : 'tenant_id'}=$1`, [tenant]);
+      await pool.end();
+    }
+  });
+});

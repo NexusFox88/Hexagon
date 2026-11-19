@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920">
+<rect width="1440" height="920" fill="#F4F5F4"/>
+<rect x="720" width="720" height="920" fill="#0B0D10"/>
+<g font-family="Helvetica,Arial,sans-serif">
+<text x="64" y="68" font-size="14" letter-spacing="2" fill="#6A7078">HEXAGON / CONTROL PLANE</text>
+<text x="784" y="68" font-size="14" letter-spacing="2" fill="#8D959E">ISOLATE. ROUTE. ORCHESTRATE.</text>
+<g transform="translate(216 170) scale(2.25)"><path fill="#111318" d="M16 36 48 17.5V110.5L16 92Z"/>
+<path fill="#111318" d="M80 17.5 112 36V92L80 110.5Z"/>
+<path fill="#111318" d="M56 54H72V74H56Z"/></g>
+<g transform="translate(936 170) scale(2.25)"><path fill="#F4F6F8" d="M16 36 48 17.5V110.5L16 92Z"/>
+<path fill="#F4F6F8" d="M80 17.5 112 36V92L80 110.5Z"/>
+<path fill="#59DCE8" d="M56 54H72V74H56Z"/></g>
+<text x="360" y="525" text-anchor="middle" fill="#111318" font-size="56" font-weight="600">Hexagon</text>
+<text x="1080" y="525" text-anchor="middle" fill="#F4F6F8" font-size="56" font-weight="600">Hexagon</text>
+<text x="360" y="567" text-anchor="middle" fill="#727980" font-size="16">Self-managed Agent fleet control plane</text>
+<text x="1080" y="567" text-anchor="middle" fill="#8D959E" font-size="16">Self-managed Agent fleet control plane</text>
+<path d="M64 667H656M784 667H1376" stroke="#6A7078" stroke-opacity=".22"/>
+<text x="64" y="713" fill="#727980" font-size="12" letter-spacing="1.5">NATIVE SIZE / 16 · 24 · 32 · 48</text>
+<text x="784" y="713" fill="#8D959E" font-size="12" letter-spacing="1.5">SINGLE-COLOR / NO GRADIENTS</text>
+<g transform="translate(64 748) scale(0.125)"><path fill="#111318" d="M16 36 48 17.5V110.5L16 92Z"/>
+<path fill="#111318" d="M80 17.5 112 36V92L80 110.5Z"/>
+<path fill="#111318" d="M56 54H72V74H56Z"/></g><g transform="translate(120 748) scale(0.1875)"><path fill="#111318" d="M16 36 48 17.5V110.5L16 92Z"/>
+<path fill="#111318" d="M80 17.5 112 36V92L80 110.5Z"/>
+<path fill="#111318" d="M56 54H72V74H56Z"/></g><g transform="translate(184 748) scale(0.25)"><path fill="#111318" d="M16 36 48 17.5V110.5L16 92Z"/>
+<path fill="#111318" d="M80 17.5 112 36V92L80 110.5Z"/>
+<path fill="#111318" d="M56 54H72V74H56Z"/></g><g transform="translate(256 748) scale(0.375)"><path fill="#111318" d="M16 36 48 17.5V110.5L16 92Z"/>
+<path fill="#111318" d="M80 17.5 112 36V92L80 110.5Z"/>
+<path fill="#111318" d="M56 54H72V74H56Z"/></g><g transform="translate(784 748) scale(0.125)"><path fill="#F4F6F8" d="M16 36 48 17.5V110.5L16 92Z"/>
+<path fill="#F4F6F8" d="M80 17.5 112 36V92L80 110.5Z"/>
+<path fill="#F4F6F8" d="M56 54H72V74H56Z"/></g><g transform="translate(840 748) scale(0.1875)"><path fill="#F4F6F8" d="M16 36 48 17.5V110.5L16 92Z"/>
+<path fill="#F4F6F8" d="M80 17.5 112 36V92L80 110.5Z"/>
+<path fill="#F4F6F8" d="M56 54H72V74H56Z"/></g><g transform="translate(904 748) scale(0.25)"><path fill="#F4F6F8" d="M16 36 48 17.5V110.5L16 92Z"/>
+<path fill="#F4F6F8" d="M80 17.5 112 36V92L80 110.5Z"/>
+<path fill="#F4F6F8" d="M56 54H72V74H56Z"/></g><g transform="translate(976 748) scale(0.375)"><path fill="#F4F6F8" d="M16 36 48 17.5V110.5L16 92Z"/>
+<path fill="#F4F6F8" d="M80 17.5 112 36V92L80 110.5Z"/>
+<path fill="#F4F6F8" d="M56 54H72V74H56Z"/></g><text x="64" y="866" fill="#727980" font-size="13">01 — Modular H / isolated boundaries + control node</text><text x="784" y="866" fill="#8D959E" font-size="13">BYO Sandbox · Harness · LLM</text></g></svg>

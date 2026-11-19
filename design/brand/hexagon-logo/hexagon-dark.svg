@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+<title id="title">Hexagon</title><desc id="desc">Two isolated execution boundaries and a central control node form a modular H within a hexagonal silhouette.</desc>
+<path fill="#F4F6F8" d="M16 36 48 17.5V110.5L16 92Z"/>
+<path fill="#F4F6F8" d="M80 17.5 112 36V92L80 110.5Z"/>
+<path fill="#F4F6F8" d="M56 54H72V74H56Z"/>
+</svg>

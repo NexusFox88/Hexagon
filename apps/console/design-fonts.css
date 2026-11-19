@@ -1,0 +1,43 @@
+/* Self-hosted fonts for the Console design system; licenses in fonts/design-system. */
+@font-face {
+  font-family: 'Funnel Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/console/fonts/design-system/funnel-display-400.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Funnel Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/console/fonts/design-system/funnel-display-500.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/console/fonts/design-system/ibm-plex-mono-400.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/console/fonts/design-system/ibm-plex-mono-500.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/console/fonts/design-system/inter-400.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/console/fonts/design-system/inter-500.ttf) format('truetype');
+}

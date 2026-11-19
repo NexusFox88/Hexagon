@@ -1,0 +1,530 @@
+{
+  "name": "console-non-color",
+  "version": "1.0.0",
+  "format": "Custom flat token map; not DTCG interchange format.",
+  "description": "可移植的非颜色设计令牌：三字体分工、直角几何、细边框、平面层级与可选字符图形。",
+  "usage": {
+    "defaultProfile": "console",
+    "profiles": {
+      "console": "默认使用无 marketing. 前缀的令牌。",
+      "marketing": "marketing.* 为宽松的展示页面尺寸，仅按需采用，不覆盖 Console 默认值。"
+    },
+    "cssVariableNaming": "将 token 名中的点替换为连字符，并加 --console- 前缀。",
+    "colors": "不定义颜色值；接入宿主现有语义颜色体系。",
+    "fonts": "保留通用字体家族名称；由宿主加载字体资源，未包含字体文件。",
+    "precedence": "宿主产品设计规范、可访问性和国际化约束优先；采用前显式处理冲突。"
+  },
+  "recipes": {
+    "pageTitle": {
+      "fontFamily": "font.family.display",
+      "typographyPrefix": "type.page"
+    },
+    "sectionTitle": {
+      "fontFamily": "font.family.display",
+      "typographyPrefix": "type.section"
+    },
+    "subsectionTitle": {
+      "fontFamily": "font.family.body",
+      "typographyPrefix": "type.subsection"
+    },
+    "bodyAndTable": {
+      "fontFamily": "font.family.body",
+      "typographyPrefix": "type.body"
+    },
+    "controlLabel": {
+      "fontFamily": "font.family.body",
+      "typographyPrefix": "type.label"
+    },
+    "metadata": {
+      "fontFamily": "font.family.body",
+      "typographyPrefix": "type.meta"
+    },
+    "codeAndIdentifiers": {
+      "fontFamily": "font.family.mono",
+      "typographyPrefix": "type.code"
+    },
+    "metric": {
+      "fontFamily": "font.family.display",
+      "typographyPrefix": "type.metric",
+      "numericVariant": "number.variant"
+    }
+  },
+  "rules": [
+    "间距使用 space.*；字符图形使用 art.cell.*，两套网格不可混用。",
+    "控件和表格行的高度按 min-height 使用，允许本地化、换行和缩放导致高度增加。",
+    "中文标题 letter-spacing 使用 0；正文、状态和长说明不强制使用等宽字体。",
+    "数据表格使用流式宽度；marketing.layout.content-max 不限制 Console 工作区。",
+    "面板、控件和浮层使用直角、细边框与平面层级；复用宿主组件的行为和语义。",
+    "保留键盘操作、焦点管理和可见焦点；通过宿主语义 token 提供焦点颜色。",
+    "颜色以外的文字或图标同时表达选中、错误等关键状态。",
+    "移动端侧栏使用可访问抽屉，工具栏允许换行，表格和代码可局部横向滚动。",
+    "普通交互使用 motion.fast；展开折叠可用 motion.standard；避免 transition: all。",
+    "prefers-reduced-motion 下关闭非必要动画、视差和闪烁；所有状态仍可理解。",
+    "字符图形默认仅用于空状态、引导和完成反馈，使用目标产品自己的资源隐喻。",
+    "装饰图形设置 aria-hidden；信息图形提供 DOM 文本；操作使用真实可访问控件。",
+    "字符图形不可替代关键监控、权限提示或操作图标；不可见时暂停动画。",
+    "保留业务逻辑、权限、用户内容和 API 标识；产品文案接入完整的本地化目录。"
+  ],
+  "tokens": {
+    "font.family.display": {
+      "type": "fontFamily",
+      "value": "\"Funnel Display\", \"PingFang SC\", \"Microsoft YaHei\", system-ui, sans-serif"
+    },
+    "font.family.body": {
+      "type": "fontFamily",
+      "value": "Inter, \"PingFang SC\", \"Microsoft YaHei\", system-ui, sans-serif"
+    },
+    "font.family.mono": {
+      "type": "fontFamily",
+      "value": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+    },
+    "marketing.type.hero.size": {
+      "type": "dimension",
+      "value": "56px"
+    },
+    "marketing.type.hero.line-height": {
+      "type": "dimension",
+      "value": "64px"
+    },
+    "marketing.type.hero.weight": {
+      "type": "fontWeight",
+      "value": 500
+    },
+    "marketing.type.hero.tracking": {
+      "type": "dimension",
+      "value": "-0.03em"
+    },
+    "marketing.type.section.size": {
+      "type": "dimension",
+      "value": "40px"
+    },
+    "marketing.type.section.line-height": {
+      "type": "dimension",
+      "value": "48px"
+    },
+    "marketing.type.section.weight": {
+      "type": "fontWeight",
+      "value": 400
+    },
+    "marketing.type.section.tracking": {
+      "type": "dimension",
+      "value": "-0.02em"
+    },
+    "marketing.type.subsection.size": {
+      "type": "dimension",
+      "value": "24px"
+    },
+    "marketing.type.subsection.line-height": {
+      "type": "dimension",
+      "value": "32px"
+    },
+    "marketing.type.subsection.weight": {
+      "type": "fontWeight",
+      "value": 400
+    },
+    "marketing.type.subsection.tracking": {
+      "type": "dimension",
+      "value": "-0.02em"
+    },
+    "marketing.type.body.size": {
+      "type": "dimension",
+      "value": "18px"
+    },
+    "marketing.type.body.line-height": {
+      "type": "dimension",
+      "value": "28px"
+    },
+    "marketing.type.body.weight": {
+      "type": "fontWeight",
+      "value": 400
+    },
+    "marketing.type.body.tracking": {
+      "type": "dimension",
+      "value": "0em"
+    },
+    "marketing.type.caption.size": {
+      "type": "dimension",
+      "value": "14px"
+    },
+    "marketing.type.caption.line-height": {
+      "type": "dimension",
+      "value": "20px"
+    },
+    "marketing.type.caption.weight": {
+      "type": "fontWeight",
+      "value": 400
+    },
+    "marketing.type.caption.tracking": {
+      "type": "dimension",
+      "value": "0em"
+    },
+    "marketing.type.art-caption.size": {
+      "type": "dimension",
+      "value": "12px"
+    },
+    "marketing.type.art-caption.line-height": {
+      "type": "dimension",
+      "value": "16px"
+    },
+    "marketing.type.art-caption.weight": {
+      "type": "fontWeight",
+      "value": 400
+    },
+    "marketing.type.art-caption.tracking": {
+      "type": "dimension",
+      "value": "0em"
+    },
+    "type.page.size": {
+      "type": "dimension",
+      "value": "28px"
+    },
+    "type.page.line-height": {
+      "type": "dimension",
+      "value": "36px"
+    },
+    "type.page.weight": {
+      "type": "fontWeight",
+      "value": 500
+    },
+    "type.page.tracking": {
+      "type": "dimension",
+      "value": "-0.02em"
+    },
+    "type.section.size": {
+      "type": "dimension",
+      "value": "20px"
+    },
+    "type.section.line-height": {
+      "type": "dimension",
+      "value": "28px"
+    },
+    "type.section.weight": {
+      "type": "fontWeight",
+      "value": 400
+    },
+    "type.section.tracking": {
+      "type": "dimension",
+      "value": "-0.02em"
+    },
+    "type.subsection.size": {
+      "type": "dimension",
+      "value": "16px"
+    },
+    "type.subsection.line-height": {
+      "type": "dimension",
+      "value": "24px"
+    },
+    "type.subsection.weight": {
+      "type": "fontWeight",
+      "value": 500
+    },
+    "type.subsection.tracking": {
+      "type": "dimension",
+      "value": "0em"
+    },
+    "type.body.size": {
+      "type": "dimension",
+      "value": "14px"
+    },
+    "type.body.line-height": {
+      "type": "dimension",
+      "value": "22px"
+    },
+    "type.body.weight": {
+      "type": "fontWeight",
+      "value": 400
+    },
+    "type.body.tracking": {
+      "type": "dimension",
+      "value": "0em"
+    },
+    "type.label.size": {
+      "type": "dimension",
+      "value": "13px"
+    },
+    "type.label.line-height": {
+      "type": "dimension",
+      "value": "20px"
+    },
+    "type.label.weight": {
+      "type": "fontWeight",
+      "value": 500
+    },
+    "type.label.tracking": {
+      "type": "dimension",
+      "value": "0em"
+    },
+    "type.meta.size": {
+      "type": "dimension",
+      "value": "12px"
+    },
+    "type.meta.line-height": {
+      "type": "dimension",
+      "value": "18px"
+    },
+    "type.meta.weight": {
+      "type": "fontWeight",
+      "value": 400
+    },
+    "type.meta.tracking": {
+      "type": "dimension",
+      "value": "0em"
+    },
+    "type.code.size": {
+      "type": "dimension",
+      "value": "13px"
+    },
+    "type.code.line-height": {
+      "type": "dimension",
+      "value": "20px"
+    },
+    "type.code.weight": {
+      "type": "fontWeight",
+      "value": 400
+    },
+    "type.code.tracking": {
+      "type": "dimension",
+      "value": "0em"
+    },
+    "type.metric.size": {
+      "type": "dimension",
+      "value": "32px"
+    },
+    "type.metric.line-height": {
+      "type": "dimension",
+      "value": "40px"
+    },
+    "type.metric.weight": {
+      "type": "fontWeight",
+      "value": 400
+    },
+    "type.metric.tracking": {
+      "type": "dimension",
+      "value": "-0.02em"
+    },
+    "space.0": {
+      "type": "dimension",
+      "value": "0px"
+    },
+    "space.4": {
+      "type": "dimension",
+      "value": "4px"
+    },
+    "space.8": {
+      "type": "dimension",
+      "value": "8px"
+    },
+    "space.12": {
+      "type": "dimension",
+      "value": "12px"
+    },
+    "space.16": {
+      "type": "dimension",
+      "value": "16px"
+    },
+    "space.24": {
+      "type": "dimension",
+      "value": "24px"
+    },
+    "space.32": {
+      "type": "dimension",
+      "value": "32px"
+    },
+    "space.48": {
+      "type": "dimension",
+      "value": "48px"
+    },
+    "space.64": {
+      "type": "dimension",
+      "value": "64px"
+    },
+    "space.80": {
+      "type": "dimension",
+      "value": "80px"
+    },
+    "space.96": {
+      "type": "dimension",
+      "value": "96px"
+    },
+    "marketing.layout.content-max": {
+      "type": "dimension",
+      "value": "1248px"
+    },
+    "marketing.layout.gutter.desktop": {
+      "type": "dimension",
+      "value": "48px"
+    },
+    "marketing.layout.gutter.tablet": {
+      "type": "dimension",
+      "value": "32px"
+    },
+    "marketing.layout.gutter.mobile": {
+      "type": "dimension",
+      "value": "16px"
+    },
+    "marketing.layout.section.desktop": {
+      "type": "dimension",
+      "value": "96px"
+    },
+    "marketing.layout.section.tablet": {
+      "type": "dimension",
+      "value": "80px"
+    },
+    "marketing.layout.section.mobile": {
+      "type": "dimension",
+      "value": "64px"
+    },
+    "marketing.control.height": {
+      "type": "dimension",
+      "value": "48px"
+    },
+    "marketing.control.padding-inline": {
+      "type": "dimension",
+      "value": "24px"
+    },
+    "marketing.tab.height": {
+      "type": "dimension",
+      "value": "32px"
+    },
+    "shape.radius": {
+      "type": "dimension",
+      "value": "0px"
+    },
+    "border.width": {
+      "type": "dimension",
+      "value": "1px"
+    },
+    "focus.width": {
+      "type": "dimension",
+      "value": "2px"
+    },
+    "focus.offset": {
+      "type": "dimension",
+      "value": "2px"
+    },
+    "link.underline-offset": {
+      "type": "dimension",
+      "value": "4px"
+    },
+    "art.cell.width": {
+      "type": "dimension",
+      "value": "6px"
+    },
+    "art.cell.height": {
+      "type": "dimension",
+      "value": "12px"
+    },
+    "motion.fast": {
+      "type": "duration",
+      "value": "120ms"
+    },
+    "motion.ease": {
+      "type": "cubicBezier",
+      "value": "cubic-bezier(0.37, 0, 0.63, 1)"
+    },
+    "art.cursor.period": {
+      "type": "duration",
+      "value": "1200ms"
+    },
+    "art.rendering": {
+      "type": "string",
+      "value": "pixelated"
+    },
+    "layout.sidebar.width": {
+      "type": "dimension",
+      "value": "224px"
+    },
+    "layout.topbar.height": {
+      "type": "dimension",
+      "value": "56px"
+    },
+    "layout.page.padding": {
+      "type": "dimension",
+      "value": "32px"
+    },
+    "layout.page.padding-mobile": {
+      "type": "dimension",
+      "value": "16px"
+    },
+    "layout.section.gap": {
+      "type": "dimension",
+      "value": "32px"
+    },
+    "layout.panel.padding": {
+      "type": "dimension",
+      "value": "24px"
+    },
+    "layout.panel.gap": {
+      "type": "dimension",
+      "value": "16px"
+    },
+    "layout.form.max-width": {
+      "type": "dimension",
+      "value": "640px"
+    },
+    "control.height": {
+      "type": "dimension",
+      "value": "36px"
+    },
+    "control.height-compact": {
+      "type": "dimension",
+      "value": "32px"
+    },
+    "control.height-touch": {
+      "type": "dimension",
+      "value": "44px"
+    },
+    "control.padding-inline": {
+      "type": "dimension",
+      "value": "12px"
+    },
+    "control.icon.size": {
+      "type": "dimension",
+      "value": "16px"
+    },
+    "table.row.height": {
+      "type": "dimension",
+      "value": "44px"
+    },
+    "table.row.height-compact": {
+      "type": "dimension",
+      "value": "36px"
+    },
+    "table.header.height": {
+      "type": "dimension",
+      "value": "36px"
+    },
+    "table.cell.padding-inline": {
+      "type": "dimension",
+      "value": "16px"
+    },
+    "motion.standard": {
+      "type": "duration",
+      "value": "180ms"
+    },
+    "art.empty.max-width": {
+      "type": "dimension",
+      "value": "240px"
+    },
+    "art.empty.max-height": {
+      "type": "dimension",
+      "value": "120px"
+    },
+    "elevation.shadow": {
+      "type": "string",
+      "value": "none"
+    },
+    "number.variant": {
+      "type": "string",
+      "value": "tabular-nums"
+    },
+    "breakpoint.mobile-max": {
+      "type": "dimension",
+      "value": "767px"
+    },
+    "breakpoint.tablet-max": {
+      "type": "dimension",
+      "value": "1023px"
+    }
+  }
+}

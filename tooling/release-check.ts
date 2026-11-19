@@ -1,0 +1,14 @@
+import {resolve} from 'node:path';
+import {mkdir,readFile,writeFile} from 'node:fs/promises';
+import {inventory,publicBlockers,verifyProvenance} from './release-audit.js';
+const args=process.argv.slice(2),index=args.indexOf('--artifact');
+if(index>=0&&!args[index+1])throw Error('artifact_directory_required');
+const root=resolve(index>=0?args[index+1]!:'.');
+const audit=await inventory(root,index>=0);audit.findings.push(...await verifyProvenance(root));
+const blockers=await publicBlockers(resolve('.'));
+const lock=JSON.parse(await readFile('package-lock.json','utf8'));
+const dependencies=Object.entries(lock.packages).filter(([path])=>path).map(([path,value])=>{const p=value as any;return {path,version:p.version,license:p.license??'UNRECORDED',integrity:p.integrity??null,dev:!!p.dev};});
+await mkdir('.local/release-audit',{recursive:true,mode:0o700});
+await writeFile('.local/release-audit/latest.json',JSON.stringify({checked_at:new Date().toISOString(),root,...audit,dependencies,public_blockers:blockers,limitations:['pattern scan is not comprehensive secret detection','source evidence media and git history need separate review','dependency license metadata is not a redistribution audit']},null,2),{mode:0o600});
+console.log(JSON.stringify({files:audit.files.length,findings:audit.findings,public_blockers:blockers,report:'.local/release-audit/latest.json'}));
+if(audit.findings.length||(args.includes('--public')&&blockers.length))process.exitCode=1;

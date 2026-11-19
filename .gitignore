@@ -1,0 +1,35 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.local/
+__pycache__/
+.venv/
+*.pyc
+*.egg-info/
+sdk/python/build/
+test-results/
+playwright-report/
+
+# Local credentials and operator-only state
+.DS_Store
+*credential*.txt
+*credentials*.json
+*.pem
+*.p12
+*.pfx
+*.key
+owner.json
+master.key
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+
+# Private browser captures and machine-readable cloud acceptance records
+/testing/evidence/**/*.png
+/testing/evidence/**/*.jpg
+/testing/evidence/**/*.jpeg
+/testing/evidence/**/*.webp
+/testing/evidence/**/*.json

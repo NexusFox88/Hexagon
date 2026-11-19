@@ -1,0 +1,80 @@
+/* Semantic colors shared by every Console surface. */
+:root{--tone-surface:#fff;--tone-canvas:#fafafa;--tone-ink:#171717;--tone-muted:#555;--tone-secondary:#888;--tone-border:#e5e5e5;--tone-border-strong:#aaa;--tone-hover:#f2f2f2;--tone-selected:#ededed;--tone-blue:#0070f3;--tone-blue-bg:#edf5ff;--tone-blue-border:#cce0fa;--tone-green:#18743c;--tone-green-bg:#edf8f0;--tone-green-border:#cdebd6;--tone-red:#b4232b;--tone-red-bg:#fff1f2;--tone-red-border:#f3cdd0;--tone-amber:#946000;--tone-amber-bg:#fff8e6;--tone-amber-border:#f1dfaf;color-scheme:light}
+:root[data-theme=dark]{--tone-surface:#111111;--tone-canvas:#0a0a0a;--tone-ink:#ededed;--tone-muted:#a1a1a1;--tone-secondary:#999999;--tone-border:#292929;--tone-border-strong:#666666;--tone-hover:#1a1a1a;--tone-selected:#252525;--tone-blue:#52a8ff;--tone-blue-bg:#10253d;--tone-blue-border:#21466e;--tone-green:#62c98b;--tone-green-bg:#102b1d;--tone-green-border:#245536;--tone-red:#ff858a;--tone-red-bg:#35171b;--tone-red-border:#693039;--tone-amber:#f2c166;--tone-amber-bg:#302512;--tone-amber-border:#665027;color-scheme:dark}
+.primary,.workspace-avatar,.skip-link,.journey-hero .button-link{color:var(--tone-surface)}
+.danger-primary{color:#fff;background:#b4232b;border-color:#b4232b}
+/* Every brand surface, including catalog choices, shares the same image treatment.
+   Colored/raster artwork retains its original palette on a neutral light backing. */
+:root[data-theme=dark] img[src^="/console/brands/"]{background:#fff;border-radius:3px;box-shadow:0 0 0 2px #fff;color-scheme:light}
+/* Monochrome marks invert as a whole; never invert colored artwork. */
+.rail-preferences{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 8px 12px}
+.rail-preferences>div{min-width:0}.rail-preferences span{font-size:12px;color:var(--muted)}.rail-preferences .select-trigger{padding:0 6px;font-size:13px;background:transparent;border-color:transparent}.rail-preferences .select-options{min-width:130px}
+#rail-locale{padding:0;gap:0}#login-preferences{display:flex;gap:12px;justify-content:center;margin-bottom:24px}#login-preferences hx-select{width:150px}
+@media(max-width:760px){.rail-preferences{display:none}.rail:has(#main-navigation.mobile-open)>.rail-preferences{display:grid;grid-column:1/-1;max-width:340px}.rail-preferences #rail-locale{display:block}}
+
+button{background:var(--surface)}button.primary{background:var(--ink);color:var(--surface)}button.primary:hover{background:var(--tone-muted)}button.ghost{background:transparent}button.danger-primary{background:#b4232b;color:#fff}
+
+:root[data-theme=dark] img[src$="/brands/airtable.svg"],
+:root[data-theme=dark] img[src$="/brands/asana.svg"],
+:root[data-theme=dark] img[src$="/brands/brave-search.svg"],
+:root[data-theme=dark] img[src$="/brands/calendly.svg"],
+:root[data-theme=dark] img[src$="/brands/claude.svg"],
+:root[data-theme=dark] img[src$="/brands/clickup.svg"],
+:root[data-theme=dark] img[src$="/brands/deepl.svg"],
+:root[data-theme=dark] img[src$="/brands/deepseek.svg"],
+:root[data-theme=dark] img[src$="/brands/discord.svg"],
+:root[data-theme=dark] img[src$="/brands/dropbox.svg"],
+:root[data-theme=dark] img[src$="/brands/fly-machines.svg"],
+:root[data-theme=dark] img[src$="/brands/github.svg"],
+:root[data-theme=dark] img[src$="/brands/gitlab.svg"],
+:root[data-theme=dark] img[src$="/brands/gmail.svg"],
+:root[data-theme=dark] img[src$="/brands/google-calendar.svg"],
+:root[data-theme=dark] img[src$="/brands/google-contacts.svg"],
+:root[data-theme=dark] img[src$="/brands/google-drive.svg"],
+:root[data-theme=dark] img[src$="/brands/google-sheets.svg"],
+:root[data-theme=dark] img[src$="/brands/google-tasks.svg"],
+:root[data-theme=dark] img[src$="/brands/http-json.svg"],
+:root[data-theme=dark] img[src$="/brands/hubspot.svg"],
+:root[data-theme=dark] img[src$="/brands/linear.svg"],
+:root[data-theme=dark] img[src$="/brands/mcp-remote.svg"],
+:root[data-theme=dark] img[src$="/brands/microsoft-teams.svg"],
+:root[data-theme=dark] img[src$="/brands/microsoft-todo.svg"],
+:root[data-theme=dark] img[src$="/brands/modal.svg"],
+:root[data-theme=dark] img[src$="/brands/notion.svg"],
+:root[data-theme=dark] img[src$="/brands/onedrive.svg"],
+:root[data-theme=dark] img[src$="/brands/openai.svg"],
+:root[data-theme=dark] img[src$="/brands/opencode.svg"],
+:root[data-theme=dark] img[src$="/brands/outlook-calendar.svg"],
+:root[data-theme=dark] img[src$="/brands/outlook.svg"],
+:root[data-theme=dark] img[src$="/brands/pi.svg"],
+:root[data-theme=dark] img[src$="/brands/python.svg"],
+:root[data-theme=dark] img[src$="/brands/salesforce.svg"],
+:root[data-theme=dark] img[src$="/brands/slack.svg"],
+:root[data-theme=dark] img[src$="/brands/sprites.svg"],
+:root[data-theme=dark] img[src$="/brands/telegram.svg"],
+:root[data-theme=dark] img[src$="/brands/todoist.svg"],
+:root[data-theme=dark] img[src$="/brands/trello.svg"],
+:root[data-theme=dark] img[src$="/brands/upstash.svg"],
+:root[data-theme=dark] img[src$="/brands/vercel.svg"]{filter:brightness(0) invert(1);background:transparent;box-shadow:none}
+
+/* Sidebar preferences are a single disclosure, not two cramped columns. */
+.rail-settings{position:relative;margin-top:auto;padding:8px}
+#preferences-toggle{width:100%;justify-content:space-between;height:36px;color:var(--ink)}
+#preferences-panel{position:absolute;bottom:calc(100% + 4px);left:8px;width:260px;max-width:calc(100vw - 32px);padding:8px;background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 30px #0003;z-index:45}
+#preferences-panel[hidden]{display:none}
+#preferences-panel .rail-preferences{display:flex;flex-direction:column;gap:12px;padding:8px}
+#preferences-panel .rail-preferences>div{display:grid;grid-template-columns:1fr;gap:6px}
+#preferences-panel .select-trigger{height:36px;border:1px solid var(--line);padding:0 10px;background:var(--surface)}
+#preferences-panel .settings-entry{margin:8px 0 0;padding:10px 8px;border-top:1px solid var(--line);display:flex;justify-content:space-between}
+.rail-bottom{margin-top:0}
+@media(max-width:760px){.rail-settings{display:none}.rail:has(#main-navigation.mobile-open) .rail-settings{display:block;grid-column:1/-1}}
+#preferences-panel{width:calc(100% - 16px);max-height:calc(100dvh - 130px);overflow-y:auto;overscroll-behavior:contain}
+#preferences-panel hx-select,#preferences-panel #locale{width:100%;min-width:0}
+#preferences-panel .select-options{position:static;min-width:0;margin-top:4px;box-shadow:none;max-height:140px}
+
+/* First-party mark uses the supplied artwork for the resolved Console theme. */
+.brand-mark{display:inline-flex;width:28px;height:28px;flex:0 0 28px}
+.brand-mark img{display:block;width:28px;height:28px;object-fit:contain}
+.brand-mark .brand-mark-dark{display:none}
+:root[data-theme=dark] .brand-mark-light{display:none}
+:root[data-theme=dark] .brand-mark-dark{display:block}

@@ -1,0 +1,9 @@
+import assert from 'node:assert/strict';
+/** Real copy plus simulated permission failure; never changes server data. */
+export async function verifyListCopy(page){
+await page.reload();await page.goto('http://127.0.0.1:8787/console/#models');await page.waitForSelector('.list-value-copy');
+await page.evaluate(()=>{window.__copyOriginal=navigator.clipboard.writeText.bind(navigator.clipboard);window.__copyExpected=document.querySelector('.list-value-text').textContent;navigator.clipboard.writeText=async value=>{window.__copyActual=value;return window.__copyOriginal(value)};});
+await page.press('.list-value-copy >> nth=0','Enter');await page.waitForFunction(()=>window.__copyActual===window.__copyExpected);await page.waitForFunction(()=>document.querySelector('.list-value-copy svg path').getAttribute('d')==='M3 8l3 3 7-7');
+await page.evaluate(()=>{navigator.clipboard.writeText=async()=>{throw new DOMException('UI test','NotAllowedError')};});await page.press('.list-value-copy >> nth=0','Enter');await page.waitForSelector('#list-value-dialog:not([hidden])');await page.waitForFunction(()=>{const e=document.querySelector('.list-full-value');return e.selectionEnd-e.selectionStart===e.value.length});const fallback=await page.evaluate(()=>{const e=document.querySelector('.list-full-value');return {equal:e.value===window.__copyExpected,selected:e.selectionEnd-e.selectionStart===e.value.length,error:document.querySelector('#list-value-dialog [role=status]').textContent.length>0};});assert(fallback.equal&&fallback.selected&&fallback.error);await page.keyboard.press('Escape');assert(await page.evaluate(()=>document.activeElement.classList.contains('list-value-copy')));await page.evaluate(()=>{navigator.clipboard.writeText=window.__copyOriginal;delete window.__copyOriginal;delete window.__copyActual;delete window.__copyExpected});
+return {exactClipboardWrite:true,fallback,focusRestored:true};
+}

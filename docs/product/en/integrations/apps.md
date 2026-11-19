@@ -1,0 +1,802 @@
+# Connect your application accounts
+
+Application connectors expose fixed third-party operations through ToolBroker. Each Connection identifies a tenant-owned account and selected operations, not the entire upstream API. Original credentials stay in the control plane; Sessions bind authority to use them.
+
+## Create and select operations
+
+This read-only Notion example requires a dedicated test page shared with the integration and appropriate comment-read capability. Creation does not search/read content; verification requests account identity. Supply private environment configuration; see [self-hosting](../operate/self-host.md) for hosted initialization. Retain/reuse the returned ID.
+
+```python
+import os
+from hexagon import Hexagon
+client = Hexagon.local()
+connection = client.create_connection(
+    kind="tool", provider="notion", name="Project notes",
+    credential=os.environ["NOTION_TOKEN"],
+    config={"authentication":"api_key", "operations":["search","read_blocks","read_comments"]},
+)
+checked = client.validate_connection(connection["id"])
+if checked["status"] != "ready":
+    raise RuntimeError("Inspect account and permission diagnostics")
+client.update_connection(connection["id"], enabled=True)
+```
+
+```typescript
+import { Hexagon } from '@hexagon/agent-sdk';
+const client = await Hexagon.local();
+const credential = process.env.NOTION_TOKEN;
+if (!credential) throw new Error('Set NOTION_TOKEN');
+const connection = await client.createConnection({
+  kind: 'tool', provider: 'notion', name: 'Project notes', credential,
+  config: { authentication: 'api_key', operations: ['search','read_blocks','read_comments'] },
+});
+const checked = await client.validateConnection(connection.id);
+if (checked.status !== 'ready') throw new Error('Inspect account and permission diagnostics');
+await client.updateConnection(connection.id, { enabled: true });
+```
+
+Bind connection.id as `tools: {notes: connection_id}` following [Tools](../build/tools.md), with a compatible Harness. Explicitly request test-page content/comments and inspect actual Tool results, pagination, and children rather than only the final answer. Run each SDK independently and close its Session.
+
+Default selection includes non-write operations. Explicit operations must use listed IDs. All writes require approval and replay=never; reads may still incur usage. Authorization, selected operations, provider scope, and resource sharing are separate requirements.
+
+## OAuth and permission evidence
+
+OAuth-capable apps require your deployment/tenant client registration and exact callback URL before Console account consent. No mandatory shared authorization SaaS is provided. Google services use separate connections/consent; Microsoft uses delegated permissions. Credential HTTPS ingress is not an OAuth management callback.
+
+Inspect allowed_operations, scope_source, permission_checks, and permission_coverage. Local selection is not a provider scope grant. Partial/unknown is not complete verification. Verification performs no writes; resource sharing and field permissions can still affect real calls.
+
+Refresh differs from reauthorization. Unknown refresh outcomes require reauthorization instead of blindly reusing a possibly rotated refresh token. Account/permission changes invalidate old policy; use a new Session. Disconnect stops local Hexagon use, not provider-side revocation, and cannot retract dispatched requests. See [authorization](../build/tool-authorization.md).
+
+## Application directory
+
+Operations, required arguments, and write classification below were extracted from the current registry. The application catalog API `GET /v1/applications` provides full schema types/options/constraints. Examples refer to Session requests against authorized test objects, not unapproved messages to real recipients.
+
+[Notion](#notion) · [Todoist](#todoist) · [Google Calendar](#google-calendar) · [Exa](#exa) · [Tavily](#tavily) · [Gmail](#gmail) · [Google Drive / Docs](#google-drive) · [GitHub](#github) · [Slack](#slack) · [Linear](#linear) · [DeepL](#deepl) · [Microsoft Outlook](#outlook) · [Microsoft Outlook Calendar](#outlook-calendar) · [Microsoft OneDrive](#onedrive) · [Microsoft To Do](#microsoft-todo) · [Microsoft Teams](#microsoft-teams) · [Google Sheets](#google-sheets) · [Google Tasks](#google-tasks) · [Google Contacts](#google-contacts) · [Asana](#asana) · [Airtable](#airtable) · [ClickUp](#clickup) · [Trello](#trello) · [Discord](#discord) · [Telegram Bot](#telegram) · [Dropbox](#dropbox) · [HubSpot](#hubspot) · [Calendly](#calendly) · [Firecrawl](#firecrawl) · [Brave Search](#brave-search) · [Apify](#apify) · [GitLab](#gitlab) · [Readwise Reader](#readwise) · [飞书 / Feishu](#feishu) · [Lark](#lark) · [Salesforce](#salesforce) · [Attio](#attio)
+
+<a id="notion"></a>
+
+### Notion (`notion`)
+
+**Configuration/auth:** Integration/PAT Token; OAuth supported.
+
+**Permissions/limits:** Share target pages with the integration. Properties are not content; read_blocks reads direct children, requiring recursion/pagination. Comments need comment-read permission.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `search` | — | Not required by default | Search accessible Notion pages by title. Results are limited to granted content. |
+| `read_page` | `page_id` | Not required by default | Read page properties. Use read_blocks for page content. |
+| `read_blocks` | `block_id` | Not required by default | Read direct child blocks; follow child IDs and pagination for complete content. |
+| `read_comments` | `block_id` | Not required by default | Read accessible comments attached to a page or block; requires comment-read capability. |
+| `create_page` | `parent_page_id`, `title` | Required | Create a child page with a title and plain text paragraph. |
+| `append_text` | `page_id`, `text` | Required | Append a paragraph to an existing page. |
+| `update_paragraph` | `block_id`, `text` | Required | Replace the text of a paragraph block. |
+| `add_comment` | `page_id`, `text` | Required | Add a comment to a page. |
+
+**Example/acceptance:** Select `search`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="todoist"></a>
+
+### Todoist (`todoist`)
+
+**Configuration/auth:** API Token; OAuth supported.
+
+**Permissions/limits:** Account access limits projects/tasks; completion is a write. Read a dedicated test task before testing completion.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_projects` | — | Not required by default | List accessible Todoist projects. |
+| `list_tasks` | — | Not required by default | List tasks, optionally within one project. Follow next_cursor for more results. |
+| `get_task` | `task_id` | Not required by default | Read one task. |
+| `create_task` | `content` | Required | Create a Todoist task; without project_id it goes to Inbox. |
+| `update_task` | `task_id` | Required | Update a task title, description, priority or due date. |
+| `complete_task` | `task_id` | Required | Complete a task. |
+
+**Example/acceptance:** Select `list_projects`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="google-calendar"></a>
+
+### Google Calendar (`google-calendar`)
+
+**Configuration/auth:** Google access token; OAuth supported.
+
+**Permissions/limits:** Calendar sharing and OAuth scopes both apply. Free/busy is not full event content; confirm calendar/event IDs before updates.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_calendars` | — | Not required by default | List calendars available to this Google account. |
+| `list_events` | — | Not required by default | List calendar events. Use ISO date-times with timezone offsets for time bounds. |
+| `free_busy` | `timeMin`, `timeMax`, `calendar_ids` | Not required by default | Check busy intervals for specified calendars. |
+| `create_event` | `summary`, `start`, `end` | Required | Create a calendar event. Attendees may receive invitations; confirm the full event. |
+| `update_event` | `event_id` | Required | Update an existing event and notify attendees. |
+
+**Example/acceptance:** Select `list_calendars`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="exa"></a>
+
+### Exa (`exa`)
+
+**Configuration/auth:** API key; no OAuth flow exposed.
+
+**Permissions/limits:** Verification searches and may incur usage. Search and contents are distinct; the full Exa API is not exposed.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `search` | `query` | Not required by default | Search the web with Exa and return source URLs and content highlights. |
+| `contents` | `urls` | Not required by default | Read highlights from known web URLs. |
+
+**Example/acceptance:** Select `search`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** [Historical dual-SDK cloud calls](../../../../testing/evidence/2026-11-16-applications.md) cover the recorded search/translation operations, not every listed capability.
+
+<a id="tavily"></a>
+
+### Tavily (`tavily`)
+
+**Configuration/auth:** API key; no OAuth flow exposed.
+
+**Permissions/limits:** Select search and URL extraction separately. Web content is untrusted data, not system instructions.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `search` | `query` | Not required by default | Search the web for a query and return source URLs and snippets. |
+| `extract` | `urls` | Not required by default | Extract content from known public URLs. |
+
+**Example/acceptance:** Select `search`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** [Historical dual-SDK cloud calls](../../../../testing/evidence/2026-11-16-applications.md) cover the recorded search/translation operations, not every listed capability.
+
+<a id="gmail"></a>
+
+### Gmail (`gmail`)
+
+**Configuration/auth:** Google access token; OAuth supported.
+
+**Permissions/limits:** Drafting and sending are separate writes. Start with drafts; a successful draft is not a sent message.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `search` | — | Not required by default | Search Gmail messages using Gmail query syntax. |
+| `read_message` | `message_id` | Not required by default | Read a Gmail message including encoded MIME payload. |
+| `create_draft` | `to`, `subject`, `body` | Required | Create an email draft without sending it. |
+| `send_message` | `to`, `subject`, `body` | Required | Send an email to the specified recipient. Confirm recipient, subject and body. |
+
+**Example/acceptance:** Select `search`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="google-drive"></a>
+
+### Google Drive / Docs (`google-drive`)
+
+**Configuration/auth:** Google access token; OAuth supported.
+
+**Permissions/limits:** File search differs from Google Docs reading; this is not generic binary download or arbitrary-format editing.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `search_files` | — | Not required by default | Search Drive using its query syntax; returns only files accessible to this account. |
+| `read_document` | `document_id` | Not required by default | Read a native Google Doc by ID. |
+| `create_document` | `title` | Required | Create an empty Google Doc with a title. |
+| `append_text` | `document_id`, `text` | Required | Append text to a Google Doc. |
+
+**Example/acceptance:** Select `search_files`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="github"></a>
+
+### GitHub (`github`)
+
+**Configuration/auth:** PAT; OAuth supported.
+
+**Permissions/limits:** Repository visibility and Token permissions apply. OAuth App is supported, not GitHub App installation auth.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_repositories` | — | Not required by default | List repositories accessible to the authenticated account. |
+| `list_issues` | `owner`, `repo` | Not required by default | List repository issues and pull requests. |
+| `read_issue` | `owner`, `repo`, `issue_number` | Not required by default | Read an issue or pull request. |
+| `read_file` | `owner`, `repo`, `path` | Not required by default | Read a repository file; content may be base64 encoded. |
+| `create_issue` | `owner`, `repo`, `title` | Required | Create a repository issue. |
+| `add_comment` | `owner`, `repo`, `issue_number`, `body` | Required | Post a comment to an issue or pull request. |
+
+**Example/acceptance:** Select `list_repositories`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="slack"></a>
+
+### Slack (`slack`)
+
+**Configuration/auth:** Bot token; OAuth supported.
+
+**Permissions/limits:** The bot needs conversation access. History/threads are distinct; no message listener or channel hosting is provided.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_channels` | — | Not required by default | List channels visible to the connected Slack bot. |
+| `read_history` | `channel` | Not required by default | Read channel messages visible to this connection. |
+| `read_thread` | `channel`, `ts` | Not required by default | Read replies where the connected token has access; bot access varies by conversation type. |
+| `post_message` | `channel`, `text` | Required | Send a message as the connected Slack app. Confirm channel and text. |
+
+**Example/acceptance:** Select `list_channels`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="linear"></a>
+
+### Linear (`linear`)
+
+**Configuration/auth:** Personal API key; OAuth supported.
+
+**Permissions/limits:** GraphQL mutation errors may follow side effects. Reconcile even when data=null; do not automatically retry.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_teams` | — | Not required by default | List accessible Linear teams. |
+| `list_issues` | — | Not required by default | List Linear issues. Use endCursor to request another page. |
+| `read_issue` | `issue_id` | Not required by default | Read one Linear issue by ID or identifier. |
+| `create_issue` | `team_id`, `title` | Required | Create a Linear issue in a team. |
+| `update_issue` | `issue_id` | Required | Update a Linear issue title or description. |
+| `add_comment` | `issue_id`, `body` | Required | Add a comment to a Linear issue. |
+
+**Example/acceptance:** Select `list_teams`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="deepl"></a>
+
+### DeepL (`deepl`)
+
+**Configuration/auth:** API key; no OAuth flow exposed.
+
+**Permissions/limits:** Set config.region to free or paid to match the key. Translation is classified non-write but can consume quota.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `translate_text` | `text`, `target_lang` | Not required by default | Translate plain text with DeepL; target_lang is a language code such as EN-US or ZH. |
+
+**Example/acceptance:** Select `translate_text`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** [Historical dual-SDK cloud calls](../../../../testing/evidence/2026-11-16-applications.md) cover the recorded search/translation operations, not every listed capability.
+
+<a id="outlook"></a>
+
+### Microsoft Outlook (`outlook`)
+
+**Configuration/auth:** Microsoft delegated access token; OAuth supported.
+
+**Permissions/limits:** Draft/send are separately selected; listed mail operations do not provide mailbox synchronization.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_messages` | — | Not required by default | List mail messages, one page at a time. Continue using @odata.nextLink as next_page_url. |
+| `read_message` | `message_id` | Not required by default | Read an Outlook message by ID. |
+| `create_draft` | `to`, `subject`, `text` | Required | Create a plain-text Outlook draft; does not send it. |
+| `send_message` | `to`, `subject`, `text` | Required | Send an email. Confirm recipient, subject and text before approval. |
+
+**Example/acceptance:** Select `list_messages`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="outlook-calendar"></a>
+
+### Microsoft Outlook Calendar (`outlook-calendar`)
+
+**Configuration/auth:** Microsoft delegated access token; OAuth supported.
+
+**Permissions/limits:** Verify calendar/event ownership. Create/update are writes, not full calendar synchronization.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_calendars` | — | Not required by default | List Outlook calendars. Follow @odata.nextLink with next_page_url. |
+| `list_events` | `calendar_id` | Not required by default | List events in a calendar, one page at a time. |
+| `create_event` | `calendar_id`, `subject`, `start`, `end` | Required | Create an Outlook event with explicit local date-time and time zone. |
+| `update_event` | `event_id` | Required | Update an event; existing attendees may receive updates. |
+
+**Example/acceptance:** Select `list_calendars`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="onedrive"></a>
+
+### Microsoft OneDrive (`onedrive`)
+
+**Configuration/auth:** Microsoft delegated access token; OAuth supported.
+
+**Permissions/limits:** Listing, metadata, and rename do not imply arbitrary content editing.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_files` | — | Not required by default | List folder children (root by default); follow @odata.nextLink as next_page_url. Metadata only. |
+| `read_file` | `item_id` | Not required by default | Read file or folder metadata, not binary file contents. |
+| `create_folder` | `name` | Required | Create a folder under the selected parent; conflicts fail. |
+| `rename_file` | `item_id`, `name` | Required | Rename a file or folder. |
+
+**Example/acceptance:** Select `list_files`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="microsoft-todo"></a>
+
+### Microsoft To Do (`microsoft-todo`)
+
+**Configuration/auth:** Microsoft delegated access token; OAuth supported.
+
+**Permissions/limits:** Choose the task list before operating on a task. Completion changes remote state.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_task_lists` | — | Not required by default | List Microsoft To Do lists; follow @odata.nextLink. |
+| `list_tasks` | `list_id` | Not required by default | List tasks in a Microsoft To Do list. |
+| `create_task` | `list_id`, `title` | Required | Create a To Do task with optional plain-text notes. |
+| `complete_task` | `list_id`, `task_id` | Required | Mark a To Do task completed. |
+
+**Example/acceptance:** Select `list_task_lists`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="microsoft-teams"></a>
+
+### Microsoft Teams (`microsoft-teams`)
+
+**Configuration/auth:** Microsoft delegated access token; OAuth supported.
+
+**Permissions/limits:** Teams/channels/chats differ. Sending depends on user/organization permissions; no bot hosting is provided.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_teams` | — | Not required by default | List joined Teams; organization consent may be required. |
+| `list_channels` | `team_id` | Not required by default | List channels in a joined team. |
+| `list_chats` | — | Not required by default | List chats visible to the signed-in user; follow @odata.nextLink. |
+| `read_history` | `chat_id` | Not required by default | Read chat messages with delegated user permission. |
+| `send_message` | `chat_id`, `text` | Required | Send a plain-text message to an existing chat as the authorized user. |
+
+**Example/acceptance:** Select `list_teams`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="google-sheets"></a>
+
+### Google Sheets (`google-sheets`)
+
+**Configuration/auth:** Google access token; OAuth supported.
+
+**Permissions/limits:** Specify spreadsheet/range. Append and update differ; discovery/range reads do not imply full exports.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `search_spreadsheets` | — | Not required by default | List accessible Sheets files. Follow nextPageToken. |
+| `read_spreadsheet` | `spreadsheet_id` | Not required by default | Read spreadsheet and tab metadata without cell data. |
+| `read_values` | `spreadsheet_id`, `range` | Not required by default | Read cell values in an A1 range such as Sheet1!A1:D20. |
+| `append_values` | `spreadsheet_id`, `range`, `values` | Required | Append rows after a table. RAW is default; USER_ENTERED interprets formulas. |
+| `update_values` | `spreadsheet_id`, `range`, `values` | Required | Overwrite cells in an A1 range; RAW is default. |
+| `create_spreadsheet` | `title` | Required | Create a spreadsheet with a title. |
+
+**Example/acceptance:** Select `search_spreadsheets`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="google-tasks"></a>
+
+### Google Tasks (`google-tasks`)
+
+**Configuration/auth:** Google access token; OAuth supported.
+
+**Permissions/limits:** Identify list and task separately; completion is a remote write.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_task_lists` | — | Not required by default | List task lists; follow nextPageToken. |
+| `list_tasks` | `list_id` | Not required by default | List tasks including completed ones when requested. |
+| `create_task` | `list_id`, `title` | Required | Create a task. Due dates are calendar dates; parent and previous IDs control placement. |
+| `complete_task` | `list_id`, `task_id` | Required | Mark a Google task completed. |
+
+**Example/acceptance:** Select `list_task_lists`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="google-contacts"></a>
+
+### Google Contacts (`google-contacts`)
+
+**Configuration/auth:** Google access token; OAuth supported.
+
+**Permissions/limits:** Name updates require the matching etag; do not overwrite with stale data. Not every contact field is editable.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_contacts` | — | Not required by default | List personal contacts with names, emails and phone numbers; follow nextPageToken. |
+| `read_contact` | `person_id` | Not required by default | Read one contact. Supply the ID after people/ from resourceName. |
+| `create_contact` | `given_name` | Required | Create a personal contact with name and optional email and phone. |
+| `update_contact` | `person_id`, `etag`, `given_name` | Required | Replace contact names using the latest etag from read_contact. Protects concurrent changes. |
+
+**Example/acceptance:** Select `list_contacts`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="asana"></a>
+
+### Asana (`asana`)
+
+**Configuration/auth:** PAT; OAuth supported.
+
+**Permissions/limits:** Workspace/project/task permissions apply separately; comments are writes.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_workspaces` | — | Not required by default | List accessible Asana workspaces; follow next_page.offset. |
+| `list_projects` | `workspace_id` | Not required by default | List workspace projects, one page at a time. |
+| `list_tasks` | `project_id` | Not required by default | List tasks in a project; use next_page.offset for pagination. |
+| `get_task` | `task_id` | Not required by default | Read a task and its details. |
+| `create_task` | `project_id`, `name` | Required | Create a task in a project with optional notes and due date. |
+| `update_task` | `task_id` | Required | Update task fields, including completion status. |
+| `add_comment` | `task_id`, `text` | Required | Add a plain-text comment to a task. |
+
+**Example/acceptance:** Select `list_workspaces`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="airtable"></a>
+
+### Airtable (`airtable`)
+
+**Configuration/auth:** Personal access token; no OAuth flow exposed.
+
+**Permissions/limits:** Match base access and table/field schema. Listing bases does not prove all records writable.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_bases` | — | Not required by default | List bases granted to the personal access token; follow offset. |
+| `read_base_schema` | `base_id` | Not required by default | Read tables and field definitions before creating or updating records. |
+| `list_records` | `base_id`, `table_id` | Not required by default | List records with optional formula/view filter; follow offset. |
+| `read_record` | `base_id`, `table_id`, `record_id` | Not required by default | Read one record by ID. |
+| `create_record` | `base_id`, `table_id`, `fields` | Required | Create a record with a field-name/value map. Linked fields take arrays of record IDs. |
+| `update_record` | `base_id`, `table_id`, `record_id`, `fields` | Required | Update selected fields of a record. |
+
+**Example/acceptance:** Select `list_bases`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="clickup"></a>
+
+### ClickUp (`clickup`)
+
+**Configuration/auth:** Personal access token; no OAuth flow exposed.
+
+**Permissions/limits:** Current list discovery covers folderless lists, not every nested project.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_workspaces` | — | Not required by default | List authorized ClickUp workspaces (called teams in API v2). |
+| `list_spaces` | `team_id` | Not required by default | List spaces in a workspace. |
+| `list_lists` | `space_id` | Not required by default | List folderless task lists in a space. |
+| `list_tasks` | `list_id` | Not required by default | List tasks in a list. Page numbers start at zero. |
+| `get_task` | `task_id` | Not required by default | Read a ClickUp task. |
+| `create_task` | `list_id`, `name` | Required | Create a task in a list. due_date is a Unix timestamp in milliseconds. |
+| `update_task` | `task_id` | Required | Update a task name, description or status. |
+| `add_comment` | `task_id`, `text` | Required | Post a comment to a task. |
+
+**Example/acceptance:** Select `list_workspaces`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="trello"></a>
+
+### Trello (`trello`)
+
+**Configuration/auth:** JSON: api_key + token; no OAuth flow exposed.
+
+credential is a JSON string: `{"api_key": "<private value>", "token": "<private value>"}`.
+
+**Permissions/limits:** Use a JSON-string credential; board/list/card IDs are not interchangeable.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_boards` | — | Not required by default | List boards visible to the authorized Trello member. |
+| `list_lists` | `board_id` | Not required by default | List lists in a board. |
+| `list_cards` | `list_id` | Not required by default | List cards in a list. |
+| `read_card` | `card_id` | Not required by default | Read a card by ID. |
+| `create_card` | `list_id`, `name` | Required | Create a card in a list with optional description. |
+| `update_card` | `card_id` | Required | Update or archive a card. |
+| `add_comment` | `card_id`, `text` | Required | Post a comment on a card. |
+
+**Example/acceptance:** Select `list_boards`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="discord"></a>
+
+### Discord (`discord`)
+
+**Configuration/auth:** Bot token; no OAuth flow exposed.
+
+**Permissions/limits:** Bot server/channel permissions apply. Editing is constrained by message ownership; no user login or gateway listener.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_servers` | — | Not required by default | List guilds accessible to the connected bot. Follow the last ID with after. |
+| `list_channels` | `guild_id` | Not required by default | List channels in a guild accessible to the bot. |
+| `read_history` | `channel_id` | Not required by default | Read channel messages. Requires history permission and applicable message-content intent. |
+| `send_message` | `channel_id`, `text` | Required | Send a bot message. Mentions are disabled to prevent accidental notifications. |
+| `edit_message` | `channel_id`, `message_id`, `text` | Required | Edit a message owned by this bot; mentions remain disabled. |
+
+**Example/acceptance:** Select `list_servers`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="telegram"></a>
+
+### Telegram Bot (`telegram`)
+
+**Configuration/auth:** Bot token; no OAuth flow exposed.
+
+**Permissions/limits:** read_chat is not arbitrary history access. Bot/chat permissions apply; polling/webhook hosting is absent.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `read_bot` | — | Not required by default | Read the connected Telegram bot profile. |
+| `read_chat` | `chat_id` | Not required by default | Read a chat the bot can access. Telegram bots cannot enumerate arbitrary private chats. |
+| `send_message` | `chat_id`, `text` | Required | Send a plain-text bot message to an existing reachable chat; no history polling or webhook takeover. |
+| `edit_message` | `chat_id`, `message_id`, `text` | Required | Edit a bot message by chat and message IDs. |
+
+**Example/acceptance:** Select `read_bot`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="dropbox"></a>
+
+### Dropbox (`dropbox`)
+
+**Configuration/auth:** Access token; OAuth supported.
+
+**Permissions/limits:** Folder/search operations paginate; metadata reads are not arbitrary binary downloads.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_files` | — | Not required by default | List folder entries. Pass returned cursor to continue; root accepts / or empty path. |
+| `read_file` | `path` | Not required by default | Read file/folder metadata, not binary file content. |
+| `search_files` | — | Not required by default | Search accessible file names and metadata; continue with returned cursor. |
+| `create_folder` | `path` | Required | Create a Dropbox folder. Existing names cause an error rather than auto-renaming. |
+| `move_file` | `from_path`, `to_path` | Required | Move or rename a file or folder. Confirm both paths. |
+
+**Example/acceptance:** Select `list_files`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="hubspot"></a>
+
+### HubSpot (`hubspot`)
+
+**Configuration/auth:** Private access token; OAuth supported.
+
+**Permissions/limits:** Read probes may establish reads; private-token write permissions can remain unknown. Selected operations are not provider-reported scopes.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_contacts` | — | Not required by default | List CRM contacts; follow paging.next.after. Requires contacts read scope. |
+| `search_contacts` | `query` | Not required by default | Search CRM contacts by text. Use after from paging.next. |
+| `read_contact` | `contact_id` | Not required by default | Read one CRM contact. |
+| `create_contact` | `properties` | Required | Create a CRM contact from HubSpot internal property names and values. |
+| `update_contact` | `contact_id`, `properties` | Required | Update selected CRM contact properties. |
+| `list_deals` | — | Not required by default | List CRM deals; requires deals read scope. |
+| `create_deal` | `properties` | Required | Create a CRM deal; include required pipeline/stage internal identifiers. |
+
+**Example/acceptance:** Select `list_contacts`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="calendly"></a>
+
+### Calendly (`calendly`)
+
+**Configuration/auth:** Personal access token; no OAuth flow exposed.
+
+**Permissions/limits:** Creating scheduling links and cancelling events are writes, not arbitrary calendar editing.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `read_profile` | — | Not required by default | Read own profile including user and organization URIs needed by list operations. |
+| `list_events` | `user` | Not required by default | List scheduled meetings for the user URI from read_profile; follow pagination.next_page_token. |
+| `read_event` | `event_id` | Not required by default | Read a scheduled event using the UUID from its URI. |
+| `list_invitees` | `event_id` | Not required by default | List event invitees, one page at a time. |
+| `list_event_types` | `user` | Not required by default | List scheduling event types belonging to a user URI. |
+| `create_scheduling_link` | `event_type_uri` | Required | Create a single-use scheduling link for an event type URI. |
+| `cancel_event` | `event_id`, `reason` | Required | Cancel a scheduled event; invitees may be notified. |
+
+**Example/acceptance:** Select `read_profile`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="firecrawl"></a>
+
+### Firecrawl (`firecrawl`)
+
+**Configuration/auth:** API key; no OAuth flow exposed.
+
+**Permissions/limits:** Scrape/map consume provider credits; treat page content as untrusted data.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `scrape_page` | `url` | Not required by default | Scrape a public page into Markdown. Consumes Firecrawl credits. |
+| `map_site` | `url` | Not required by default | Discover URLs on a public website with a bounded result limit. Consumes credits. |
+
+**Example/acceptance:** Select `scrape_page`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="brave-search"></a>
+
+### Brave Search (`brave-search`)
+
+**Configuration/auth:** Subscription token; no OAuth flow exposed.
+
+**Permissions/limits:** Verification performs a potentially billable search; only paginated web_search is exposed.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `web_search` | `query` | Not required by default | Search the web with Brave. Results include titles, links and snippets; consumes API quota. |
+
+**Example/acceptance:** Select `web_search`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="apify"></a>
+
+### Apify (`apify`)
+
+**Configuration/auth:** API token; no OAuth flow exposed.
+
+**Permissions/limits:** start_actor requires approval and may incur cost. Start is not completion; inspect the Run and paginate its dataset.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_actors` | — | Not required by default | List actors belonging to this account. Follow offset for further pages. |
+| `start_actor` | `actor_id`, `input` | Required | Start an Actor asynchronously. May incur charges and external side effects; requires approval. Read its run ID to follow completion. |
+| `read_actor_run` | `run_id` | Not required by default | Read Actor run state, including its default dataset ID. |
+| `read_dataset` | `dataset_id` | Not required by default | Read a bounded page of JSON dataset items. |
+
+**Example/acceptance:** Select `list_actors`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="gitlab"></a>
+
+### GitLab (`gitlab`)
+
+**Configuration/auth:** PAT; no OAuth flow exposed.
+
+**Permissions/limits:** GitLab.com only, not self-hosted instances. Project namespaces are encoded; supply the right identifier.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_projects` | — | Not required by default | List GitLab.com projects accessible through membership. |
+| `list_issues` | `project_id` | Not required by default | List issues in a GitLab.com project; project_id accepts a numeric ID or namespace/project. |
+| `create_issue` | `project_id`, `title` | Required | Create an issue in a GitLab.com project. |
+
+**Example/acceptance:** Select `list_projects`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="readwise"></a>
+
+### Readwise Reader (`readwise`)
+
+**Configuration/auth:** Readwise Token; no OAuth flow exposed.
+
+**Permissions/limits:** Paginate Reader documents. save_document is a write; verification may succeed with 204 without JSON.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_documents` | — | Not required by default | List Reader documents. Use nextPageCursor from the response as pageCursor. |
+| `save_document` | `url` | Required | Save a URL to Readwise Reader. Existing documents may be updated. |
+
+**Example/acceptance:** Select `list_documents`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="feishu"></a>
+
+### 飞书 / Feishu (`feishu`)
+
+**Configuration/auth:** JSON: app_id + app_secret; no OAuth flow exposed.
+
+credential is a JSON string: `{"app_id": "<private value>", "app_secret": "<private value>"}`.
+
+**Permissions/limits:** Uses the Feishu API origin. Publish the self-built app and enable its bot; configure group membership, document sharing, and table permissions separately.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_chats` | — | Not required by default | List groups this app bot belongs to. Requires chat read permission and bot membership. |
+| `read_chat_messages` | `chat_id` | Not required by default | Read messages in an authorized group. The app needs message read permission; page_token continues the result. |
+| `send_chat_message` | `chat_id`, `text` | Required | Send a plain-text message to a group where this bot is authorized. Requires approval. |
+| `read_document` | `document_id` | Not required by default | Read raw text of an authorized cloud document. Share the document with the app and grant docs read permission. |
+| `list_bitable_records` | `app_token`, `table_id` | Not required by default | Read a bounded page of records in an authorized Bitable table. |
+| `create_bitable_record` | `app_token`, `table_id`, `fields` | Required | Create a record in an authorized Bitable table. Requires approval and write permission. |
+
+**Example/acceptance:** Select `list_chats`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="lark"></a>
+
+### Lark (`lark`)
+
+**Configuration/auth:** JSON: app_id + app_secret; no OAuth flow exposed.
+
+credential is a JSON string: `{"app_id": "<private value>", "app_secret": "<private value>"}`.
+
+**Permissions/limits:** Uses the international Lark origin; do not mix Feishu credentials. App identity, not delegated user OAuth or IM webhook hosting.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_chats` | — | Not required by default | List groups this app bot belongs to. Requires chat read permission and bot membership. |
+| `read_chat_messages` | `chat_id` | Not required by default | Read messages in an authorized group. The app needs message read permission; page_token continues the result. |
+| `send_chat_message` | `chat_id`, `text` | Required | Send a plain-text message to a group where this bot is authorized. Requires approval. |
+| `read_document` | `document_id` | Not required by default | Read raw text of an authorized cloud document. Share the document with the app and grant docs read permission. |
+| `list_bitable_records` | `app_token`, `table_id` | Not required by default | Read a bounded page of records in an authorized Bitable table. |
+| `create_bitable_record` | `app_token`, `table_id`, `fields` | Required | Create a record in an authorized Bitable table. Requires approval and write permission. |
+
+**Example/acceptance:** Select `list_chats`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="salesforce"></a>
+
+### Salesforce (`salesforce`)
+
+**Configuration/auth:** Externally managed access token; OAuth supported.
+
+**Permissions/limits:** Supply an HTTPS My Domain instance_url. REST v62.0 is pinned; list uses recent-items, not full export or arbitrary SOQL.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_contacts` | — | Not required by default | List recent Salesforce contacts; this endpoint is a bounded recent-items view, not a complete export. |
+| `read_contacts` | `record_id` | Not required by default | Read one Salesforce Contact. |
+| `create_contacts` | `fields` | Required | Create a Salesforce Contact using API field names. |
+| `update_contacts` | `record_id`, `fields` | Required | Update a Salesforce Contact using API field names. |
+| `list_accounts` | — | Not required by default | List recent Salesforce accounts; this endpoint is a bounded recent-items view, not a complete export. |
+| `read_accounts` | `record_id` | Not required by default | Read one Salesforce Account. |
+| `create_accounts` | `fields` | Required | Create a Salesforce Account using API field names. |
+| `update_accounts` | `record_id`, `fields` | Required | Update a Salesforce Account using API field names. |
+| `list_opportunities` | — | Not required by default | List recent Salesforce opportunities; this endpoint is a bounded recent-items view, not a complete export. |
+| `read_opportunities` | `record_id` | Not required by default | Read one Salesforce Opportunity. |
+| `create_opportunities` | `fields` | Required | Create a Salesforce Opportunity using API field names. |
+| `update_opportunities` | `record_id`, `fields` | Required | Update a Salesforce Opportunity using API field names. |
+
+**Example/acceptance:** Select `list_contacts`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+<a id="attio"></a>
+
+### Attio (`attio`)
+
+**Configuration/auth:** Workspace token; OAuth supported.
+
+**Permissions/limits:** Limited to people/companies/deals. Match values to workspace attributes; introspected scope does not prove every record accessible.
+
+| Operation | Required arguments | Approval | Implementation description |
+| --- | --- | --- | --- |
+| `list_records` | `object` | Not required by default | List records of a standard Attio object with bounded offset pagination. |
+| `read_record` | `object`, `record_id` | Not required by default | Read one Attio record. |
+| `create_record` | `object`, `values` | Required | Create an Attio record using attribute values. |
+| `update_record` | `object`, `record_id`, `values` | Required | Update an Attio record using attribute values. |
+
+**Example/acceptance:** Select `list_records`, supply required arguments for a dedicated test object, and verify actual content and denied access. For writes, first verify zero writes on rejection, then approve one authorized test operation and inspect the remote result.
+
+**Evidence:** Implementation and deterministic contract records; this page claims no real-account, OAuth consent, or write acceptance. See [implementation/evidence](../../../application-connectors.md).
+
+## Errors, changes, and reconciliation
+
+401 invalidates credentials; 403 can indicate resource/operation access; 429 indicates rate/quota limits. For uncertain dispatched writes, inspect the original call/request_hash and actual provider records before [reconciliation](../operate/reconciliation.md). Never replay to discover whether a write happened. Linear GraphQL mutation errors, even with data=null, do not prove zero side effects.
+
+New Session account pinning depends on stable provider identity; older snapshots do not gain it retroactively. Catalog presence proves an adapter exists, not account permissions or live service health. No new provider operation, OAuth consent, email, or message was performed for this page.
+
+Sources: [registry](../../../../integrations/apps/registry.ts), [application contract](../../../application-connectors.md), [CRM evidence](../../../../testing/evidence/2026-11-18-crm-authorization.md). Next: [Tools](../build/tools.md), [approvals](../build/approvals.md), [MCP](mcp.md).

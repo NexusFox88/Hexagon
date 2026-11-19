@@ -1,0 +1,283 @@
+{
+  "brand": "Hexagon",
+  "version": "1.1",
+  "updated": "2026-11-20",
+  "scope": "Brand assets only; not a Console theme override",
+  "tagline": "Agent fleet control plane",
+  "colors": {
+    "light": {
+      "primary": "#111111",
+      "secondary": "#5F6368",
+      "preview_background": "#FAFAFA"
+    },
+    "dark": {
+      "primary": "#F5F5F5",
+      "secondary": "#A8ADB3",
+      "preview_background": "#111111"
+    }
+  },
+  "typography": {
+    "family": "Geist",
+    "wordmark_weight": 600,
+    "tagline_weight": 400,
+    "delivery": "outlined paths"
+  },
+  "assets": [
+    {
+      "file": "hexagon-horizontal-dark.svg",
+      "theme": "dark",
+      "kind": "logo",
+      "layout": "horizontal",
+      "tagline": false,
+      "viewBox": "0 0 408 96",
+      "transparent": true,
+      "variant": "primary"
+    },
+    {
+      "file": "hexagon-horizontal-light.svg",
+      "theme": "light",
+      "kind": "logo",
+      "layout": "horizontal",
+      "tagline": false,
+      "viewBox": "0 0 408 96",
+      "transparent": true,
+      "variant": "primary"
+    },
+    {
+      "file": "hexagon-horizontal-tagline-dark.svg",
+      "theme": "dark",
+      "kind": "logo",
+      "layout": "horizontal",
+      "tagline": true,
+      "viewBox": "0 0 408 96",
+      "transparent": true,
+      "variant": "primary"
+    },
+    {
+      "file": "hexagon-horizontal-tagline-light.svg",
+      "theme": "light",
+      "kind": "logo",
+      "layout": "horizontal",
+      "tagline": true,
+      "viewBox": "0 0 408 96",
+      "transparent": true,
+      "variant": "primary"
+    },
+    {
+      "file": "hexagon-icon-dark.svg",
+      "theme": "dark",
+      "kind": "logo",
+      "layout": "icon",
+      "tagline": false,
+      "viewBox": "0 0 128 128",
+      "transparent": true,
+      "variant": "primary"
+    },
+    {
+      "file": "hexagon-icon-light.svg",
+      "theme": "light",
+      "kind": "logo",
+      "layout": "icon",
+      "tagline": false,
+      "viewBox": "0 0 128 128",
+      "transparent": true,
+      "variant": "primary"
+    },
+    {
+      "file": "hexagon-loading-dark.svg",
+      "theme": "dark",
+      "kind": "loading",
+      "layout": "icon",
+      "tagline": false,
+      "viewBox": "0 0 128 128",
+      "transparent": true,
+      "variant": "orchestration",
+      "duration_ms": 2400,
+      "reduced_motion": "static H"
+    },
+    {
+      "file": "hexagon-loading-light.svg",
+      "theme": "light",
+      "kind": "loading",
+      "layout": "icon",
+      "tagline": false,
+      "viewBox": "0 0 128 128",
+      "transparent": true,
+      "variant": "orchestration",
+      "duration_ms": 2400,
+      "reduced_motion": "static H"
+    },
+    {
+      "file": "hexagon-loading-pulse-dark.svg",
+      "theme": "dark",
+      "kind": "loading",
+      "layout": "icon",
+      "tagline": false,
+      "viewBox": "0 0 128 128",
+      "transparent": true,
+      "variant": "compact-pulse",
+      "duration_ms": 1200,
+      "reduced_motion": "static H"
+    },
+    {
+      "file": "hexagon-loading-pulse-light.svg",
+      "theme": "light",
+      "kind": "loading",
+      "layout": "icon",
+      "tagline": false,
+      "viewBox": "0 0 128 128",
+      "transparent": true,
+      "variant": "compact-pulse",
+      "duration_ms": 1200,
+      "reduced_motion": "static H"
+    },
+    {
+      "file": "hexagon-vertical-dark.svg",
+      "theme": "dark",
+      "kind": "logo",
+      "layout": "vertical",
+      "tagline": false,
+      "viewBox": "0 0 320 208",
+      "transparent": true,
+      "variant": "primary"
+    },
+    {
+      "file": "hexagon-vertical-light.svg",
+      "theme": "light",
+      "kind": "logo",
+      "layout": "vertical",
+      "tagline": false,
+      "viewBox": "0 0 320 208",
+      "transparent": true,
+      "variant": "primary"
+    },
+    {
+      "file": "hexagon-vertical-tagline-dark.svg",
+      "theme": "dark",
+      "kind": "logo",
+      "layout": "vertical",
+      "tagline": true,
+      "viewBox": "0 0 320 232",
+      "transparent": true,
+      "variant": "primary"
+    },
+    {
+      "file": "hexagon-vertical-tagline-light.svg",
+      "theme": "light",
+      "kind": "logo",
+      "layout": "vertical",
+      "tagline": true,
+      "viewBox": "0 0 320 232",
+      "transparent": true,
+      "variant": "primary"
+    },
+    {
+      "file": "creative/hero-dark.svg",
+      "kind": "creative",
+      "theme": "dark",
+      "layout": "hero",
+      "viewBox": "0 0 1440 800",
+      "transparent": false,
+      "typography": "outlined paths"
+    },
+    {
+      "file": "creative/hero-light.svg",
+      "kind": "creative",
+      "theme": "light",
+      "layout": "hero",
+      "viewBox": "0 0 1440 800",
+      "transparent": false,
+      "typography": "outlined paths"
+    },
+    {
+      "file": "creative/motion-storyboard-dark.svg",
+      "kind": "creative",
+      "theme": "dark",
+      "layout": "motion-storyboard",
+      "viewBox": "0 0 1280 360",
+      "transparent": false,
+      "typography": "outlined paths"
+    },
+    {
+      "file": "creative/motion-storyboard-light.svg",
+      "kind": "creative",
+      "theme": "light",
+      "layout": "motion-storyboard",
+      "viewBox": "0 0 1280 360",
+      "transparent": false,
+      "typography": "outlined paths"
+    },
+    {
+      "file": "creative/pattern-dark.svg",
+      "kind": "creative",
+      "theme": "dark",
+      "layout": "pattern",
+      "viewBox": "0 0 512 512",
+      "transparent": true,
+      "typography": "outlined paths"
+    },
+    {
+      "file": "creative/pattern-light.svg",
+      "kind": "creative",
+      "theme": "light",
+      "layout": "pattern",
+      "viewBox": "0 0 512 512",
+      "transparent": true,
+      "typography": "outlined paths"
+    },
+    {
+      "file": "creative/readme-banner-dark.svg",
+      "kind": "creative",
+      "theme": "dark",
+      "layout": "readme-banner",
+      "viewBox": "0 0 1280 320",
+      "transparent": false,
+      "typography": "outlined paths"
+    },
+    {
+      "file": "creative/readme-banner-light.svg",
+      "kind": "creative",
+      "theme": "light",
+      "layout": "readme-banner",
+      "viewBox": "0 0 1280 320",
+      "transparent": false,
+      "typography": "outlined paths"
+    },
+    {
+      "file": "creative/social-dark.svg",
+      "kind": "creative",
+      "theme": "dark",
+      "layout": "social",
+      "viewBox": "0 0 1200 630",
+      "transparent": false,
+      "typography": "outlined paths"
+    },
+    {
+      "file": "creative/social-light.svg",
+      "kind": "creative",
+      "theme": "light",
+      "layout": "social",
+      "viewBox": "0 0 1200 630",
+      "transparent": false,
+      "typography": "outlined paths"
+    },
+    {
+      "file": "creative/social-dark.png",
+      "kind": "social-export",
+      "theme": "dark",
+      "width": 1200,
+      "height": 630,
+      "transparent": false
+    },
+    {
+      "file": "creative/social-light.png",
+      "kind": "social-export",
+      "theme": "light",
+      "width": 1200,
+      "height": 630,
+      "transparent": false
+    }
+  ],
+  "language": "en",
+  "creative_concept": "Controlled divergence"
+}

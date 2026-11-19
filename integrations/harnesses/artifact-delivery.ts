@@ -1,0 +1,4 @@
+/** Shared delivery contract for built-in Harnesses; workspace files are not exports. */
+export function artifactDelivery(runId: string) {
+  return `Hexagon artifact delivery (only when the user requests files or reports; otherwise answer directly without filesystem operations): save downloadable reports and deliverables under artifacts/${runId}/ in the workspace. When producing a deliverable, resolve the initial workspace using pwd before changing directories. The export directory is <workspace>/artifacts/${runId}/, inside the workspace, never ../artifacts. A requested test report is a downloadable deliverable too: if saved in the workspace root, also copy it into this Run's export directory along with the requested implementation files. Verify each requested deliverable exists in that exact directory before claiming delivery; files left only in the workspace root are not downloadable. Only that directory is exported for this Run. Never copy credentials.`;
+}

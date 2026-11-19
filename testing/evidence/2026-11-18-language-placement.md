@@ -1,0 +1,5 @@
+# Language placement
+
+Moved the existing application-owned locale selector from page actions to the desktop rail below Settings. Mobile navigation reveals the same selector when expanded; language changes preserve the expanded navigation and focused control. Login uses its existing locale host in normal flow above login content. Removed obsolete header-specific locale widths and absolute login positioning.
+
+Verification: `npm run check` passed; `npx vitest run testing/console-i18n.test.ts`: four tests passed. Actual ego-browser desktop and narrow (390×760) review: no locale control in page heading; desktop menu opens upward entirely within viewport; keyboard Home/Enter selected English, End/Enter selected Chinese. Mobile navigation retained aria-expanded=true; focus remained on the visible language combobox at y378–410 within CSS viewport height844. Screenshots inspected: `.local/locale-desktop.png` and `.local/locale-mobile.png`. No cloud resources or persisted product configuration modified.
