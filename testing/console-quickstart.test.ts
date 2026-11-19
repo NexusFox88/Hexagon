@@ -11,7 +11,7 @@ for (const language of ['python','typescript']) {
   for (const outcome of ['completed','failed','cleanup_unknown','preflight_failed','waiting_approval','poll_failed']) {
     it(`${language} generated program: ${outcome}, literal input and lifecycle`, async()=>{
       const calls:Array<{path:string;body:any;key?:string}>=[];
-      const prompt='Literal "quotes" \\ paths\n中文 ${process.exit(9)} `backticks`';
+      const prompt='Literal "quotes" \\ paths\n\u4e2d\u6587 ${process.exit(9)} `backticks`';
       const server=createServer(async(req,res)=>{
         let raw='';for await(const chunk of req)raw+=chunk;
         calls.push({path:req.url!,body:raw?JSON.parse(raw):null,key:req.headers['idempotency-key'] as string|undefined});

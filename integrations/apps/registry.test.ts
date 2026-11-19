@@ -33,8 +33,8 @@ it('validates all catalog schemas, localizes operations, and requires approval f
 });
 it('uses migrated DeepL mapping and official Exa contents shape without exposing credentials',async()=>{
  const fetch=vi.fn().mockResolvedValue(new Response(JSON.stringify({translations:[{text:'Hello'}]})));vi.stubGlobal('fetch',fetch);
- expect(await executeTool('deepl',{},'private-key','translate_text',{text:'你好',target_lang:'EN-US'},'call')).toEqual({translations:[{text:'Hello'}]});
- const [url,options]=fetch.mock.calls[0]!;expect(String(url)).toBe('https://api-free.deepl.com/v2/translate');expect(options.headers.Authorization).toBe('DeepL-Auth-Key private-key');expect(JSON.parse(options.body)).toEqual({text:['你好'],target_lang:'EN-US'});expect(options.redirect).toBe('error');
+ expect(await executeTool('deepl',{},'private-key','translate_text',{text:'\u4f60\u597d',target_lang:'EN-US'},'call')).toEqual({translations:[{text:'Hello'}]});
+ const [url,options]=fetch.mock.calls[0]!;expect(String(url)).toBe('https://api-free.deepl.com/v2/translate');expect(options.headers.Authorization).toBe('DeepL-Auth-Key private-key');expect(JSON.parse(options.body)).toEqual({text:['\u4f60\u597d'],target_lang:'EN-US'});expect(options.redirect).toBe('error');
  expect(exa.operations.contents!.request({urls:['https://example.com']},{}).body).toEqual({ids:['https://example.com'],highlights:true});
  expect(deepl.verify({region:'paid'}).url).toBe('https://api.deepl.com/v2/usage');
 });

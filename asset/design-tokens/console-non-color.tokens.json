@@ -2,17 +2,17 @@
   "name": "console-non-color",
   "version": "1.0.0",
   "format": "Custom flat token map; not DTCG interchange format.",
-  "description": "可移植的非颜色设计令牌：三字体分工、直角几何、细边框、平面层级与可选字符图形。",
+  "description": "Portable non-color design tokens: three font roles, square geometry, fine borders, flat hierarchy and optional character art.",
   "usage": {
     "defaultProfile": "console",
     "profiles": {
-      "console": "默认使用无 marketing. 前缀的令牌。",
-      "marketing": "marketing.* 为宽松的展示页面尺寸，仅按需采用，不覆盖 Console 默认值。"
+      "console": "Use tokens without the marketing. prefix by default.",
+      "marketing": "marketing.* provides roomier presentation dimensions; opt in without overriding Console defaults."
     },
-    "cssVariableNaming": "将 token 名中的点替换为连字符，并加 --console- 前缀。",
-    "colors": "不定义颜色值；接入宿主现有语义颜色体系。",
-    "fonts": "保留通用字体家族名称；由宿主加载字体资源，未包含字体文件。",
-    "precedence": "宿主产品设计规范、可访问性和国际化约束优先；采用前显式处理冲突。"
+    "cssVariableNaming": "Replace dots with hyphens and prefix with --console-.",
+    "colors": "Reuse the host semantic color system; no colors are defined here.",
+    "fonts": "Generic font families only; the host loads font assets.",
+    "precedence": "Host design, accessibility and localization requirements take precedence; resolve conflicts explicitly."
   },
   "recipes": {
     "pageTitle": {
@@ -50,20 +50,20 @@
     }
   },
   "rules": [
-    "间距使用 space.*；字符图形使用 art.cell.*，两套网格不可混用。",
-    "控件和表格行的高度按 min-height 使用，允许本地化、换行和缩放导致高度增加。",
-    "中文标题 letter-spacing 使用 0；正文、状态和长说明不强制使用等宽字体。",
-    "数据表格使用流式宽度；marketing.layout.content-max 不限制 Console 工作区。",
-    "面板、控件和浮层使用直角、细边框与平面层级；复用宿主组件的行为和语义。",
-    "保留键盘操作、焦点管理和可见焦点；通过宿主语义 token 提供焦点颜色。",
-    "颜色以外的文字或图标同时表达选中、错误等关键状态。",
-    "移动端侧栏使用可访问抽屉，工具栏允许换行，表格和代码可局部横向滚动。",
-    "普通交互使用 motion.fast；展开折叠可用 motion.standard；避免 transition: all。",
-    "prefers-reduced-motion 下关闭非必要动画、视差和闪烁；所有状态仍可理解。",
-    "字符图形默认仅用于空状态、引导和完成反馈，使用目标产品自己的资源隐喻。",
-    "装饰图形设置 aria-hidden；信息图形提供 DOM 文本；操作使用真实可访问控件。",
-    "字符图形不可替代关键监控、权限提示或操作图标；不可见时暂停动画。",
-    "保留业务逻辑、权限、用户内容和 API 标识；产品文案接入完整的本地化目录。"
+    "Use space.* for spacing and art.cell.* for character art; do not mix the grids.",
+    "Treat control and table row heights as minimums to accommodate translation, wrapping and zoom.",
+    "Use zero letter spacing for Chinese headings; do not force monospace for body text, status or long explanations.",
+    "Use fluid table widths; marketing.layout.content-max does not constrain Console workspaces.",
+    "Use square geometry, fine borders and flat hierarchy; reuse host behavior and semantics.",
+    "Preserve keyboard controls, focus management and visible focus using host semantic tokens.",
+    "Use text or icons alongside color for important states.",
+    "Use an accessible mobile drawer, wrapping toolbars and local horizontal scrolling for tables and code.",
+    "Use motion.fast for interactions and motion.standard for expansion; avoid transition: all.",
+    "Disable unnecessary motion, parallax and flashing with prefers-reduced-motion; preserve understandable states.",
+    "Reserve character art for empty states, onboarding and completion feedback using product-specific metaphors.",
+    "Mark decorative art aria-hidden; provide DOM text for informative art and accessible controls for actions.",
+    "Do not replace monitoring, permission notices or action icons with character art; pause hidden animations.",
+    "Preserve business logic, permissions, user content and API identifiers; use complete localization catalogs."
   ],
   "tokens": {
     "font.family.display": {

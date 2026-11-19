@@ -315,8 +315,8 @@ try {
     files = await Promise.all((await readdir(directory)).map(async path => ({ path, content_base64: (await readFile(new URL(path, directory))).toString('base64') })));
   }
   await api('POST', `/sessions/${session.id}/files`, { files });
-  const input = { input: (toolSmoke ? '必须先调用 requirements 的 read MCP 工具读取 ACCEPTANCE-001。实现后必须调用 reports 的 write MCP 工具写入报告，平台自动处理授权与审批，请等待调用返回，然后再回复。' : '') + (webSmoke ? '根据 README.md 实现 Web 任务筛选功能。不要修改 acceptance.mjs，运行 node acceptance.mjs。将测试输出保存为 test-report.txt，并将 filter.mjs 复制到本次 Run 产物目录。运行 python3 serve.py 启动端口 3000 的预览，结束时保留服务进程。最后用中文说明修改和测试结果。' : '实现 calculate.py 的 add 函数，运行 python3 test_calculate.py，不要修改测试文件。将测试输出保存为 test-report.txt，并将实现后的 calculate.py 复制到本次 Run 的产物目录，确保这两个文件可下载。最后用中文说明修改及测试结果。') };
-  if (denyAuthorization) input.input += '如果 reports 工具返回用户拒绝授权，请不要再次调用或尝试其他写入方式；保留本地测试产物，最终明确说明报告未上传以及授权被拒绝的原因。';
+  const input = { input: (toolSmoke ? 'First call the requirements read MCP tool for ACCEPTANCE-001. After implementation, call reports write MCP to submit the report. Wait for platform authorization, approval and the tool result before replying. ' : '') + (webSmoke ? 'Implement Web task filtering following README.md. Do not modify acceptance.mjs. Run node acceptance.mjs, save its output as test-report.txt and copy filter.mjs to the Run artifact directory. Start python3 serve.py on port 3000 and retain the preview process. Explain changes and test results in English.' : 'Implement add in calculate.py and run python3 test_calculate.py without changing tests. Save output as test-report.txt and copy calculate.py into the Run artifact directory so both files can be downloaded. Explain changes and test results in English.') };
+  if (denyAuthorization) input.input += 'If the reports tool returns authorization denied, do not retry or attempt another write path. Retain local test artifacts and explicitly state in English that authorization was denied and the report was not uploaded.';
   const run = await api('POST', `/sessions/${session.id}/runs`, input, { 'idempotency-key': 'first' });
   const retry = await api('POST', `/sessions/${session.id}/runs`, input, { 'idempotency-key': 'first' });
   if (run.id !== retry.id) throw new Error('duplicate_run');
@@ -363,7 +363,7 @@ try {
       const calls = (await api('GET', `/runs/${run.id}/tool-calls`)).calls.filter((call: any) => call.binding === 'reports');
       const denied = (await allEvents(run.id)).filter(event => event.type === 'authorization.denied');
       const connection = await api('GET', `/connections/${reportConnection}`);
-      if (!requirementReads || reports.length || calls.length !== 1 || calls[0].state !== 'completed' || denied.length !== 1 || connection.status === 'ready' || evidence.approval_wait_observed || !/拒绝/.test(result.output?.text ?? '')) throw new Error('authorization_denial_incomplete');
+      if (!requirementReads || reports.length || calls.length !== 1 || calls[0].state !== 'completed' || denied.length !== 1 || connection.status === 'ready' || evidence.approval_wait_observed || !/(?:denied|refused)/i.test(result.output?.text ?? '')) throw new Error('authorization_denial_incomplete');
       evidence.authorization_denial = { call: calls[0].id, event: denied[0].id, reports: reports.length, connection_status: connection.status, output: result.output.text };
     } else if (!requirementReads || reports.length !== 1 || !evidence.authorization_wait_observed || !evidence.approval_wait_observed) throw new Error('tool_journey_incomplete');
     if (process.env.HEXAGON_TOOL_EXPIRY === '1' && (evidence.report_authentication_failures !== 1 || !evidence.approval_after_reauthentication)) throw new Error('tool_reauthentication_incomplete');
@@ -458,7 +458,7 @@ try {
   evidence.stream_resume_verified = true;
   evidence.event_count = events.length;
   evidence.replay_verified = true;
-  const followup = await api('POST', `/sessions/${session.id}/runs`, { input: '用中文一句话总结刚才修改了哪个文件、实现了什么。不要调用工具。' }, { 'idempotency-key': 'followup' });
+  const followup = await api('POST', `/sessions/${session.id}/runs`, { input: 'Summarize the modified file and its implementation in one English sentence. Do not call tools.' }, { 'idempotency-key': 'followup' });
   evidence.followup = await waitRun(followup.id);
   if (evidence.followup.state !== 'completed') throw new Error('followup_failed');
   if (process.env.HEXAGON_BOTH_SDKS === '1') {
@@ -509,7 +509,7 @@ PY`);
         if (Buffer.from(unchanged).toString() !== test) throw new Error('python_web_test_modified');
         evidence.python_independent_test = await connector.execute(pythonSession.sandbox.id, 'cd /tmp/hexagon-runtime/workspace && node acceptance.mjs');
         if (evidence.python_independent_test.exit_code !== 0) throw new Error('python_web_fixed_test_failed');
-        const cross = await new Hexagon(base, token).submit(pythonSession.id, '用中文一句话说明先前的筛选逻辑，不调用工具。', 'ts-web-cross');
+        const cross = await new Hexagon(base, token).submit(pythonSession.id, 'Describe the previous filtering logic in one English sentence. Do not call tools.', 'ts-web-cross');
         evidence.ts_cross_language = await waitRun(cross.id);
         if (evidence.ts_cross_language.state !== 'completed') throw new Error('ts_web_cross_failed');
       });
@@ -523,7 +523,7 @@ PY`);
       if (Buffer.from(pythonTest).toString() !== test) throw new Error('python_test_modified');
       evidence.python.independent_test = await connector.execute(pythonSession.sandbox.id, 'cd /tmp/hexagon-runtime/workspace && python3 test_calculate.py');
       if (evidence.python.independent_test.exit_code !== 0) throw new Error('python_fixed_test_failed');
-      const cross = await new Hexagon(base, token).submit(pythonSession.id, '用中文一句话说明先前的修改，不调用工具。', 'ts-cross');
+      const cross = await new Hexagon(base, token).submit(pythonSession.id, 'Describe the previous changes in one English sentence. Do not call tools.', 'ts-cross');
       evidence.ts_cross_language = await waitRun(cross.id);
       if (evidence.ts_cross_language.state !== 'completed') throw new Error('ts_cross_language_failed');
       await new Hexagon(base, token).close(pythonSession.id);
@@ -537,7 +537,7 @@ PY`);
     evidence.cancelled_run=evidence.python.ts_cancelled_run;
     if(!evidence.cancelled_run || (await api('GET',`/runs/${evidence.cancelled_run}`)).state!=='cancelled')throw new Error('serial_ts_cancellation_missing');
   } else {
-  const cancelled = await new Hexagon(base, token).submit(session.id, '执行 sleep 120，结束后再回复。', 'ts-cancel');
+  const cancelled = await new Hexagon(base, token).submit(session.id, 'Run sleep 120 and reply only after it finishes.', 'ts-cancel');
   await new Hexagon(base, token).cancel(cancelled.id);
   const cancellationResult = await waitRun(cancelled.id);
   if (cancellationResult.state !== 'cancelled') throw new Error('ts_cancellation_failed');

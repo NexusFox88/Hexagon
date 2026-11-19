@@ -41,11 +41,11 @@ def preview_request(url, path='/', cookie=None):
         connection.close()
 
 
-cross = wait(h.submit(c['ts_session'], '用中文一句话说明刚才修改的筛选逻辑，不调用工具。', 'python-web-cross'))
+cross = wait(h.submit(c['ts_session'], 'Describe the updated filtering logic in one English sentence. Do not call tools.', 'python-web-cross'))
 assert cross['state'] == 'completed'
 ts_cancelled = None
 if c.get('serial_sdks'):
-    ts_cancelled = h.submit(c['ts_session'], '执行 sleep 120，结束后再回复。', 'ts-cancel')
+    ts_cancelled = h.submit(c['ts_session'], 'Run sleep 120 and reply only after it finishes.', 'ts-cancel')
     h.cancel(ts_cancelled['id'])
     assert wait(ts_cancelled)['state'] == 'cancelled'
     h.close(c['ts_session'])
@@ -62,7 +62,7 @@ agent = h.create_agent(name='Python independent Web task', harness=c['harness'],
 session = h.create_session(agent_id=agent['id'], sandbox_connection_id=c['sandbox'], model_connection_id=c['model'], connections=http_bindings, tools={'requirements': c['requirements'], 'reports': report['id']})
 files = {path.name: path.read_bytes() for path in Path(c['fixture']).iterdir() if path.is_file()}
 h.upload(session['id'], files)
-prompt = '先调用 requirements read MCP 工具读取 ACCEPTANCE-001，按 README.md 实现 filter.mjs。不要修改 acceptance.mjs，运行 node acceptance.mjs，将测试输出 test-report.txt、filter.mjs 放入本次 Run 的产物目录。运行 python3 serve.py 启动端口 3000 的 Web 预览并保留服务。最后调用 reports write MCP 工具，平台会处理授权与审批，请等待结果后用中文总结。'
+prompt = 'First call the requirements read MCP tool for ACCEPTANCE-001 and implement filter.mjs following README.md. Do not modify acceptance.mjs. Run node acceptance.mjs and place test-report.txt and filter.mjs in the Run artifact directory. Start python3 serve.py and retain the port 3000 preview. Finally call reports write MCP; wait for platform authorization and approval, then summarize in English.'
 run = h.submit(session['id'], prompt, 'python-web-first')
 assert h.submit(session['id'], prompt, 'python-web-first')['id'] == run['id']
 baseline = writes()
@@ -130,13 +130,13 @@ if status != 200 or b'ACCEPTANCE-001 / LIVE WORKSPACE' not in body:
     assert json.loads(sys.stdin.readline())['verified'] is True
 assert status == 200 and b'ACCEPTANCE-001 / LIVE WORKSPACE' in body
 assert preview_request(preview['url'])[0] == 401
-followup = wait(h.submit(session['id'], '用中文一句话总结修改，不调用工具。', 'python-web-follow'))
+followup = wait(h.submit(session['id'], 'Summarize the changes in one English sentence. Do not call tools.', 'python-web-follow'))
 assert followup['state'] == 'completed'
 # Parent independently checks fixed workspace bytes/tests and continues via TS.
 print(json.dumps({'checkpoint': {'session': session['id'], 'run': run['id']}}), flush=True)
 assert json.loads(sys.stdin.readline())['verified'] is True
 # Exercise explicit cancellation without depending on a model race.
-cancelled = h.submit(session['id'], '执行 sleep 120，结束后再回复。', 'python-web-cancel')
+cancelled = h.submit(session['id'], 'Run sleep 120 and reply only after it finishes.', 'python-web-cancel')
 h.cancel(cancelled['id'])
 assert wait(cancelled)['state'] == 'cancelled'
 h.revoke_preview(preview['id'])

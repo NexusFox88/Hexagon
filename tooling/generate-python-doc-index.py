@@ -12,7 +12,7 @@ methods = [n for n in client.body if isinstance(n, ast.FunctionDef) and (not n.n
 for language in ('en', 'zh-CN'):
     page = ROOT / 'docs/product' / language / 'reference/python.md'
     zh = language == 'zh-CN'
-    lines = [BEGIN, '', '| '+('签名（省略 self/cls） | HTTP 映射／返回方式' if zh else 'Signature (self/cls omitted) | HTTP mapping / return mode')+' |', '| --- | --- |']
+    lines = [BEGIN, '', '| '+('\u7b7e\u540d\uff08\u7701\u7565 self/cls\uff09 | HTTP \u6620\u5c04\uff0f\u8fd4\u56de\u65b9\u5f0f' if zh else 'Signature (self/cls omitted) | HTTP mapping / return mode')+' |', '| --- | --- |']
     for node in methods:
         args = node.args
         signature = ast.unparse(args)
@@ -25,8 +25,8 @@ for language in ('en', 'zh-CN'):
                 method = call.args[0].value if isinstance(call.args[0], ast.Constant) else ast.unparse(call.args[0])
                 route = f'`{method}` `{ast.unparse(call.args[1])}`'
                 break
-        if node.name == '__init__': route = 'Hexagon instance; no HTTP request / 无请求'
-        if node.name == 'local': route = 'Local discovery → Hexagon instance / 本地发现'
+        if node.name == '__init__': route = 'Hexagon instance; no HTTP request / \u65e0\u8bf7\u6c42'
+        if node.name == 'local': route = 'Local discovery → Hexagon instance / \u672c\u5730\u53d1\u73b0'
         if node.name == 'request': route = 'JSON-decoded value; 204 → None'
         if node.name == 'download_artifact': route += '; bytes'
         if node.name == 'stream': route += '; generator[dict]'

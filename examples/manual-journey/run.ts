@@ -21,7 +21,7 @@ try{
  await writeFile(journal,JSON.stringify({session:session.id,state:'open'}),{mode:0o600});
  console.log(`Session: ${session.id}`);
  interrupted.signal.throwIfAborted();
- run=await client.submit(session.id,'请用中文一句话介绍你自己，并说明你正在云端 Sandbox 中运行。无需执行 shell 工具。',randomUUID());
+ run=await client.submit(session.id,'Introduce yourself in one English sentence and state that you are running in a cloud Sandbox. Do not run shell tools.',randomUUID());
  console.log(`Run: ${run.id}`);
  let cursor='0',httpVerified=false;
  for(let attempt=0;attempt<3;attempt++){

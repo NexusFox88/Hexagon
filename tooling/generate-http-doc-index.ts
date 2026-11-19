@@ -23,7 +23,7 @@ const operations=rows.map(row=>({...row,page:assignments[row.method+' '+row.path
 writeFileSync('docs/product/http-operation-coverage.json',JSON.stringify({scope:'Current literal management routes and editorial page assignments. A draft assignment does not certify exhaustive schemas, executable examples or runtime acceptance.',total:rows.length,assigned:operations.filter(row=>row.page).length,pending:operations.filter(row=>!row.page).length,operations},null,2)+'\n');
 for(const lang of ['en','zh-CN']){
  const target=`docs/product/${lang}/reference/http.md`,text=readFileSync(target,'utf8');
- const body=['<!-- http-routes:begin -->','',lang==='en'?'| Method | Path | Application token |':'| 方法 | 路径 | Application Token |','| --- | --- | --- |',...rows.map(r=>`| ${r.method} | \`${r.path}\` | ${r.application?'Allowed / 允许':'Owner required / 要求 owner'} |`),'','<!-- http-routes:end -->'].join('\n');
+ const body=['<!-- http-routes:begin -->','',lang==='en'?'| Method | Path | Application token |':'| \u65b9\u6cd5 | \u8def\u5f84 | Application Token |','| --- | --- | --- |',...rows.map(r=>`| ${r.method} | \`${r.path}\` | ${r.application?'Allowed / \u5141\u8bb8':'Owner required / \u8981\u6c42 owner'} |`),'','<!-- http-routes:end -->'].join('\n');
  const begin=text.indexOf('<!-- http-routes:begin -->'),end=text.indexOf('<!-- http-routes:end -->')+'<!-- http-routes:end -->'.length;
  if(begin<0)throw Error('Missing marker');
  writeFileSync(target,text.slice(0,begin)+body+text.slice(end));

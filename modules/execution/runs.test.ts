@@ -39,7 +39,7 @@ describe.skipIf(!url)('Run transactions against PostgreSQL', () => {
     await expect(runs.submit(tenant,sid,'changed','Task')).rejects.toMatchObject({code:'context_file_changed'});
     await inputs.upload(tenant,sid,{files:[{path:'brief.txt',content_base64:bytes.toString('base64')}]});
     await expect(runs.submit('foreign',sid,'foreign','Task')).rejects.toMatchObject({code:'session_not_found'});
-    await expect(runs.submit(tenant,sid,'too-large','中'.repeat(41000))).rejects.toMatchObject({code:'input_too_large'});
+    await expect(runs.submit(tenant,sid,'too-large','\u4e2d'.repeat(41000))).rejects.toMatchObject({code:'input_too_large'});
     const origin={message_id:'message',channel:'test'},run=await runs.submit(tenant,sid,'valid','Task',origin,{key_id:'trusted'});
     expect(run.execution_identity.principal).toEqual({key_id:'trusted'});
     expect((await runs.submit(tenant,sid,'valid','Task',origin)).id).toBe(run.id);

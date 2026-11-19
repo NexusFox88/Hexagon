@@ -3,7 +3,7 @@ import zhCN from './locales/zh-CN.js';
 
 export const catalogs = Object.freeze({ en, 'zh-CN': zhCN });
 export const supportedLocales = Object.freeze(['en', 'zh-CN']);
-export const localeOptions = Object.freeze([{value:'en',label:'English'},{value:'zh-CN',label:'简体中文'}]);
+export const localeOptions = Object.freeze([{value:'en',label:'English'},{value:'zh-CN',label:'\u7b80\u4f53\u4e2d\u6587'}]);
 export const preferenceKey = 'hexagon.console.locale';
 export function resolveLocale(saved, languages = []) {
   if (supportedLocales.includes(saved)) return saved;

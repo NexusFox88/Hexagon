@@ -3,7 +3,7 @@
   "items": [
     {
       "id": "E01",
-      "title": "文档首页",
+      "title": "\u6587\u6863\u9996\u9875",
       "target": "/",
       "zh_CN": "draft",
       "en": "draft",
@@ -11,7 +11,7 @@
     },
     {
       "id": "E02",
-      "title": "仓库 README",
+      "title": "\u4ed3\u5e93 README",
       "target": "README.md",
       "zh_CN": "draft",
       "en": "draft",
@@ -19,7 +19,7 @@
     },
     {
       "id": "E03",
-      "title": "编程 Agent 集成阅读指南",
+      "title": "\u7f16\u7a0b Agent \u96c6\u6210\u9605\u8bfb\u6307\u5357",
       "target": "/agents",
       "zh_CN": "draft",
       "en": "draft",
@@ -27,7 +27,7 @@
     },
     {
       "id": "E04",
-      "title": "更新记录与升级提示",
+      "title": "\u66f4\u65b0\u8bb0\u5f55\u4e0e\u5347\u7ea7\u63d0\u793a",
       "target": "/changelog",
       "zh_CN": "draft",
       "en": "draft",
@@ -35,7 +35,7 @@
     },
     {
       "id": "S01",
-      "title": "Hexagon 是什么",
+      "title": "Hexagon \u662f\u4ec0\u4e48",
       "target": "/start/overview",
       "zh_CN": "draft",
       "en": "draft",
@@ -43,7 +43,7 @@
     },
     {
       "id": "S02",
-      "title": "适用场景、选择依据与产品边界",
+      "title": "\u9002\u7528\u573a\u666f\u3001\u9009\u62e9\u4f9d\u636e\u4e0e\u4ea7\u54c1\u8fb9\u754c",
       "target": "/start/use-cases",
       "zh_CN": "draft",
       "en": "draft",
@@ -51,7 +51,7 @@
     },
     {
       "id": "S03",
-      "title": "安装并启动本地控制平面",
+      "title": "\u5b89\u88c5\u5e76\u542f\u52a8\u672c\u5730\u63a7\u5236\u5e73\u9762",
       "target": "/start/install",
       "zh_CN": "draft",
       "en": "draft",
@@ -59,7 +59,7 @@
     },
     {
       "id": "S04",
-      "title": "创建你的第一个 Agent Session",
+      "title": "\u521b\u5efa\u4f60\u7684\u7b2c\u4e00\u4e2a Agent Session",
       "target": "/start/first-session",
       "zh_CN": "draft",
       "en": "draft",
@@ -67,7 +67,7 @@
     },
     {
       "id": "S05",
-      "title": "理解刚才发生的事",
+      "title": "\u7406\u89e3\u521a\u624d\u53d1\u751f\u7684\u4e8b",
       "target": "/start/what-happened",
       "zh_CN": "draft",
       "en": "draft",
@@ -75,7 +75,7 @@
     },
     {
       "id": "S06",
-      "title": "完成一个真实项目任务",
+      "title": "\u5b8c\u6210\u4e00\u4e2a\u771f\u5b9e\u9879\u76ee\u4efb\u52a1",
       "target": "/start/project-task",
       "zh_CN": "draft",
       "en": "draft",
@@ -83,7 +83,7 @@
     },
     {
       "id": "B01",
-      "title": "将 Agent 接入你的后端",
+      "title": "\u5c06 Agent \u63a5\u5165\u4f60\u7684\u540e\u7aef",
       "target": "/build/backend-integration",
       "zh_CN": "draft",
       "en": "draft",
@@ -91,7 +91,7 @@
     },
     {
       "id": "B02",
-      "title": "给任务提供文件与上下文",
+      "title": "\u7ed9\u4efb\u52a1\u63d0\u4f9b\u6587\u4ef6\u4e0e\u4e0a\u4e0b\u6587",
       "target": "/build/project-context",
       "zh_CN": "draft",
       "en": "draft",
@@ -99,7 +99,7 @@
     },
     {
       "id": "B03",
-      "title": "在同一个 Session 中连续工作",
+      "title": "\u5728\u540c\u4e00\u4e2a Session \u4e2d\u8fde\u7eed\u5de5\u4f5c",
       "target": "/build/multi-turn",
       "zh_CN": "draft",
       "en": "draft",
@@ -107,7 +107,7 @@
     },
     {
       "id": "B04",
-      "title": "将 Run 事件显示到你的应用",
+      "title": "\u5c06 Run \u4e8b\u4ef6\u663e\u793a\u5230\u4f60\u7684\u5e94\u7528",
       "target": "/build/stream-events",
       "zh_CN": "draft",
       "en": "draft",
@@ -115,7 +115,7 @@
     },
     {
       "id": "B05",
-      "title": "为 Agent 绑定 Tools 与 MCP",
+      "title": "\u4e3a Agent \u7ed1\u5b9a Tools \u4e0e MCP",
       "target": "/build/tools",
       "zh_CN": "draft",
       "en": "draft",
@@ -123,7 +123,7 @@
     },
     {
       "id": "B06",
-      "title": "处理工具授权与重新授权",
+      "title": "\u5904\u7406\u5de5\u5177\u6388\u6743\u4e0e\u91cd\u65b0\u6388\u6743",
       "target": "/build/tool-authorization",
       "zh_CN": "draft",
       "en": "draft",
@@ -131,7 +131,7 @@
     },
     {
       "id": "B07",
-      "title": "在你的产品中加入人工审批",
+      "title": "\u5728\u4f60\u7684\u4ea7\u54c1\u4e2d\u52a0\u5165\u4eba\u5de5\u5ba1\u6279",
       "target": "/build/approvals",
       "zh_CN": "draft",
       "en": "draft",
@@ -139,7 +139,7 @@
     },
     {
       "id": "B08",
-      "title": "获取、保留和交付任务产物",
+      "title": "\u83b7\u53d6\u3001\u4fdd\u7559\u548c\u4ea4\u4ed8\u4efb\u52a1\u4ea7\u7269",
       "target": "/build/artifacts",
       "zh_CN": "draft",
       "en": "draft",
@@ -147,7 +147,7 @@
     },
     {
       "id": "B09",
-      "title": "安全地预览 Agent 创建的 Web 应用",
+      "title": "\u5b89\u5168\u5730\u9884\u89c8 Agent \u521b\u5efa\u7684 Web \u5e94\u7528",
       "target": "/build/private-preview",
       "zh_CN": "draft",
       "en": "draft",
@@ -155,7 +155,7 @@
     },
     {
       "id": "B10",
-      "title": "让空闲 Session 休眠并自动唤醒",
+      "title": "\u8ba9\u7a7a\u95f2 Session \u4f11\u7720\u5e76\u81ea\u52a8\u5524\u9192",
       "target": "/build/idle-and-wake",
       "zh_CN": "draft",
       "en": "draft",
@@ -163,7 +163,7 @@
     },
     {
       "id": "B11",
-      "title": "处理断线、重试、取消与不确定结果",
+      "title": "\u5904\u7406\u65ad\u7ebf\u3001\u91cd\u8bd5\u3001\u53d6\u6d88\u4e0e\u4e0d\u786e\u5b9a\u7ed3\u679c",
       "target": "/build/recovery",
       "zh_CN": "draft",
       "en": "draft",
@@ -171,7 +171,7 @@
     },
     {
       "id": "B12",
-      "title": "使用可复用的 Agent 配置",
+      "title": "\u4f7f\u7528\u53ef\u590d\u7528\u7684 Agent \u914d\u7f6e",
       "target": "/build/agent-templates",
       "zh_CN": "draft",
       "en": "draft",
@@ -179,7 +179,7 @@
     },
     {
       "id": "B13",
-      "title": "更换连接并管理既有 Session",
+      "title": "\u66f4\u6362\u8fde\u63a5\u5e76\u7ba1\u7406\u65e2\u6709 Session",
       "target": "/build/connection-lifecycle",
       "zh_CN": "draft",
       "en": "draft",
@@ -187,7 +187,7 @@
     },
     {
       "id": "B14",
-      "title": "配置 Sandbox 资源与网络策略",
+      "title": "\u914d\u7f6e Sandbox \u8d44\u6e90\u4e0e\u7f51\u7edc\u7b56\u7565",
       "target": "/build/sandbox-policy",
       "zh_CN": "draft",
       "en": "draft",
@@ -195,7 +195,7 @@
     },
     {
       "id": "I01",
-      "title": "选择 Sandbox、Harness、模型与 Tools 的组合",
+      "title": "\u9009\u62e9 Sandbox\u3001Harness\u3001\u6a21\u578b\u4e0e Tools \u7684\u7ec4\u5408",
       "target": "/integrations/choose",
       "zh_CN": "draft",
       "en": "draft",
@@ -203,7 +203,7 @@
     },
     {
       "id": "I02",
-      "title": "Sandbox 能力总览",
+      "title": "Sandbox \u80fd\u529b\u603b\u89c8",
       "target": "/integrations/sandboxes",
       "zh_CN": "draft",
       "en": "draft",
@@ -211,7 +211,7 @@
     },
     {
       "id": "I03",
-      "title": "接入 E2B",
+      "title": "\u63a5\u5165 E2B",
       "target": "/integrations/sandboxes/e2b",
       "zh_CN": "draft",
       "en": "draft",
@@ -219,7 +219,7 @@
     },
     {
       "id": "I04",
-      "title": "接入 Modal",
+      "title": "\u63a5\u5165 Modal",
       "target": "/integrations/sandboxes/modal",
       "zh_CN": "draft",
       "en": "draft",
@@ -227,7 +227,7 @@
     },
     {
       "id": "I05",
-      "title": "接入 Blaxel",
+      "title": "\u63a5\u5165 Blaxel",
       "target": "/integrations/sandboxes/blaxel",
       "zh_CN": "draft",
       "en": "draft",
@@ -235,7 +235,7 @@
     },
     {
       "id": "I06",
-      "title": "接入 Fly Sprites",
+      "title": "\u63a5\u5165 Fly Sprites",
       "target": "/integrations/sandboxes/fly-sprites",
       "zh_CN": "draft",
       "en": "draft",
@@ -243,7 +243,7 @@
     },
     {
       "id": "I07",
-      "title": "接入 Upstash Box",
+      "title": "\u63a5\u5165 Upstash Box",
       "target": "/integrations/sandboxes/upstash-box",
       "zh_CN": "draft",
       "en": "draft",
@@ -251,7 +251,7 @@
     },
     {
       "id": "I08",
-      "title": "接入 Vercel Sandbox",
+      "title": "\u63a5\u5165 Vercel Sandbox",
       "target": "/integrations/sandboxes/vercel",
       "zh_CN": "draft",
       "en": "draft",
@@ -259,7 +259,7 @@
     },
     {
       "id": "I09",
-      "title": "接入 Agent37",
+      "title": "\u63a5\u5165 Agent37",
       "target": "/integrations/sandboxes/agent37",
       "zh_CN": "draft",
       "en": "draft",
@@ -267,7 +267,7 @@
     },
     {
       "id": "I10",
-      "title": "接入 Boat",
+      "title": "\u63a5\u5165 Boat",
       "target": "/integrations/sandboxes/boat",
       "zh_CN": "draft",
       "en": "draft",
@@ -275,7 +275,7 @@
     },
     {
       "id": "I11",
-      "title": "接入 Freestyle VMs",
+      "title": "\u63a5\u5165 Freestyle VMs",
       "target": "/integrations/sandboxes/freestyle",
       "zh_CN": "draft",
       "en": "draft",
@@ -283,7 +283,7 @@
     },
     {
       "id": "I12",
-      "title": "接入 Fly Machines",
+      "title": "\u63a5\u5165 Fly Machines",
       "target": "/integrations/sandboxes/fly-machines",
       "zh_CN": "draft",
       "en": "draft",
@@ -291,7 +291,7 @@
     },
     {
       "id": "I13",
-      "title": "接入 Instabox",
+      "title": "\u63a5\u5165 Instabox",
       "target": "/integrations/sandboxes/instabox",
       "zh_CN": "draft",
       "en": "draft",
@@ -299,7 +299,7 @@
     },
     {
       "id": "I14",
-      "title": "选择并配置 Harness",
+      "title": "\u9009\u62e9\u5e76\u914d\u7f6e Harness",
       "target": "/integrations/harnesses",
       "zh_CN": "draft",
       "en": "draft",
@@ -307,7 +307,7 @@
     },
     {
       "id": "I15",
-      "title": "注册并运行 OCI Harness",
+      "title": "\u6ce8\u518c\u5e76\u8fd0\u884c OCI Harness",
       "target": "/integrations/harnesses/oci",
       "zh_CN": "draft",
       "en": "draft",
@@ -315,7 +315,7 @@
     },
     {
       "id": "I16",
-      "title": "使用自定义 source-package Harness",
+      "title": "\u4f7f\u7528\u81ea\u5b9a\u4e49 source-package Harness",
       "target": "/integrations/harnesses/source-package",
       "zh_CN": "draft",
       "en": "draft",
@@ -323,7 +323,7 @@
     },
     {
       "id": "I17",
-      "title": "连接你自己的模型端点",
+      "title": "\u8fde\u63a5\u4f60\u81ea\u5df1\u7684\u6a21\u578b\u7aef\u70b9",
       "target": "/integrations/models",
       "zh_CN": "draft",
       "en": "draft",
@@ -331,7 +331,7 @@
     },
     {
       "id": "I18",
-      "title": "理解模型协议兼容性",
+      "title": "\u7406\u89e3\u6a21\u578b\u534f\u8bae\u517c\u5bb9\u6027",
       "target": "/integrations/model-protocols",
       "zh_CN": "draft",
       "en": "draft",
@@ -339,7 +339,7 @@
     },
     {
       "id": "I19",
-      "title": "接入应用连接器",
+      "title": "\u63a5\u5165\u5e94\u7528\u8fde\u63a5\u5668",
       "target": "/integrations/apps",
       "zh_CN": "draft",
       "en": "draft",
@@ -347,7 +347,7 @@
     },
     {
       "id": "I20",
-      "title": "连接受保护的 HTTP API",
+      "title": "\u8fde\u63a5\u53d7\u4fdd\u62a4\u7684 HTTP API",
       "target": "/integrations/http-tools",
       "zh_CN": "draft",
       "en": "draft",
@@ -355,7 +355,7 @@
     },
     {
       "id": "I21",
-      "title": "连接 Remote MCP 服务",
+      "title": "\u8fde\u63a5 Remote MCP \u670d\u52a1",
       "target": "/integrations/mcp",
       "zh_CN": "draft",
       "en": "draft",
@@ -363,7 +363,7 @@
     },
     {
       "id": "I22",
-      "title": "已验证的执行组合",
+      "title": "\u5df2\u9a8c\u8bc1\u7684\u6267\u884c\u7ec4\u5408",
       "target": "/integrations/verified-combinations",
       "zh_CN": "draft",
       "en": "draft",
@@ -371,7 +371,7 @@
     },
     {
       "id": "C01",
-      "title": "Session、Run 与 Agent 模板",
+      "title": "Session\u3001Run \u4e0e Agent \u6a21\u677f",
       "target": "/concepts/sessions-runs-agents",
       "zh_CN": "draft",
       "en": "draft",
@@ -379,7 +379,7 @@
     },
     {
       "id": "C02",
-      "title": "控制平面、Runtime、Harness 与 Sandbox",
+      "title": "\u63a7\u5236\u5e73\u9762\u3001Runtime\u3001Harness \u4e0e Sandbox",
       "target": "/concepts/execution-architecture",
       "zh_CN": "draft",
       "en": "draft",
@@ -387,7 +387,7 @@
     },
     {
       "id": "C03",
-      "title": "初始化、预检与配置固定",
+      "title": "\u521d\u59cb\u5316\u3001\u9884\u68c0\u4e0e\u914d\u7f6e\u56fa\u5b9a",
       "target": "/concepts/initialization",
       "zh_CN": "draft",
       "en": "draft",
@@ -395,7 +395,7 @@
     },
     {
       "id": "C04",
-      "title": "持久事件与故障恢复",
+      "title": "\u6301\u4e45\u4e8b\u4ef6\u4e0e\u6545\u969c\u6062\u590d",
       "target": "/concepts/events-and-recovery",
       "zh_CN": "draft",
       "en": "draft",
@@ -403,7 +403,7 @@
     },
     {
       "id": "C05",
-      "title": "工作区、对话、产物与持久化边界",
+      "title": "\u5de5\u4f5c\u533a\u3001\u5bf9\u8bdd\u3001\u4ea7\u7269\u4e0e\u6301\u4e45\u5316\u8fb9\u754c",
       "target": "/concepts/persistence",
       "zh_CN": "draft",
       "en": "draft",
@@ -411,7 +411,7 @@
     },
     {
       "id": "C06",
-      "title": "凭据、授权与信任边界",
+      "title": "\u51ed\u636e\u3001\u6388\u6743\u4e0e\u4fe1\u4efb\u8fb9\u754c",
       "target": "/concepts/security-boundaries",
       "zh_CN": "draft",
       "en": "draft",
@@ -419,7 +419,7 @@
     },
     {
       "id": "C07",
-      "title": "能力声明、兼容性与验证证据",
+      "title": "\u80fd\u529b\u58f0\u660e\u3001\u517c\u5bb9\u6027\u4e0e\u9a8c\u8bc1\u8bc1\u636e",
       "target": "/concepts/capabilities-and-evidence",
       "zh_CN": "draft",
       "en": "draft",
@@ -427,7 +427,7 @@
     },
     {
       "id": "C08",
-      "title": "Serverless Session 的生命周期",
+      "title": "Serverless Session \u7684\u751f\u547d\u5468\u671f",
       "target": "/concepts/serverless-lifecycle",
       "zh_CN": "draft",
       "en": "draft",
@@ -435,7 +435,7 @@
     },
     {
       "id": "O01",
-      "title": "管理本地工作区",
+      "title": "\u7ba1\u7406\u672c\u5730\u5de5\u4f5c\u533a",
       "target": "/operate/local-workspace",
       "zh_CN": "draft",
       "en": "draft",
@@ -443,7 +443,7 @@
     },
     {
       "id": "O02",
-      "title": "自托管控制平面",
+      "title": "\u81ea\u6258\u7ba1\u63a7\u5236\u5e73\u9762",
       "target": "/operate/self-host",
       "zh_CN": "draft",
       "en": "draft",
@@ -451,7 +451,7 @@
     },
     {
       "id": "O03",
-      "title": "配置网络入口、代理与受保护凭据通道",
+      "title": "\u914d\u7f6e\u7f51\u7edc\u5165\u53e3\u3001\u4ee3\u7406\u4e0e\u53d7\u4fdd\u62a4\u51ed\u636e\u901a\u9053",
       "target": "/operate/networking",
       "zh_CN": "draft",
       "en": "draft",
@@ -459,7 +459,7 @@
     },
     {
       "id": "O04",
-      "title": "管理身份、权限与应用 Token",
+      "title": "\u7ba1\u7406\u8eab\u4efd\u3001\u6743\u9650\u4e0e\u5e94\u7528 Token",
       "target": "/operate/access-control",
       "zh_CN": "draft",
       "en": "draft",
@@ -467,7 +467,7 @@
     },
     {
       "id": "O05",
-      "title": "管理和轮换受保护凭据",
+      "title": "\u7ba1\u7406\u548c\u8f6e\u6362\u53d7\u4fdd\u62a4\u51ed\u636e",
       "target": "/operate/credentials",
       "zh_CN": "draft",
       "en": "draft",
@@ -475,7 +475,7 @@
     },
     {
       "id": "O06",
-      "title": "观察运行并诊断故障",
+      "title": "\u89c2\u5bdf\u8fd0\u884c\u5e76\u8bca\u65ad\u6545\u969c",
       "target": "/operate/observability",
       "zh_CN": "draft",
       "en": "draft",
@@ -483,7 +483,7 @@
     },
     {
       "id": "O07",
-      "title": "对账和清理不确定的云资源与 Tool 操作",
+      "title": "\u5bf9\u8d26\u548c\u6e05\u7406\u4e0d\u786e\u5b9a\u7684\u4e91\u8d44\u6e90\u4e0e Tool \u64cd\u4f5c",
       "target": "/operate/reconciliation",
       "zh_CN": "draft",
       "en": "draft",
@@ -491,7 +491,7 @@
     },
     {
       "id": "O08",
-      "title": "升级版本与迁移数据",
+      "title": "\u5347\u7ea7\u7248\u672c\u4e0e\u8fc1\u79fb\u6570\u636e",
       "target": "/operate/upgrades",
       "zh_CN": "draft",
       "en": "draft",
@@ -499,7 +499,7 @@
     },
     {
       "id": "O09",
-      "title": "备份和恢复控制平面",
+      "title": "\u5907\u4efd\u548c\u6062\u590d\u63a7\u5236\u5e73\u9762",
       "target": "/operate/backup-restore",
       "zh_CN": "draft",
       "en": "draft",
@@ -507,7 +507,7 @@
     },
     {
       "id": "O10",
-      "title": "管理容量、配额与成本",
+      "title": "\u7ba1\u7406\u5bb9\u91cf\u3001\u914d\u989d\u4e0e\u6210\u672c",
       "target": "/operate/capacity-and-cost",
       "zh_CN": "draft",
       "en": "draft",
@@ -515,7 +515,7 @@
     },
     {
       "id": "O11",
-      "title": "按症状排查问题",
+      "title": "\u6309\u75c7\u72b6\u6392\u67e5\u95ee\u9898",
       "target": "/operate/troubleshooting",
       "zh_CN": "draft",
       "en": "draft",
@@ -523,7 +523,7 @@
     },
     {
       "id": "R01",
-      "title": "HTTP API 参考",
+      "title": "HTTP API \u53c2\u8003",
       "target": "/reference/http",
       "zh_CN": "draft",
       "en": "draft",
@@ -531,7 +531,7 @@
     },
     {
       "id": "R02",
-      "title": "Python SDK 参考",
+      "title": "Python SDK \u53c2\u8003",
       "target": "/reference/python",
       "zh_CN": "draft",
       "en": "draft",
@@ -539,7 +539,7 @@
     },
     {
       "id": "R03",
-      "title": "TypeScript SDK 参考",
+      "title": "TypeScript SDK \u53c2\u8003",
       "target": "/reference/typescript",
       "zh_CN": "draft",
       "en": "draft",
@@ -547,7 +547,7 @@
     },
     {
       "id": "R04",
-      "title": "配置与环境变量",
+      "title": "\u914d\u7f6e\u4e0e\u73af\u5883\u53d8\u91cf",
       "target": "/reference/configuration",
       "zh_CN": "draft",
       "en": "draft",
@@ -555,7 +555,7 @@
     },
     {
       "id": "R05",
-      "title": "事件、状态与转换",
+      "title": "\u4e8b\u4ef6\u3001\u72b6\u6001\u4e0e\u8f6c\u6362",
       "target": "/reference/events-and-states",
       "zh_CN": "draft",
       "en": "draft",
@@ -563,7 +563,7 @@
     },
     {
       "id": "R06",
-      "title": "错误码与处理建议",
+      "title": "\u9519\u8bef\u7801\u4e0e\u5904\u7406\u5efa\u8bae",
       "target": "/reference/errors",
       "zh_CN": "draft",
       "en": "draft",
@@ -571,7 +571,7 @@
     },
     {
       "id": "R07",
-      "title": "限制、默认值与支持范围",
+      "title": "\u9650\u5236\u3001\u9ed8\u8ba4\u503c\u4e0e\u652f\u6301\u8303\u56f4",
       "target": "/reference/limits",
       "zh_CN": "draft",
       "en": "draft",
@@ -579,7 +579,7 @@
     },
     {
       "id": "R08",
-      "title": "CLI 与本地管理命令",
+      "title": "CLI \u4e0e\u672c\u5730\u7ba1\u7406\u547d\u4ee4",
       "target": "/reference/cli",
       "zh_CN": "draft",
       "en": "draft",
@@ -587,7 +587,7 @@
     },
     {
       "id": "R09",
-      "title": "术语表",
+      "title": "\u672f\u8bed\u8868",
       "target": "/reference/glossary",
       "zh_CN": "draft",
       "en": "draft",
@@ -595,7 +595,7 @@
     },
     {
       "id": "D01",
-      "title": "搭建开发环境并提交第一个改动",
+      "title": "\u642d\u5efa\u5f00\u53d1\u73af\u5883\u5e76\u63d0\u4ea4\u7b2c\u4e00\u4e2a\u6539\u52a8",
       "target": "/contribute/development",
       "zh_CN": "draft",
       "en": "draft",
@@ -603,7 +603,7 @@
     },
     {
       "id": "D02",
-      "title": "代码地图与模块边界",
+      "title": "\u4ee3\u7801\u5730\u56fe\u4e0e\u6a21\u5757\u8fb9\u754c",
       "target": "/contribute/codebase",
       "zh_CN": "draft",
       "en": "draft",
@@ -611,7 +611,7 @@
     },
     {
       "id": "D03",
-      "title": "添加一个 Sandbox 连接器",
+      "title": "\u6dfb\u52a0\u4e00\u4e2a Sandbox \u8fde\u63a5\u5668",
       "target": "/contribute/sandbox-connectors",
       "zh_CN": "draft",
       "en": "draft",
@@ -619,7 +619,7 @@
     },
     {
       "id": "D04",
-      "title": "添加一个 Harness 适配器",
+      "title": "\u6dfb\u52a0\u4e00\u4e2a Harness \u9002\u914d\u5668",
       "target": "/contribute/harness-adapters",
       "zh_CN": "draft",
       "en": "draft",
@@ -627,7 +627,7 @@
     },
     {
       "id": "D05",
-      "title": "添加 Tool 或应用连接器",
+      "title": "\u6dfb\u52a0 Tool \u6216\u5e94\u7528\u8fde\u63a5\u5668",
       "target": "/contribute/tool-connectors",
       "zh_CN": "draft",
       "en": "draft",
@@ -635,7 +635,7 @@
     },
     {
       "id": "D06",
-      "title": "运行测试与记录真实验收",
+      "title": "\u8fd0\u884c\u6d4b\u8bd5\u4e0e\u8bb0\u5f55\u771f\u5b9e\u9a8c\u6536",
       "target": "/contribute/testing",
       "zh_CN": "draft",
       "en": "draft",
@@ -643,7 +643,7 @@
     },
     {
       "id": "D07",
-      "title": "编写、校验和翻译文档",
+      "title": "\u7f16\u5199\u3001\u6821\u9a8c\u548c\u7ffb\u8bd1\u6587\u6863",
       "target": "/contribute/documentation",
       "zh_CN": "draft",
       "en": "draft",
@@ -651,7 +651,7 @@
     },
     {
       "id": "D08",
-      "title": "提出设计变更并提交贡献",
+      "title": "\u63d0\u51fa\u8bbe\u8ba1\u53d8\u66f4\u5e76\u63d0\u4ea4\u8d21\u732e",
       "target": "/contribute/proposals-and-prs",
       "zh_CN": "draft",
       "en": "draft",

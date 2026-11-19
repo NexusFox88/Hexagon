@@ -19,4 +19,4 @@ function larkApplication(provider:'feishu'|'lark',origin:string,name:string):App
  create_bitable_record:operation('Create a record in an authorized Bitable table. Requires approval and write permission.',true,{app_token:id,table_id:id,fields:{type:'object',additionalProperties:true,minProperties:1,maxProperties:100}},['app_token','table_id','fields'],a=>({url:base+'/bitable/v1/apps/'+encode(a.app_token)+'/tables/'+encode(a.table_id)+'/records',method:'POST',body:{fields:a.fields}})),
  }};
 }
-export const larkApplications=[larkApplication('feishu','https://open.feishu.cn','飞书 / Feishu'),larkApplication('lark','https://open.larksuite.com','Lark')];
+export const larkApplications=[larkApplication('feishu','https://open.feishu.cn','Feishu'),larkApplication('lark','https://open.larksuite.com','Lark')];

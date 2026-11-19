@@ -15,7 +15,7 @@ const members=client.members.filter(n=>(ts.isMethodDeclaration(n)||ts.isConstruc
 const clean=s=>s.replace(/\s+/g,' ').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('|','&#124;');
 for(const lang of ['en','zh-CN']){
  const path=resolve(root,`docs/product/${lang}/reference/typescript.md`),text=readFileSync(path,'utf8');
- const rows=['<!-- ts-methods:begin -->','',lang==='en'?'| Declaration | Inferred return |':'| 声明 | 推断返回类型 |','| --- | --- |'];
+ const rows=['<!-- ts-methods:begin -->','',lang==='en'?'| Declaration | Inferred return |':'| \u58f0\u660e | \u63a8\u65ad\u8fd4\u56de\u7c7b\u578b |','| --- | --- |'];
  for(const n of members){
   const head=n.getText(source).slice(0,n.body.getStart(source)-n.getStart(source)).trim();
   const signature=checker.getSignatureFromDeclaration(n);

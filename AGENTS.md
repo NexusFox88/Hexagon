@@ -21,3 +21,8 @@ Use package.json scripts as they become implemented. Record real command results
 - Keep platform Sandbox configuration separate from Agent Tools, protected APIs and model endpoints.
 - No browser-native product UI: native alerts/confirms/prompts, selects/dialogs, validation bubbles, date/color pickers or number spinners. Reuse accessible application-owned components; preserve keyboard operation and focus management.
 - Console localization is mandatory: all product copy belongs in complete `en` / `zh-CN` catalogs, including errors, accessible names and dynamic states. Use `i18n.js` / Intl; preserve user content and API identifiers. New UI must pass catalog checks and both-language browser review. See the strict localization contract in `docs/console-design.md`.
+
+## Source language
+- Keep non-documentation source, comments, configuration and example messages in English. Documentation and README files may be multilingual.
+- Store localized Chinese strings and intentional Unicode regression fixtures as Unicode escapes; preserve runtime localization and Unicode coverage.
+- Run `testing/source-language.test.ts` to enforce this boundary.

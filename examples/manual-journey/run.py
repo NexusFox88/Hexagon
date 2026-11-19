@@ -26,7 +26,7 @@ try:
     journal = directory / ('python-' + session['id'] + '.json')
     journal.write_text(json.dumps({'session':session['id'],'state':'open'})); journal.chmod(0o600)
     print('Session:', session['id'], flush=True)
-    run = client.submit(session['id'], '请用中文一句话介绍你自己，并说明你正在云端 Sandbox 中运行。无需执行 shell 工具。', str(uuid.uuid4()))
+    run = client.submit(session['id'], 'Introduce yourself in one English sentence and state that you are running in a cloud Sandbox. Do not run shell tools.', str(uuid.uuid4()))
     print('Run:', run['id'], flush=True)
     cursor, http_verified = '0', False
     for attempt in range(3):

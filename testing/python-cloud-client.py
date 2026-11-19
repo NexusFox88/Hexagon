@@ -21,13 +21,13 @@ def wait(run):
 
 
 # Continue the TS-created Session first.
-cross = wait(h.submit(c["ts_session"], "用中文一句话说明你之前实现的函数，不调用工具。", "python-cross"))
+cross = wait(h.submit(c["ts_session"], "Describe the function you implemented earlier in one English sentence. Do not call tools.", "python-cross"))
 
 # Independently create a Session, upload bytes, submit and stream a real task.
 session = h.create_session(**c["definition"])
 test = b'from calculate import add\nassert add(2, 3) == 5\nassert add(-4, 1) == -3\nprint("2 assertions passed")\n'
 h.upload(session["id"], {"calculate.py": b'def add(a, b):\n    raise NotImplementedError()\n', "test_calculate.py": test})
-prompt = "实现 calculate.py 的 add 函数，运行 python3 test_calculate.py，不要修改测试文件。最后用中文说明修改和测试结果。"
+prompt = "Implement add in calculate.py and run python3 test_calculate.py without modifying tests. Explain the changes and test results in English."
 run = h.submit(session["id"], prompt, "python-first")
 assert h.submit(session["id"], prompt, "python-first")["id"] == run["id"]
 stream = h.stream(run["id"])
@@ -37,5 +37,5 @@ events = list(h.stream(run["id"], head["id"]))
 assert all(event.get("id") != head["id"] for event in events)
 assert events[-1]["type"] == "stream.end"
 result = wait(run)
-follow = wait(h.submit(session["id"], "用中文一句话总结修改，不调用工具。", "python-follow"))
+follow = wait(h.submit(session["id"], "Summarize the changes in one English sentence. Do not call tools.", "python-follow"))
 print(json.dumps({"session": session["id"], "run": result, "followup": follow, "cross_language": cross, "event_count": len(events), "cursor_resume": True}, ensure_ascii=False))

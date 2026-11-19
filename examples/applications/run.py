@@ -11,7 +11,7 @@ agent=api.create_agent(name='Python application acceptance',harness={'id':'custo
 session=api.create_session(agent_id=agent['id'],**config);run=None
 journal=Path('.local/applications')/('python-'+session['id']+'.json');journal.write_text(json.dumps({'session':session['id'],'state':'open'}));journal.chmod(0o600)
 try:
-    run=api.submit(session['id'],'请通过 exa 和 tavily 的 search 工具分别搜索 Model Context Protocol 官方文档，再通过 deepl 的 translate_text 工具将「你好，世界。」翻译为 EN-US。必须实际调用这三个远程工具，不用 shell、不生成文件。最后用中文报告两条文档链接和翻译结果。',str(uuid.uuid4()))
+    run=api.submit(session['id'],'Use the exa and tavily search tools to find official Model Context Protocol documentation. Use deepl translate_text to translate "Bonjour, le monde." to EN-US. Actually call all three remote tools; do not use shell or create files. Report two documentation links and the translation in English.',str(uuid.uuid4()))
     print(json.dumps({'session':session['id'],'run':run['id']}),flush=True)
     cursor='0'
     for attempt in range(3):

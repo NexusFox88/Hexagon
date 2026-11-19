@@ -15,7 +15,7 @@ it('requires complete catalogs and matching interpolation parameters in both lan
   }
   expect(()=>translate('en','missing.key')).toThrow('Missing translation');
   expect(()=>translate('en','ui.more_actions_name')).toThrow('Missing translation parameter');
-  expect(translate('en','ui.more_actions_name',{name:'<script>中文</script>'})).toBe('More actions · <script>中文</script>');
+  expect(translate('en','ui.more_actions_name',{name:'<script>\u4e2d\u6587</script>'})).toBe('More actions · <script>\u4e2d\u6587</script>');
 });
 it('resolves explicit preferences, browser language order, regional variants and unsupported languages', () => {
   expect(resolveLocale('zh-CN',['en-US'])).toBe('zh-CN');

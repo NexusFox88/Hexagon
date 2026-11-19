@@ -12,7 +12,7 @@ const session=await api.createSession({agent_id:agent.id,...config});
 const journal=`.local/applications/typescript-${session.id}.json`;let run:any;
 await writeFile(journal,JSON.stringify({session:session.id,state:'open'}),{mode:0o600});
 try{
- run=await api.submit(session.id,'请通过 exa 和 tavily 的 search 工具分别搜索 Model Context Protocol 官方文档，再通过 deepl 的 translate_text 工具将「你好，世界。」翻译为 EN-US。必须实际调用这三个远程工具，不用 shell、不生成文件。最后用中文报告两条文档链接和翻译结果。',randomUUID());
+ run=await api.submit(session.id,'Use the exa and tavily search tools to find official Model Context Protocol documentation. Use deepl translate_text to translate "Bonjour, le monde." to EN-US. Actually call all three remote tools; do not use shell or create files. Report two documentation links and the translation in English.',randomUUID());
  console.log(JSON.stringify({session:session.id,run:run.id}));
  for await(const event of api.stream(run.id,'0',AbortSignal.timeout(600000)))if(event.type==='tool.completed')console.log('tool.completed');
  const result=await api.run(run.id),calls=await api.toolCalls(run.id);if(result.state!=='completed'||!result.output?.text)throw new Error('agent_result_missing:'+result.state);

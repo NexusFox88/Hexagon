@@ -6,7 +6,7 @@ import type { SandboxConnector } from '../modules/sandboxes/connector.js';
 export async function checkActiveCancellation(client: Hexagon, connector: SandboxConnector, sandbox: string, session: string) {
   const marker = `cancel-probe-${randomUUID()}.json`;
   const source = `import json,os,time; from pathlib import Path; Path("${marker}").write_text(json.dumps({"pid":os.getpid(),"pgid":os.getpgrp()})); time.sleep(120); Path("${marker}.finished").write_text("finished")`;
-  const run = await client.submit(session, `这是取消验收任务。请用终端工具立即以前台方式运行以下命令并等待命令结束，不要放到后台，不要修改命令，不需要调用外部工具：python3 -c '${source}'`, `active-cancel-${marker}`);
+  const run = await client.submit(session, `This is a cancellation acceptance task. Use the terminal tool to run this command in the foreground and wait for completion. Do not background or modify it, and do not call external tools: python3 -c '${source}'`, `active-cancel-${marker}`);
   const command = (code: string) => connector.execute(sandbox, `python3 -c '${code.replaceAll("'", "'\\''")}'`);
   const read = async () => {
     const result = await command(`from pathlib import Path; p=Path("/tmp/hexagon-runtime/workspace/${marker}"); print(p.read_text() if p.exists() else "null")`);

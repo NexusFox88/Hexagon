@@ -13,7 +13,7 @@ for(const first of ['python','typescript'])it(`${first} generated persistent pro
   if(req.url==='/v1/sessions/preflight')res.end('{"ready":true}');
   else if(req.url==='/v1/sessions'){expect(JSON.parse(raw)).toEqual({harness:{id:'pi',version:'1.5.2'},sandbox_connection_id:'sandbox',model_connection_id:'model',tools:{search:'tool'},env:{MODE:'test'}});res.end('{"id":"session-1"}');}
   else if(req.url==='/v1/sessions/session-1/runs'){
-   keys.push(String(req.headers['idempotency-key']));expect(JSON.parse(raw).input).toBe('literal "input" 中文');
+   keys.push(String(req.headers['idempotency-key']));expect(JSON.parse(raw).input).toBe('literal "input" \u4e2d\u6587');
    if(lose){lose=false;res.destroy();return;}res.end('{"id":"run-1","state":"queued"}');
   }else if(req.url==='/v1/runs/run-1')res.end(JSON.stringify({id:'run-1',state:runState,output:{text:'answer'}}));
   else if(req.url?.startsWith('/v1/runs/run-1/stream')){res.setHeader('content-type','text/event-stream');res.end('id: 7\nevent: run.completed\ndata: {}\n\nevent: stream.end\ndata: {}\n\n');}
@@ -24,10 +24,10 @@ for(const first of ['python','typescript'])it(`${first} generated persistent pro
  const directory=await mkdtemp(resolve('.local/persistent-example-test-'));
  try{
   const sdk=resolve(directory,'node_modules/@hexagon/agent-sdk');await mkdir(sdk,{recursive:true});await writeFile(resolve(sdk,'package.json'),JSON.stringify({type:'module',exports:'./index.js'}));await writeFile(resolve(sdk,'index.js'),`export {Hexagon} from ${JSON.stringify(pathToFileURL(resolve('sdk/typescript/index.ts')).href)};`);
-  for(const language of ['python','typescript'])await writeFile(resolve(directory,language==='python'?'run.py':'run.mts'),sessionCode({language,base,agentId:'agent-1',sessionDefinition:{harness:{id:'pi',version:'1.5.2'},sandbox_connection_id:'sandbox',model_connection_id:'model',tools:{search:'tool'},env:{MODE:'test'}},bindings:{sandbox_connection_id:'sandbox',model_connection_id:'model'},prompt:'literal "input" 中文'}));
+  for(const language of ['python','typescript'])await writeFile(resolve(directory,language==='python'?'run.py':'run.mts'),sessionCode({language,base,agentId:'agent-1',sessionDefinition:{harness:{id:'pi',version:'1.5.2'},sandbox_connection_id:'sandbox',model_connection_id:'model',tools:{search:'tool'},env:{MODE:'test'}},bindings:{sandbox_connection_id:'sandbox',model_connection_id:'model'},prompt:'literal "input" \u4e2d\u6587'}));
   async function run(language:string,args:string[]=[]){return new Promise<{code:number|null;output:string}>((done,reject)=>{const file=resolve(directory,language==='python'?'run.py':'run.mts');const child=spawn(language==='python'?'python3':process.execPath,language==='python'?[file,...args]:['--import','tsx',file,...args],{cwd:directory,env:{...process.env,HEXAGON_API_TOKEN:'fixture',PYTHONPATH:resolve('sdk/python')}});let output='';child.stdout.on('data',d=>output+=d);child.stderr.on('data',d=>output+=d);child.on('error',reject);child.on('close',code=>done({code,output}));});}
   expect((await run(first)).code).toBe(1);
-  const journal=JSON.parse(await readFile(resolve(directory,'hexagon-session.json'),'utf8'));expect(journal).toMatchObject({session_id:'session-1',input:'literal "input" 中文'});expect(journal.run_id).toBeUndefined();
+  const journal=JSON.parse(await readFile(resolve(directory,'hexagon-session.json'),'utf8'));expect(journal).toMatchObject({session_id:'session-1',input:'literal "input" \u4e2d\u6587'});expect(journal.run_id).toBeUndefined();
   const second=first==='python'?'typescript':'python';const resumed=await run(second,['--resume','--stream']);expect(resumed.code,resumed.output).toBe(0);expect(resumed.output).toContain('answer');
   expect(keys).toHaveLength(2);expect(keys[0]).toBe(keys[1]);expect(calls.filter(p=>p==='/v1/sessions')).toHaveLength(1);expect(calls.some(p=>p.endsWith('/close'))).toBe(false);
   expect(JSON.parse(await readFile(resolve(directory,'hexagon-session.json'),'utf8')).cursor).toBe('7');

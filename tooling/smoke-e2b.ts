@@ -84,7 +84,7 @@ try {
     await connector.write(resource, '/tmp/hexagon-runtime/workspace/test_calculate.py', Buffer.from('from calculate import add\nassert add(2, 3) == 5\nassert add(-4, 1) == -3\nprint("2 assertions passed")\n'));
     const agentRun = randomUUID();
     evidence.stage = 'model_execution'; await save();
-    await runtime.request('POST', '/runs', openCodeRequest(agentRun, '请实现 calculate.py 的 add 函数，执行 python3 test_calculate.py 验证，不要修改测试文件。最后用中文简短说明修改和测试结果。', model));
+    await runtime.request('POST', '/runs', openCodeRequest(agentRun, 'Implement add in calculate.py and run python3 test_calculate.py without changing tests. Briefly explain changes and test results in English.', model));
     let state;
     let cursor = 0;
     const decoded: NonNullable<ReturnType<typeof decodeOpenCode>>[] = [];
