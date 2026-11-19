@@ -1,75 +1,159 @@
-# Hexagon
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="brand-assets/creative/readme-banner-dark.svg">
+    <img src="brand-assets/creative/readme-banner-light.svg" alt="Hexagon — Self-managed Agent fleet control plane" width="100%">
+  </picture>
+</p>
 
-**A self-hostable Agent control plane for applications.** Create stateful Sessions through Python, TypeScript or REST, run Agent tasks in cloud Sandboxes, observe durable events, and retrieve results and artifacts. Console manages connections and execution; the selected Harness runs the Agent inside the Sandbox.
+<h1 align="center">Your agents. Your infrastructure.</h1>
 
-[中文](README.zh-CN.md) · [Documentation](docs/product/en/index.md) · [First Session](docs/product/en/start/first-session.md) · [Coding Agent guide](docs/product/en/agents.md)
+<p align="center">
+  <strong>The open-source control plane for your Agent fleet.</strong><br>
+  Bring your Sandbox, Harness and LLM. Ship headless agents through Python, TypeScript or REST.
+</p>
 
-**Developer preview preparation, not a stable public release.** This checkout contains scoped real-cloud evidence; it does not establish universal Sandbox × Harness compatibility. Public distribution approval remains pending in [release-policy.json](release-policy.json). Project code is [Apache-2.0](LICENSE), with applicable [third-party notices](THIRD_PARTY_NOTICES.md).
+<p align="center">
+  <a href="docs/product/en/start/first-session.md"><strong>Run your first Session →</strong></a> ·
+  <a href="docs/product/en/index.md">Documentation</a> ·
+  <a href="#see-your-fleet">Console</a> ·
+  <a href="docs/product/en/integrations/verified-combinations.md">Verified combinations</a> ·
+  <a href="CONTRIBUTING.md">Contribute</a>
+</p>
 
-## What you can build
+<p align="center">
+  <a href="LICENSE"><img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache_2.0-111111?style=flat-square"></a>
+  <img alt="Status: Developer preview" src="https://img.shields.io/badge/Status-Developer_preview-555555?style=flat-square">
+  <img alt="Clients: Python, TypeScript, REST" src="https://img.shields.io/badge/Clients-Python_%C2%B7_TypeScript_%C2%B7_REST-111111?style=flat-square">
+</p>
 
-Give an Agent a Web project, ask it to implement a filter, inspect the actual test output and private preview, download the changed files, then continue the conversation in the same workspace. Hexagon manages the execution lifecycle around that task:
+Build coding agents, internal operators and tool-connected assistants on infrastructure you control. Hexagon handles the execution around the agent: Session state, cloud workspaces, scoped tool access, durable events and result delivery. Your application owns the user experience.
 
-| Your application does | Hexagon provides |
+## From a prompt to an operated fleet
+
+An agent needs more than a model call. It needs a workspace, a runtime, permissions, continuity and a way to see what happened.
+
+- **Choose your execution stack.** Bind a Sandbox, a versioned Harness and a model endpoint per Session. Register custom OCI Harness images where the provider supports them.
+- **Keep the conversation alive.** Continue work in the same Session, inspect its pinned initialization, and reuse that definition in SDK code or the Playground.
+- **Treat execution as infrastructure.** Observe Runs, reconnect to persisted events, cancel work explicitly, and reconcile uncertain cloud operations.
+- **Give agents scoped access.** Connect remote MCP, applications and protected APIs. Keep original provider and upstream credentials in the control plane, with authorization and approval flows for tools.
+- **Deliver more than text.** Retrieve answers and exported artifacts. Inspect private previews where supported. Retain exported artifacts after workspace closure.
+- **Let idle workspaces rest.** Pause and automatic wake follow provider-specific strategies. Session identity survives supported idle transitions; recovery scope depends on the stack.
+
+## See your fleet
+
+**Configure once. Inspect the actual API. Take the code into your application.**
+
+![Hexagon API Playground with Sandbox, model and Harness selection alongside REST endpoints](brand-assets/screenshots/console-playground.png)
+
+The API Playground exposes Python, TypeScript and REST side by side. Console is the operations surface for connections, authorization, Session execution and diagnostics; your application drives conversations through the API.
+
+<details>
+<summary><strong>Inspect a real Session: conversation, execution and initialization</strong></summary>
+
+![A completed E2B and OpenCode acceptance Session in the live Hexagon Console](brand-assets/screenshots/console-session.png)
+
+A captured acceptance Session, not a fabricated demo. Inspect the conversation and execution progress, then switch to Initialization to see the definition used for that Session.
+
+</details>
+
+<details>
+<summary><strong>Choose a Harness: built-ins, OCI images and build recipes</strong></summary>
+
+![Hexagon Harness templates showing runtime protocols, images, recipes and verification links](brand-assets/screenshots/console-harnesses.png)
+
+The catalog distinguishes published images, build recipes and linked verification. A catalog entry is not a claim that every provider/model combination works.
+
+</details>
+
+## Bring your stack
+
+| Layer | Available integration paths |
 | --- | --- |
-| Creates work context and submits tasks | Pinned Session configuration and Run state |
-| Displays progress and reconnects | Persisted events and cursor-based replay |
-| Connects external Tools | Scoped account access, authorization and write approval |
-| Delivers results and ends work | Exported artifacts, private previews where supported, resource cleanup and reconciliation |
+| **Sandbox** | E2B, Modal, Vercel Sandbox, Blaxel, Fly Sprites, Fly Machines, Upstash Box, Instabox, Freestyle VMs, Boat and Agent37 |
+| **Harness** | Built-in Pi and OpenCode; OCI adapters/templates for Codex, Hermes, OpenClaw, OpenCode, Aider, Claude Code, DeepSeek Harness and custom agents |
+| **Model** | Anthropic Messages, OpenAI Chat Completions and OpenAI Responses; bring a compatible endpoint and model |
+| **Tools** | Remote MCP, application connectors and protected HTTP APIs, with explicit Session bindings |
+| **Client** | Python SDK, TypeScript SDK and REST; Console uses the same control plane |
 
-Your application retains business identity, user permissions and its own task records. See [use cases and boundaries](docs/product/en/start/use-cases.md).
+**Choose a verified combination, not just a familiar name.** Image distribution, tool support, model protocols and pause/recovery vary by adapter. Some Harness templates require a build. Daytona is excluded. See [integration selection](docs/product/en/integrations/choose.md), [Sandbox capabilities](docs/product/en/integrations/sandboxes.md) and [dated cloud evidence](docs/product/en/integrations/verified-combinations.md).
 
-```mermaid
-flowchart LR
-  A[Application / SDK] --> C[Control plane]
-  B[Console] --> C
-  C --> S[Cloud Sandbox: Runtime + Harness]
-  S -->|Scoped access| C
-  C --> E[Model endpoints and Tools]
-```
+## Launch your first Session
 
-## Start from a source checkout
-
-Prepare Node.js 22.19+, an existing dedicated PostgreSQL database, and Python 3.10+ for Python clients. Temporary development credential ingress uses cloudflared; provider-specific dependencies are described in the [installation guide](docs/product/en/start/install.md).
+**1. Start the control plane.** You need Node.js 22.19+, a dedicated PostgreSQL database and Python 3.10+ if using the Python SDK. Local development credential ingress uses `cloudflared`; see [installation prerequisites](docs/product/en/start/install.md).
 
 ```sh
+git clone https://github.com/NexusFox88/Haxegon.git
+cd Haxegon
 npm ci
-# Substitute an existing dedicated database and your local authentication settings.
+
+# Use an existing dedicated database and your PostgreSQL credentials.
 export DATABASE_URL='postgres://YOUR_USER@127.0.0.1:5432/hexagon'
 npm run local -- doctor
 npm run local -- start
-npm run local -- status
 ```
 
-Open [local Console](http://127.0.0.1:8787/console/). Local Console and `Hexagon.local()` use workspace discovery; hosted clients use explicit credentials. The commands do not create PostgreSQL or its database. Read [installation](docs/product/en/start/install.md) for data directories, ingress and SDK installation before running a cloud task.
+**2. Connect your infrastructure.** Open [Console](http://127.0.0.1:8787/console/), verify one Sandbox and one model connection, then choose a compatible Harness in API Playground. Local Console and `Hexagon.local()` discover workspace access automatically—no manual API token. Hosted clients use explicit credentials.
 
-Then follow [Your first Session](docs/product/en/start/first-session.md): connect and verify one Sandbox and model, choose a compatible Harness, submit work, check its result and artifact, close the Session, and verify retained artifacts. Saving an Agent is optional. Tools and OAuth are not prerequisites for this first task. Cloud resources and model calls use your accounts and may incur charges.
+**3. Submit from your application.** This is the TypeScript API shape after [installing the local SDK](docs/product/en/start/install.md) and configuring connections:
 
-The tutorial's complete [Python](examples/documentation/first-session.py) and [TypeScript](examples/documentation/first-session.ts) programs retain private journals and check cleanup. Run them with the tutorial prerequisites and connection IDs, not as standalone snippets without setup. Console's API Playground can also generate calls for your selected connections.
+```ts
+import { Hexagon } from '@hexagon/agent-sdk';
 
-## Continue with your product
+const hexagon = await Hexagon.local();
+const session = await hexagon.createSession({
+  harness: { id: 'pi', version: '1.5.2' },
+  sandbox_connection_id: 'YOUR_SANDBOX_CONNECTION_ID',
+  model_connection_id: 'YOUR_MODEL_CONNECTION_ID',
+  env: { APP_ENV: 'development' },
+});
 
-| Goal | Guide |
+const run = await hexagon.submit(
+  session.id,
+  'Create hello.txt in the supplied Run artifact directory, then explain it.',
+  crypto.randomUUID(), // Keep this key when retrying the same submission.
+);
+
+console.log({ session: session.id, run: run.id });
+// Inspect execution in Console, or query hexagon.run(run.id).
+```
+
+Submission returns a Run, not a completed answer. Use the complete [Python](examples/documentation/first-session.py) or [TypeScript](examples/documentation/first-session.ts) journey to wait for completion, download and verify artifacts, close the Session and check retention. Those programs keep a private recovery journal. API Playground also generates programs for your selected connections.
+
+**[Follow the full first-Session walkthrough →](docs/product/en/start/first-session.md)**
+
+Your cloud and model accounts fund execution. The startup commands do not provision PostgreSQL. Close unused Sessions and confirm cleanup; a disconnected client does not stop a Run.
+
+## A control plane you can reason about
+
+```mermaid
+flowchart LR
+    APP["Your application<br/>Python · TypeScript · REST"] --> CP["Hexagon control plane<br/>Sessions · Runs · Events · Access"]
+    UI["Console<br/>Configure · Inspect · Operate"] --> CP
+    CP --> SB["Cloud Sandbox<br/>Runtime + selected Harness"]
+    SB -->|Scoped model and tool access| CP
+    CP --> LLM[Your model endpoint]
+    CP --> TOOLS[MCP · Applications · Protected APIs]
+```
+
+**The control plane owns lifecycle. The Sandbox runs the Harness.** PostgreSQL persists state and events. Runtime supervises agent processes. Your application owns business identity and user permissions. Local versus hosted describes the control plane; agent execution uses cloud Sandboxes.
+
+| Build next | Guide |
 | --- | --- |
-| Add Agent execution to a backend | [Backend integration](docs/product/en/build/backend-integration.md) |
-| Supply a project and inspect the result | [Project context](docs/product/en/build/project-context.md) and [artifacts](docs/product/en/build/artifacts.md) |
-| Handle authorization, approvals and failures | [Tool authorization](docs/product/en/build/tool-authorization.md), [approvals](docs/product/en/build/approvals.md), [recovery](docs/product/en/build/recovery.md) |
-| Operate your own control plane | [Self-hosting](docs/product/en/operate/self-host.md), [networking](docs/product/en/operate/networking.md), [backup/restore](docs/product/en/operate/backup-restore.md) |
-| Find all existing documentation | [Documentation directory](docs/product/en/directory.md) |
+| Add an agent to your backend | [Backend integration](docs/product/en/build/backend-integration.md) |
+| Supply a repository or project | [Project context](docs/product/en/build/project-context.md) |
+| Connect tools and handle approvals | [Tool authorization](docs/product/en/build/tool-authorization.md) · [Approvals](docs/product/en/build/approvals.md) |
+| Operate and recover your deployment | [Self-hosting](docs/product/en/operate/self-host.md) · [Recovery](docs/product/en/build/recovery.md) · [Backup](docs/product/en/operate/backup-restore.md) |
+| Extend the execution stack | [Code boundaries](docs/product/en/contribute/codebase.md) · [Harness integration](docs/product/en/integrations/harnesses.md) |
 
-## Execution and security boundaries
+## Preview status
 
-Local and hosted refer to the control plane. Real execution uses cloud Sandboxes. Runtime supervises Harness processes; provider and original upstream credentials remain in the control plane. Guests receive scoped access whose permissions still matter. Keep the database and its matching encryption key together. Temporary credential ingress must not expose the management API; hosted deployments need appropriate stable HTTPS ingress. See [security](SECURITY.md).
+Hexagon is in **developer preview**, with scoped real-cloud acceptance records. It is not a universal Sandbox × Harness compatibility promise or a stable-release SLA. The [latest release-preparation attempt](testing/evidence/2026-11-19-open-source-preparation.md) records unresolved E2B image preparation and a blocked credential-ingress journey; historical passes do not erase those failures. Follow the [support ledger](docs/release/support.md) and [release prerequisites](release-policy.json) when evaluating a deployment.
 
-Disconnecting an event stream does not cancel a Run. Explicitly close unused Sessions and confirm cleanup. Paused does not universally mean free, and some expiry/cleanup mechanisms require the control plane to stay running. Unknown remote outcomes require [reconciliation](docs/product/en/operate/reconciliation.md), not blind retries.
+Pause is distinct from close and does not universally mean zero billing. Recovery may restore files and native conversation without preserving every process. Unknown remote outcomes require [reconciliation](docs/product/en/operate/reconciliation.md), not blind retries. Keep the database and its matching encryption key together; see [security boundaries](SECURITY.md).
 
-Image support, model protocols, Tool bridges and restoration vary by combination. Check [integration selection](docs/product/en/integrations/choose.md) and [dated verification evidence](docs/product/en/integrations/verified-combinations.md). A recipe, registration or catalog card is not a cloud pass. Daytona is excluded from the current catalog. The product docs remain drafts under active completion; see [coverage](docs/product/coverage.json) and [changes](docs/product/en/changelog.md).
+## Build with us
 
-## Contribute
-
-Start with [development setup](docs/product/en/contribute/development.md), [code boundaries](docs/product/en/contribute/codebase.md) and [CONTRIBUTING.md](CONTRIBUTING.md). Public contribution intake is not yet configured; these guides describe the repository's engineering requirements.
-
-After installing development dependencies, use an isolated test database:
+Good contributions make the fleet easier to operate: a reproducible provider failure, an adapter with lifecycle tests, a complete SDK journey, or a clearer first-run experience. Start with [CONTRIBUTING.md](CONTRIBUTING.md) and [development setup](docs/product/en/contribute/development.md).
 
 ```sh
 export TEST_DATABASE_URL='postgres://YOUR_USER@127.0.0.1:5432/hexagon_test'
@@ -78,6 +162,6 @@ npm run verify:packages
 npm run release:check
 ```
 
-Both verification gates require the test database; package verification also needs Python packaging tools. Ordinary `npm test` without database configuration can omit database-backed coverage. Deterministic checks are separate from explicit, billable cloud acceptance. Record actual results and preserve failed evidence as described in [testing](docs/product/en/contribute/testing.md).
+Use an isolated test database and the documented packaging prerequisites. Deterministic tests and real cloud acceptance are separate; cloud tests consume your resources. See [testing](docs/product/en/contribute/testing.md).
 
-[Release checklist](docs/release/checklist.md) · [Support and evidence](docs/release/support.md) · [Third-party notices](THIRD_PARTY_NOTICES.md). Release checks do not publish anything; public-release prerequisites remain pending.
+[Apache-2.0](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md) · [All documentation](docs/product/en/directory.md) · [Chinese documentation](docs/product/zh-CN/index.md) · [Brand assets](brand-assets/README.md)

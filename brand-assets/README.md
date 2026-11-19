@@ -60,3 +60,7 @@ In Console, obtain status text from the existing localization catalog. Set aria-
 - [Creative contact sheet](previews/creative-sheet.png)
 
 Presentation backgrounds exist only in the previews and creative compositions. They are not part of the transparent identity files. Assets are prepared for integration; product UI has not been changed automatically.
+
+## Product screenshots
+
+[Live Console captures](screenshots/README.md) cover API Playground, Harness templates and an existing acceptance Session. They are used in the repository README and remain separate from illustrative brand artwork.

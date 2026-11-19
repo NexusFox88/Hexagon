@@ -276,6 +276,33 @@
       "width": 1200,
       "height": 630,
       "transparent": false
+    },
+    {
+      "file": "screenshots/console-playground.png",
+      "kind": "console-screenshot",
+      "theme": "dark",
+      "language": "en",
+      "captured": "2026-11-20",
+      "source": "Live local Console; existing acceptance data",
+      "transparent": false
+    },
+    {
+      "file": "screenshots/console-session.png",
+      "kind": "console-screenshot",
+      "theme": "dark",
+      "language": "en",
+      "captured": "2026-11-20",
+      "source": "Live local Console; existing acceptance data",
+      "transparent": false
+    },
+    {
+      "file": "screenshots/console-harnesses.png",
+      "kind": "console-screenshot",
+      "theme": "dark",
+      "language": "en",
+      "captured": "2026-11-20",
+      "source": "Live local Console; existing acceptance data",
+      "transparent": false
     }
   ],
   "language": "en",
