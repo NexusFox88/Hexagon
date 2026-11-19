@@ -2,6 +2,8 @@
 
 An English-only library of identity, motion and creative artwork.
 
+Approved headline: **Your agent fleet. / Your infrastructure stack.** The canonical wording lives in [brand-copy.json](brand-copy.json).
+
 Start with [Visual guidelines](BRAND-GUIDELINES.md), [Creative assets](creative/README.md) and the [Asset manifest](asset-manifest.json).
 
 ## Creative direction

@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-<h1 align="center">Your agents. Your infrastructure.</h1>
+<h1 align="center">Your agent fleet.<br>Your infrastructure stack.</h1>
 
 <p align="center">
   <strong>The open-source control plane for your Agent fleet.</strong><br>

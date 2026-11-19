@@ -8,7 +8,7 @@ Version 1.1 · November 20, 2026 · English-only asset library
 
 Extended description: A self-managed Agent fleet control plane with a headless agent API. Bring your Sandbox, Harness and LLM.
 
-Use the spelling **Hexagon**. The short lockup descriptor is **Agent fleet control plane**. Creative headline: **Your agents. Your infrastructure.** Brand verbs: **Isolate. Route. Orchestrate.** These are identity statements, not certifications of security, compatibility or service availability.
+Use the spelling **Hexagon**. The short lockup descriptor is **Agent fleet control plane**. Creative headline: **Your agent fleet. Your infrastructure stack.** Brand verbs: **Isolate. Route. Orchestrate.** These are identity statements, not certifications of security, compatibility or service availability.
 
 The character is precise, modular and restrained. Express DevOps through geometry, hierarchy and purposeful movement. All copy, documentation, accessible labels, source comments and metadata in this folder must remain English.
 

@@ -46,11 +46,11 @@ Working creative platform:
 
 Candidate supporting lines:
 
-- **Your agents. One control plane.** — product positioning
+- **Your agent fleet. Your infrastructure stack.** — approved product headline
 - **Independent agents. Coordinated execution.** — brand narrative
 - **Launch. Orchestrate. Return.** — motion language
 
-These are proposed campaign lines. The shipped wordmark descriptor remains **Agent fleet control plane**, and the current creative headline remains **Your agents. Your infrastructure.** Changes to those defaults should be deliberate and versioned.
+These are proposed campaign lines. The shipped wordmark descriptor remains **Agent fleet control plane**, and the current creative headline remains **Your agent fleet. Your infrastructure stack.** Changes to those defaults should be deliberate and versioned.
 
 ## Signature concept: Formation / Reformation
 

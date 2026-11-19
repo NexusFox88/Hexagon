@@ -1,6 +1,6 @@
 {
   "brand": "Hexagon",
-  "version": "1.1",
+  "version": "1.2",
   "updated": "2026-11-20",
   "scope": "Brand assets only; not a Console theme override",
   "tagline": "Agent fleet control plane",
@@ -303,8 +303,49 @@
       "captured": "2026-11-20",
       "source": "Live local Console; existing acceptance data",
       "transparent": false
+    },
+    {
+      "file": "creative/github-social-dark.svg",
+      "kind": "creative",
+      "theme": "dark",
+      "layout": "github-social",
+      "width": 1280,
+      "height": 640,
+      "transparent": false
+    },
+    {
+      "file": "creative/github-social-dark.png",
+      "kind": "social-export",
+      "theme": "dark",
+      "layout": "github-social",
+      "width": 1280,
+      "height": 640,
+      "transparent": false
+    },
+    {
+      "file": "creative/github-social-light.svg",
+      "kind": "creative",
+      "theme": "light",
+      "layout": "github-social",
+      "width": 1280,
+      "height": 640,
+      "transparent": false
+    },
+    {
+      "file": "creative/github-social-light.png",
+      "kind": "social-export",
+      "theme": "light",
+      "layout": "github-social",
+      "width": 1280,
+      "height": 640,
+      "transparent": false
     }
   ],
   "language": "en",
-  "creative_concept": "Controlled divergence"
+  "creative_concept": "Controlled divergence",
+  "copy_source": "brand-copy.json",
+  "headline_lines": [
+    "Your agent fleet.",
+    "Your infrastructure stack."
+  ]
 }
