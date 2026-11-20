@@ -347,5 +347,18 @@
   "headline_lines": [
     "Your agent fleet.",
     "Your infrastructure stack."
-  ]
+  ],
+  "collections": {
+    "gtm": {
+      "index": "gtm/asset-index.json",
+      "guide": "gtm/AGENT-GUIDE.md",
+      "gallery": "gtm/index.html",
+      "language": "en",
+      "concept_topics": 8,
+      "template_families": 6,
+      "product_stories": 7,
+      "website_visuals": "gtm/WEBSITE-REUSE.md",
+      "website_story_chapters": 6
+    }
+  }
 }

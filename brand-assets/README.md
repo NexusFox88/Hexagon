@@ -66,3 +66,9 @@ Presentation backgrounds exist only in the previews and creative compositions. T
 ## Product screenshots
 
 [Live Console captures](screenshots/README.md) cover API Playground, Harness templates and an existing acceptance Session. They are used in the repository README and remain separate from illustrative brand artwork.
+
+## GTM production kit
+
+The [GTM studio](gtm/README.md) includes eight concepts, six campaign-template families, seven sourced product stories, a carousel, motion exports, a live UI walkthrough and Agent creation instructions. Open the [local gallery](gtm/index.html) or use the [machine-readable asset index](gtm/asset-index.json). All campaign copy is English and follows the shared headline.
+
+The GTM collection also reuses the marketing website's ASCII fleet, ordered-dither horizon, Funnel Display / IBM Plex Mono typography and six-chapter request flow. See [website visual reuse](gtm/WEBSITE-REUSE.md) for source mapping, reusable layers and creation rules.

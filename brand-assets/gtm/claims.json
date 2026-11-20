@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "as_of": "2026-11-20",
+  "default_status": "developer-preview",
+  "claims": [
+    {"id":"byo","allowed":"Choose a compatible Sandbox, Harness and model endpoint per Session.","limit":"Catalog entries do not imply universal compatibility.","sources":["../../docs/product/en/integrations/verified-combinations.md"]},
+    {"id":"identity","allowed":"Inspect the pinned initialization used for a Session.","limit":"Business-user authorization remains the application's responsibility.","sources":["../../docs/product/en/concepts/initialization.md"]},
+    {"id":"tools","allowed":"Bind brokered tools and inspect their recorded calls.","limit":"Binding is not proof of invocation; arbitrary native shell/network calls are not automatically brokered approvals.","sources":["../../docs/product/en/build/tool-authorization.md"]},
+    {"id":"wake","allowed":"Supported combinations can pause and wake on subsequent work.","limit":"Preservation, resource identity and billing vary. No universal RAM or zero-cost claim.","sources":["../../docs/product/en/build/idle-and-wake.md","../../testing/evidence/2026-11-19-harness-serverless-ui.md"]},
+    {"id":"delivery","allowed":"Retrieve recorded answers and exported artifacts after workspace closure.","limit":"Exported artifacts are not a complete workspace snapshot; retention policy still applies.","sources":["../../docs/product/en/build/artifacts.md"]},
+    {"id":"credentials","allowed":"Original managed provider and upstream credentials are held by the control plane.","limit":"Scoped execution capabilities are sensitive; ordinary environment variables are visible to guest code; image registry authentication has a separate path.","sources":["../../docs/product/en/concepts/security-boundaries.md"]}
+  ],
+  "prohibited_without_new_evidence": ["every combination works", "zero billing while paused", "all memory survives", "production SLA", "fabricated customer or adoption metrics", "a new live cloud pass inferred from a historical screenshot"]
+}

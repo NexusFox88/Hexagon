@@ -1,0 +1,2978 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "concepts.fleet.art-dark",
+      "file": "concepts/fleet/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Fleet in formation.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.fleet.wide-dark",
+      "file": "concepts/fleet/wide-dark.svg",
+      "export": "concepts/fleet/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Fleet in formation. Independent agents. Coordinated execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.fleet.square-dark",
+      "file": "concepts/fleet/square-dark.svg",
+      "export": "concepts/fleet/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Fleet in formation. Independent agents. Coordinated execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.fleet.portrait-dark",
+      "file": "concepts/fleet/portrait-dark.svg",
+      "export": "concepts/fleet/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Fleet in formation. Independent agents. Coordinated execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.fleet.art-light",
+      "file": "concepts/fleet/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Fleet in formation.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.fleet.wide-light",
+      "file": "concepts/fleet/wide-light.svg",
+      "export": "concepts/fleet/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Fleet in formation. Independent agents. Coordinated execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.fleet.square-light",
+      "file": "concepts/fleet/square-light.svg",
+      "export": "concepts/fleet/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Fleet in formation. Independent agents. Coordinated execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.fleet.portrait-light",
+      "file": "concepts/fleet/portrait-light.svg",
+      "export": "concepts/fleet/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Fleet in formation. Independent agents. Coordinated execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.stack.art-dark",
+      "file": "concepts/stack/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Bring your stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.stack.wide-dark",
+      "file": "concepts/stack/wide-dark.svg",
+      "export": "concepts/stack/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Bring your stack. Sandbox. Harness. LLM. Independently configurable.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.stack.square-dark",
+      "file": "concepts/stack/square-dark.svg",
+      "export": "concepts/stack/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Bring your stack. Sandbox. Harness. LLM. Independently configurable.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.stack.portrait-dark",
+      "file": "concepts/stack/portrait-dark.svg",
+      "export": "concepts/stack/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Bring your stack. Sandbox. Harness. LLM. Independently configurable.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.stack.art-light",
+      "file": "concepts/stack/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Bring your stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.stack.wide-light",
+      "file": "concepts/stack/wide-light.svg",
+      "export": "concepts/stack/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Bring your stack. Sandbox. Harness. LLM. Independently configurable.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.stack.square-light",
+      "file": "concepts/stack/square-light.svg",
+      "export": "concepts/stack/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Bring your stack. Sandbox. Harness. LLM. Independently configurable.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.stack.portrait-light",
+      "file": "concepts/stack/portrait-light.svg",
+      "export": "concepts/stack/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Bring your stack. Sandbox. Harness. LLM. Independently configurable.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.control.art-dark",
+      "file": "concepts/control/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "One control plane.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.control.wide-dark",
+      "file": "concepts/control/wide-dark.svg",
+      "export": "concepts/control/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "One control plane. Coordinate lifecycle, access and execution records.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.control.square-dark",
+      "file": "concepts/control/square-dark.svg",
+      "export": "concepts/control/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "One control plane. Coordinate lifecycle, access and execution records.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.control.portrait-dark",
+      "file": "concepts/control/portrait-dark.svg",
+      "export": "concepts/control/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "One control plane. Coordinate lifecycle, access and execution records.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.control.art-light",
+      "file": "concepts/control/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "One control plane.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.control.wide-light",
+      "file": "concepts/control/wide-light.svg",
+      "export": "concepts/control/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "One control plane. Coordinate lifecycle, access and execution records.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.control.square-light",
+      "file": "concepts/control/square-light.svg",
+      "export": "concepts/control/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "One control plane. Coordinate lifecycle, access and execution records.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.control.portrait-light",
+      "file": "concepts/control/portrait-light.svg",
+      "export": "concepts/control/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "One control plane. Coordinate lifecycle, access and execution records.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md"
+    },
+    {
+      "id": "concepts.isolation.art-dark",
+      "file": "concepts/isolation/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Boundaries by design.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.isolation.wide-dark",
+      "file": "concepts/isolation/wide-dark.svg",
+      "export": "concepts/isolation/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Boundaries by design. Separate cloud workspaces for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.isolation.square-dark",
+      "file": "concepts/isolation/square-dark.svg",
+      "export": "concepts/isolation/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Boundaries by design. Separate cloud workspaces for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.isolation.portrait-dark",
+      "file": "concepts/isolation/portrait-dark.svg",
+      "export": "concepts/isolation/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Boundaries by design. Separate cloud workspaces for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.isolation.art-light",
+      "file": "concepts/isolation/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Boundaries by design.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.isolation.wide-light",
+      "file": "concepts/isolation/wide-light.svg",
+      "export": "concepts/isolation/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Boundaries by design. Separate cloud workspaces for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.isolation.square-light",
+      "file": "concepts/isolation/square-light.svg",
+      "export": "concepts/isolation/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Boundaries by design. Separate cloud workspaces for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.isolation.portrait-light",
+      "file": "concepts/isolation/portrait-light.svg",
+      "export": "concepts/isolation/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Boundaries by design. Separate cloud workspaces for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.continuity.art-dark",
+      "file": "concepts/continuity/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Keep the thread.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md"
+    },
+    {
+      "id": "concepts.continuity.wide-dark",
+      "file": "concepts/continuity/wide-dark.svg",
+      "export": "concepts/continuity/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Keep the thread. Inspect identity and pinned Session initialization.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md"
+    },
+    {
+      "id": "concepts.continuity.square-dark",
+      "file": "concepts/continuity/square-dark.svg",
+      "export": "concepts/continuity/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Keep the thread. Inspect identity and pinned Session initialization.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md"
+    },
+    {
+      "id": "concepts.continuity.portrait-dark",
+      "file": "concepts/continuity/portrait-dark.svg",
+      "export": "concepts/continuity/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Keep the thread. Inspect identity and pinned Session initialization.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md"
+    },
+    {
+      "id": "concepts.continuity.art-light",
+      "file": "concepts/continuity/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Keep the thread.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md"
+    },
+    {
+      "id": "concepts.continuity.wide-light",
+      "file": "concepts/continuity/wide-light.svg",
+      "export": "concepts/continuity/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Keep the thread. Inspect identity and pinned Session initialization.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md"
+    },
+    {
+      "id": "concepts.continuity.square-light",
+      "file": "concepts/continuity/square-light.svg",
+      "export": "concepts/continuity/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Keep the thread. Inspect identity and pinned Session initialization.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md"
+    },
+    {
+      "id": "concepts.continuity.portrait-light",
+      "file": "concepts/continuity/portrait-light.svg",
+      "export": "concepts/continuity/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Keep the thread. Inspect identity and pinned Session initialization.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md"
+    },
+    {
+      "id": "concepts.wake.art-dark",
+      "file": "concepts/wake/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Work. Rest. Resume.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md"
+    },
+    {
+      "id": "concepts.wake.wide-dark",
+      "file": "concepts/wake/wide-dark.svg",
+      "export": "concepts/wake/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Work. Rest. Resume. Pause and wake follow provider-specific strategies.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md"
+    },
+    {
+      "id": "concepts.wake.square-dark",
+      "file": "concepts/wake/square-dark.svg",
+      "export": "concepts/wake/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Work. Rest. Resume. Pause and wake follow provider-specific strategies.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md"
+    },
+    {
+      "id": "concepts.wake.portrait-dark",
+      "file": "concepts/wake/portrait-dark.svg",
+      "export": "concepts/wake/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Work. Rest. Resume. Pause and wake follow provider-specific strategies.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md"
+    },
+    {
+      "id": "concepts.wake.art-light",
+      "file": "concepts/wake/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Work. Rest. Resume.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md"
+    },
+    {
+      "id": "concepts.wake.wide-light",
+      "file": "concepts/wake/wide-light.svg",
+      "export": "concepts/wake/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Work. Rest. Resume. Pause and wake follow provider-specific strategies.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md"
+    },
+    {
+      "id": "concepts.wake.square-light",
+      "file": "concepts/wake/square-light.svg",
+      "export": "concepts/wake/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Work. Rest. Resume. Pause and wake follow provider-specific strategies.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md"
+    },
+    {
+      "id": "concepts.wake.portrait-light",
+      "file": "concepts/wake/portrait-light.svg",
+      "export": "concepts/wake/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Work. Rest. Resume. Pause and wake follow provider-specific strategies.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md"
+    },
+    {
+      "id": "concepts.tools.art-dark",
+      "file": "concepts/tools/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Access with intent.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.tools.wide-dark",
+      "file": "concepts/tools/wide-dark.svg",
+      "export": "concepts/tools/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Access with intent. Bind tools to Sessions. Authorize operations.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.tools.square-dark",
+      "file": "concepts/tools/square-dark.svg",
+      "export": "concepts/tools/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Access with intent. Bind tools to Sessions. Authorize operations.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.tools.portrait-dark",
+      "file": "concepts/tools/portrait-dark.svg",
+      "export": "concepts/tools/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Access with intent. Bind tools to Sessions. Authorize operations.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.tools.art-light",
+      "file": "concepts/tools/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Access with intent.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.tools.wide-light",
+      "file": "concepts/tools/wide-light.svg",
+      "export": "concepts/tools/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Access with intent. Bind tools to Sessions. Authorize operations.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.tools.square-light",
+      "file": "concepts/tools/square-light.svg",
+      "export": "concepts/tools/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Access with intent. Bind tools to Sessions. Authorize operations.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.tools.portrait-light",
+      "file": "concepts/tools/portrait-light.svg",
+      "export": "concepts/tools/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Access with intent. Bind tools to Sessions. Authorize operations.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md"
+    },
+    {
+      "id": "concepts.delivery.art-dark",
+      "file": "concepts/delivery/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Deliver more than text.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md"
+    },
+    {
+      "id": "concepts.delivery.wide-dark",
+      "file": "concepts/delivery/wide-dark.svg",
+      "export": "concepts/delivery/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Deliver more than text. Return answers, events and exported artifacts.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md"
+    },
+    {
+      "id": "concepts.delivery.square-dark",
+      "file": "concepts/delivery/square-dark.svg",
+      "export": "concepts/delivery/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Deliver more than text. Return answers, events and exported artifacts.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md"
+    },
+    {
+      "id": "concepts.delivery.portrait-dark",
+      "file": "concepts/delivery/portrait-dark.svg",
+      "export": "concepts/delivery/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Deliver more than text. Return answers, events and exported artifacts.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md"
+    },
+    {
+      "id": "concepts.delivery.art-light",
+      "file": "concepts/delivery/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Deliver more than text.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md"
+    },
+    {
+      "id": "concepts.delivery.wide-light",
+      "file": "concepts/delivery/wide-light.svg",
+      "export": "concepts/delivery/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Deliver more than text. Return answers, events and exported artifacts.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md"
+    },
+    {
+      "id": "concepts.delivery.square-light",
+      "file": "concepts/delivery/square-light.svg",
+      "export": "concepts/delivery/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Deliver more than text. Return answers, events and exported artifacts.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md"
+    },
+    {
+      "id": "concepts.delivery.portrait-light",
+      "file": "concepts/delivery/portrait-light.svg",
+      "export": "concepts/delivery/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Deliver more than text. Return answers, events and exported artifacts.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md"
+    },
+    {
+      "id": "exports.launch-wide-dark",
+      "file": "exports/launch-wide-dark.svg",
+      "export": "exports/launch-wide-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.launch-video-dark",
+      "file": "exports/launch-video-dark.svg",
+      "export": "exports/launch-video-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.launch-square-dark",
+      "file": "exports/launch-square-dark.svg",
+      "export": "exports/launch-square-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.launch-portrait-dark",
+      "file": "exports/launch-portrait-dark.svg",
+      "export": "exports/launch-portrait-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.launch-story-dark",
+      "file": "exports/launch-story-dark.svg",
+      "export": "exports/launch-story-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.launch-wide-light",
+      "file": "exports/launch-wide-light.svg",
+      "export": "exports/launch-wide-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.launch-video-light",
+      "file": "exports/launch-video-light.svg",
+      "export": "exports/launch-video-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.launch-square-light",
+      "file": "exports/launch-square-light.svg",
+      "export": "exports/launch-square-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.launch-portrait-light",
+      "file": "exports/launch-portrait-light.svg",
+      "export": "exports/launch-portrait-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.launch-story-light",
+      "file": "exports/launch-story-light.svg",
+      "export": "exports/launch-story-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.feature-wide-dark",
+      "file": "exports/feature-wide-dark.svg",
+      "export": "exports/feature-wide-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.feature-video-dark",
+      "file": "exports/feature-video-dark.svg",
+      "export": "exports/feature-video-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.feature-square-dark",
+      "file": "exports/feature-square-dark.svg",
+      "export": "exports/feature-square-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.feature-portrait-dark",
+      "file": "exports/feature-portrait-dark.svg",
+      "export": "exports/feature-portrait-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.feature-story-dark",
+      "file": "exports/feature-story-dark.svg",
+      "export": "exports/feature-story-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.feature-wide-light",
+      "file": "exports/feature-wide-light.svg",
+      "export": "exports/feature-wide-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.feature-video-light",
+      "file": "exports/feature-video-light.svg",
+      "export": "exports/feature-video-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.feature-square-light",
+      "file": "exports/feature-square-light.svg",
+      "export": "exports/feature-square-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.feature-portrait-light",
+      "file": "exports/feature-portrait-light.svg",
+      "export": "exports/feature-portrait-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.feature-story-light",
+      "file": "exports/feature-story-light.svg",
+      "export": "exports/feature-story-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.code-wide-dark",
+      "file": "exports/code-wide-dark.svg",
+      "export": "exports/code-wide-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.code-video-dark",
+      "file": "exports/code-video-dark.svg",
+      "export": "exports/code-video-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.code-square-dark",
+      "file": "exports/code-square-dark.svg",
+      "export": "exports/code-square-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.code-portrait-dark",
+      "file": "exports/code-portrait-dark.svg",
+      "export": "exports/code-portrait-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.code-story-dark",
+      "file": "exports/code-story-dark.svg",
+      "export": "exports/code-story-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.code-wide-light",
+      "file": "exports/code-wide-light.svg",
+      "export": "exports/code-wide-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.code-video-light",
+      "file": "exports/code-video-light.svg",
+      "export": "exports/code-video-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.code-square-light",
+      "file": "exports/code-square-light.svg",
+      "export": "exports/code-square-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.code-portrait-light",
+      "file": "exports/code-portrait-light.svg",
+      "export": "exports/code-portrait-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.code-story-light",
+      "file": "exports/code-story-light.svg",
+      "export": "exports/code-story-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.explainer-wide-dark",
+      "file": "exports/explainer-wide-dark.svg",
+      "export": "exports/explainer-wide-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.explainer-video-dark",
+      "file": "exports/explainer-video-dark.svg",
+      "export": "exports/explainer-video-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.explainer-square-dark",
+      "file": "exports/explainer-square-dark.svg",
+      "export": "exports/explainer-square-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.explainer-portrait-dark",
+      "file": "exports/explainer-portrait-dark.svg",
+      "export": "exports/explainer-portrait-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.explainer-story-dark",
+      "file": "exports/explainer-story-dark.svg",
+      "export": "exports/explainer-story-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.explainer-wide-light",
+      "file": "exports/explainer-wide-light.svg",
+      "export": "exports/explainer-wide-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.explainer-video-light",
+      "file": "exports/explainer-video-light.svg",
+      "export": "exports/explainer-video-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.explainer-square-light",
+      "file": "exports/explainer-square-light.svg",
+      "export": "exports/explainer-square-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.explainer-portrait-light",
+      "file": "exports/explainer-portrait-light.svg",
+      "export": "exports/explainer-portrait-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.explainer-story-light",
+      "file": "exports/explainer-story-light.svg",
+      "export": "exports/explainer-story-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.carousel-wide-dark",
+      "file": "exports/carousel-wide-dark.svg",
+      "export": "exports/carousel-wide-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.carousel-video-dark",
+      "file": "exports/carousel-video-dark.svg",
+      "export": "exports/carousel-video-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.carousel-square-dark",
+      "file": "exports/carousel-square-dark.svg",
+      "export": "exports/carousel-square-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.carousel-portrait-dark",
+      "file": "exports/carousel-portrait-dark.svg",
+      "export": "exports/carousel-portrait-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.carousel-story-dark",
+      "file": "exports/carousel-story-dark.svg",
+      "export": "exports/carousel-story-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.carousel-wide-light",
+      "file": "exports/carousel-wide-light.svg",
+      "export": "exports/carousel-wide-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.carousel-video-light",
+      "file": "exports/carousel-video-light.svg",
+      "export": "exports/carousel-video-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.carousel-square-light",
+      "file": "exports/carousel-square-light.svg",
+      "export": "exports/carousel-square-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.carousel-portrait-light",
+      "file": "exports/carousel-portrait-light.svg",
+      "export": "exports/carousel-portrait-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.carousel-story-light",
+      "file": "exports/carousel-story-light.svg",
+      "export": "exports/carousel-story-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.release-wide-dark",
+      "file": "exports/release-wide-dark.svg",
+      "export": "exports/release-wide-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.release-video-dark",
+      "file": "exports/release-video-dark.svg",
+      "export": "exports/release-video-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.release-square-dark",
+      "file": "exports/release-square-dark.svg",
+      "export": "exports/release-square-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.release-portrait-dark",
+      "file": "exports/release-portrait-dark.svg",
+      "export": "exports/release-portrait-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.release-story-dark",
+      "file": "exports/release-story-dark.svg",
+      "export": "exports/release-story-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.release-wide-light",
+      "file": "exports/release-wide-light.svg",
+      "export": "exports/release-wide-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.release-video-light",
+      "file": "exports/release-video-light.svg",
+      "export": "exports/release-video-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.release-square-light",
+      "file": "exports/release-square-light.svg",
+      "export": "exports/release-square-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.release-portrait-light",
+      "file": "exports/release-portrait-light.svg",
+      "export": "exports/release-portrait-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.release-story-light",
+      "file": "exports/release-story-light.svg",
+      "export": "exports/release-story-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json"
+    },
+    {
+      "id": "exports.carousel-01-dark",
+      "file": "exports/carousel-01-dark.svg",
+      "export": "exports/carousel-01-dark.png",
+      "kind": "carousel-slide",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Start with your stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 1,
+      "topics": [
+        "stack"
+      ]
+    },
+    {
+      "id": "exports.carousel-01-light",
+      "file": "exports/carousel-01-light.svg",
+      "export": "exports/carousel-01-light.png",
+      "kind": "carousel-slide",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Start with your stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 1,
+      "topics": [
+        "stack"
+      ]
+    },
+    {
+      "id": "exports.carousel-02-dark",
+      "file": "exports/carousel-02-dark.svg",
+      "export": "exports/carousel-02-dark.png",
+      "kind": "carousel-slide",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Pin the definition.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 2,
+      "topics": [
+        "continuity"
+      ]
+    },
+    {
+      "id": "exports.carousel-02-light",
+      "file": "exports/carousel-02-light.svg",
+      "export": "exports/carousel-02-light.png",
+      "kind": "carousel-slide",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Pin the definition.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 2,
+      "topics": [
+        "continuity"
+      ]
+    },
+    {
+      "id": "exports.carousel-03-dark",
+      "file": "exports/carousel-03-dark.svg",
+      "export": "exports/carousel-03-dark.png",
+      "kind": "carousel-slide",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Submit the work.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 3,
+      "topics": [
+        "control"
+      ]
+    },
+    {
+      "id": "exports.carousel-03-light",
+      "file": "exports/carousel-03-light.svg",
+      "export": "exports/carousel-03-light.png",
+      "kind": "carousel-slide",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Submit the work.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 3,
+      "topics": [
+        "control"
+      ]
+    },
+    {
+      "id": "exports.carousel-04-dark",
+      "file": "exports/carousel-04-dark.svg",
+      "export": "exports/carousel-04-dark.png",
+      "kind": "carousel-slide",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Observe execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 4,
+      "topics": [
+        "tools"
+      ]
+    },
+    {
+      "id": "exports.carousel-04-light",
+      "file": "exports/carousel-04-light.svg",
+      "export": "exports/carousel-04-light.png",
+      "kind": "carousel-slide",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Observe execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 4,
+      "topics": [
+        "tools"
+      ]
+    },
+    {
+      "id": "exports.carousel-05-dark",
+      "file": "exports/carousel-05-dark.svg",
+      "export": "exports/carousel-05-dark.png",
+      "kind": "carousel-slide",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Keep the result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 5,
+      "topics": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "exports.carousel-05-light",
+      "file": "exports/carousel-05-light.svg",
+      "export": "exports/carousel-05-light.png",
+      "kind": "carousel-slide",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Keep the result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 5,
+      "topics": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "product.stories.first-session-full",
+      "file": "product/stories/first-session-full.svg",
+      "export": "product/stories/first-session-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Configure once. Call the API.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "screenshots/console-playground.png",
+      "provenance": "product/provenance.json",
+      "limits": "Configuration view only; no request was submitted during capture.",
+      "crop": "none",
+      "topics": [
+        "first-session"
+      ]
+    },
+    {
+      "id": "product.stories.first-session-detail",
+      "file": "product/stories/first-session-detail.svg",
+      "export": "product/stories/first-session-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Configure once. Call the API.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "screenshots/console-playground.png",
+      "provenance": "product/provenance.json",
+      "limits": "Configuration view only; no request was submitted during capture.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "first-session"
+      ]
+    },
+    {
+      "id": "product.stories.initialization-full",
+      "file": "product/stories/initialization-full.svg",
+      "export": "product/stories/initialization-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Know the agent you started.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/initialization.png",
+      "provenance": "product/provenance.json",
+      "limits": "A configuration snapshot is not proof of future cloud availability.",
+      "crop": "none",
+      "topics": [
+        "initialization"
+      ]
+    },
+    {
+      "id": "product.stories.initialization-detail",
+      "file": "product/stories/initialization-detail.svg",
+      "export": "product/stories/initialization-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Know the agent you started.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/initialization.png",
+      "provenance": "product/provenance.json",
+      "limits": "A configuration snapshot is not proof of future cloud availability.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "initialization"
+      ]
+    },
+    {
+      "id": "product.stories.tool-access-full",
+      "file": "product/stories/tool-access-full.svg",
+      "export": "product/stories/tool-access-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "See the tool behind the call.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/tool-calls.png",
+      "provenance": "product/provenance.json",
+      "limits": "Historical read-only MCP calls do not demonstrate an OAuth or write-approval flow.",
+      "crop": "none",
+      "topics": [
+        "tool-access"
+      ]
+    },
+    {
+      "id": "product.stories.tool-access-detail",
+      "file": "product/stories/tool-access-detail.svg",
+      "export": "product/stories/tool-access-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "See the tool behind the call.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/tool-calls.png",
+      "provenance": "product/provenance.json",
+      "limits": "Historical read-only MCP calls do not demonstrate an OAuth or write-approval flow.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "tool-access"
+      ]
+    },
+    {
+      "id": "product.stories.continuation-full",
+      "file": "product/stories/continuation-full.svg",
+      "export": "product/stories/continuation-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Continue the same thread.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/continuation.png",
+      "provenance": "product/provenance.json",
+      "limits": "Historical continuation view. This image alone does not prove pause, memory or file integrity; use the dated recovery evidence.",
+      "crop": "none",
+      "topics": [
+        "continuation"
+      ]
+    },
+    {
+      "id": "product.stories.continuation-detail",
+      "file": "product/stories/continuation-detail.svg",
+      "export": "product/stories/continuation-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Continue the same thread.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/continuation.png",
+      "provenance": "product/provenance.json",
+      "limits": "Historical continuation view. This image alone does not prove pause, memory or file integrity; use the dated recovery evidence.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "continuation"
+      ]
+    },
+    {
+      "id": "product.stories.harnesses-full",
+      "file": "product/stories/harnesses-full.svg",
+      "export": "product/stories/harnesses-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Choose an execution runtime.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "screenshots/console-harnesses.png",
+      "provenance": "product/provenance.json",
+      "limits": "Catalog presence does not certify every Sandbox, model or SDK combination.",
+      "crop": "none",
+      "topics": [
+        "harnesses"
+      ]
+    },
+    {
+      "id": "product.stories.harnesses-detail",
+      "file": "product/stories/harnesses-detail.svg",
+      "export": "product/stories/harnesses-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Choose an execution runtime.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "screenshots/console-harnesses.png",
+      "provenance": "product/provenance.json",
+      "limits": "Catalog presence does not certify every Sandbox, model or SDK combination.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "harnesses"
+      ]
+    },
+    {
+      "id": "product.stories.artifacts-full",
+      "file": "product/stories/artifacts-full.svg",
+      "export": "product/stories/artifacts-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "The result includes files.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/artifacts.png",
+      "provenance": "product/provenance.json",
+      "limits": "A UI capture does not independently verify file bytes or indefinite retention.",
+      "crop": "none",
+      "topics": [
+        "artifacts"
+      ]
+    },
+    {
+      "id": "product.stories.artifacts-detail",
+      "file": "product/stories/artifacts-detail.svg",
+      "export": "product/stories/artifacts-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "The result includes files.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/artifacts.png",
+      "provenance": "product/provenance.json",
+      "limits": "A UI capture does not independently verify file bytes or indefinite retention.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "artifacts"
+      ]
+    },
+    {
+      "id": "product.stories.observability-full",
+      "file": "product/stories/observability-full.svg",
+      "export": "product/stories/observability-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Inspect execution in context.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "screenshots/console-session.png",
+      "provenance": "product/provenance.json",
+      "limits": "Retained acceptance data; no new cloud Run was executed for this asset pack.",
+      "crop": "none",
+      "topics": [
+        "observability"
+      ]
+    },
+    {
+      "id": "product.stories.observability-detail",
+      "file": "product/stories/observability-detail.svg",
+      "export": "product/stories/observability-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Inspect execution in context.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "screenshots/console-session.png",
+      "provenance": "product/provenance.json",
+      "limits": "Retained acceptance data; no new cloud Run was executed for this asset pack.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "observability"
+      ]
+    },
+    {
+      "id": "website.sequence-00-dark",
+      "file": "website/sequence-00-dark.svg",
+      "export": "website/sequence-00-dark.png",
+      "kind": "website-story",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "An agent fleet. On your terms.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 0,
+      "topics": [
+        "website",
+        "fleet"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "website.sequence-01-dark",
+      "file": "website/sequence-01-dark.svg",
+      "export": "website/sequence-01-dark.png",
+      "kind": "website-story",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Start inside your product.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 1,
+      "topics": [
+        "website",
+        "request"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "website.sequence-02-dark",
+      "file": "website/sequence-02-dark.svg",
+      "export": "website/sequence-02-dark.png",
+      "kind": "website-story",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "One API. Separate workspaces.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 2,
+      "topics": [
+        "website",
+        "dispatch"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "website.sequence-03-dark",
+      "file": "website/sequence-03-dark.svg",
+      "export": "website/sequence-03-dark.png",
+      "kind": "website-story",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Your runtime. Your Harness.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 3,
+      "topics": [
+        "website",
+        "harness"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "website.sequence-04-dark",
+      "file": "website/sequence-04-dark.svg",
+      "export": "website/sequence-04-dark.png",
+      "kind": "website-story",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Access stays intentional.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 4,
+      "topics": [
+        "website",
+        "tools"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "website.sequence-05-dark",
+      "file": "website/sequence-05-dark.svg",
+      "export": "website/sequence-05-dark.png",
+      "kind": "website-story",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Bring the result home.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 5,
+      "topics": [
+        "website",
+        "return"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "components.ascii-unit-dark",
+      "file": "components/ascii-unit-dark.svg",
+      "export": null,
+      "kind": "website-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "ASCII execution unit",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "website",
+        "fleet"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "components.dither-horizon-dark",
+      "file": "components/dither-horizon-dark.svg",
+      "export": null,
+      "kind": "website-component",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Ordered-dither horizon",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "website",
+        "texture"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "website.sequence-00-light",
+      "file": "website/sequence-00-light.svg",
+      "export": "website/sequence-00-light.png",
+      "kind": "website-story",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "An agent fleet. On your terms.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 0,
+      "topics": [
+        "website",
+        "fleet"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "website.sequence-01-light",
+      "file": "website/sequence-01-light.svg",
+      "export": "website/sequence-01-light.png",
+      "kind": "website-story",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Start inside your product.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 1,
+      "topics": [
+        "website",
+        "request"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "website.sequence-02-light",
+      "file": "website/sequence-02-light.svg",
+      "export": "website/sequence-02-light.png",
+      "kind": "website-story",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "One API. Separate workspaces.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 2,
+      "topics": [
+        "website",
+        "dispatch"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "website.sequence-03-light",
+      "file": "website/sequence-03-light.svg",
+      "export": "website/sequence-03-light.png",
+      "kind": "website-story",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Your runtime. Your Harness.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 3,
+      "topics": [
+        "website",
+        "harness"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "website.sequence-04-light",
+      "file": "website/sequence-04-light.svg",
+      "export": "website/sequence-04-light.png",
+      "kind": "website-story",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Access stays intentional.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 4,
+      "topics": [
+        "website",
+        "tools"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "website.sequence-05-light",
+      "file": "website/sequence-05-light.svg",
+      "export": "website/sequence-05-light.png",
+      "kind": "website-story",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Bring the result home.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 5,
+      "topics": [
+        "website",
+        "return"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "components.ascii-unit-light",
+      "file": "components/ascii-unit-light.svg",
+      "export": null,
+      "kind": "website-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "ASCII execution unit",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "website",
+        "fleet"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    },
+    {
+      "id": "components.dither-horizon-light",
+      "file": "components/dither-horizon-light.svg",
+      "export": null,
+      "kind": "website-component",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Ordered-dither horizon",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "website",
+        "texture"
+      ],
+      "visual_source": "WEBSITE-REUSE.md"
+    }
+  ]
+}

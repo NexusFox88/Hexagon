@@ -1,0 +1,112 @@
+{
+  "capture_mode": "Live browser UI and previously captured Console evidence",
+  "source_root": "product/",
+  "stories": [
+    {
+      "id": "first-session",
+      "title": "Configure once. Call the API.",
+      "capture": "../../screenshots/console-playground.png",
+      "caption": "API Playground shows a configured stack and REST endpoints.",
+      "limits": "Configuration view only; no request was submitted during capture.",
+      "captured": "2026-11-20",
+      "kind": "real-product",
+      "evidence": [
+        "../../../docs/product/en/start/first-session.md"
+      ],
+      "cloud_execution": "historical, not re-run for GTM",
+      "pixel_edits": "none",
+      "theme": "dark"
+    },
+    {
+      "id": "initialization",
+      "title": "Know the agent you started.",
+      "capture": "captures/initialization.png",
+      "caption": "The retained Session exposes pinned initialization and a JSON copy action.",
+      "limits": "A configuration snapshot is not proof of future cloud availability.",
+      "captured": "2026-11-20",
+      "kind": "real-product",
+      "evidence": [
+        "../../../docs/product/en/concepts/initialization.md"
+      ],
+      "cloud_execution": "historical, not re-run for GTM",
+      "pixel_edits": "none",
+      "theme": "dark"
+    },
+    {
+      "id": "tool-access",
+      "title": "See the tool behind the call.",
+      "capture": "captures/tool-calls.png",
+      "caption": "Recorded DeepWiki MCP calls link back to their Sessions.",
+      "limits": "Historical read-only MCP calls do not demonstrate an OAuth or write-approval flow.",
+      "captured": "2026-11-20",
+      "kind": "real-product",
+      "evidence": [
+        "../../../docs/product/en/build/tool-authorization.md"
+      ],
+      "cloud_execution": "historical, not re-run for GTM",
+      "pixel_edits": "none",
+      "theme": "dark"
+    },
+    {
+      "id": "continuation",
+      "title": "Continue the same thread.",
+      "capture": "captures/continuation.png",
+      "caption": "A retained E2B/OpenCode test Session shows a second turn reading an earlier marker.",
+      "limits": "Historical continuation view. This image alone does not prove pause, memory or file integrity; use the dated recovery evidence.",
+      "captured": "2026-11-20",
+      "kind": "real-product",
+      "evidence": [
+        "../../../docs/product/en/build/idle-and-wake.md",
+        "../../../testing/evidence/2026-11-19-harness-serverless-ui.md"
+      ],
+      "cloud_execution": "historical, not re-run for GTM",
+      "pixel_edits": "none",
+      "theme": "dark"
+    },
+    {
+      "id": "harnesses",
+      "title": "Choose an execution runtime.",
+      "capture": "../../screenshots/console-harnesses.png",
+      "caption": "The real Harness catalog distinguishes image templates and build recipes.",
+      "limits": "Catalog presence does not certify every Sandbox, model or SDK combination.",
+      "captured": "2026-11-20",
+      "kind": "real-product",
+      "evidence": [
+        "../../../docs/product/en/integrations/harnesses.md"
+      ],
+      "cloud_execution": "historical, not re-run for GTM",
+      "pixel_edits": "none",
+      "theme": "dark"
+    },
+    {
+      "id": "artifacts",
+      "title": "The result includes files.",
+      "capture": "captures/artifacts.png",
+      "caption": "A retained Vercel/Pi task shows completed output and artifact controls after closure.",
+      "limits": "A UI capture does not independently verify file bytes or indefinite retention.",
+      "captured": "2026-11-20",
+      "kind": "real-product",
+      "evidence": [
+        "../../../docs/product/en/build/artifacts.md"
+      ],
+      "cloud_execution": "historical, not re-run for GTM",
+      "pixel_edits": "none",
+      "theme": "dark"
+    },
+    {
+      "id": "observability",
+      "title": "Inspect execution in context.",
+      "capture": "../../screenshots/console-session.png",
+      "caption": "The real Session view combines task, response and execution progress.",
+      "limits": "Retained acceptance data; no new cloud Run was executed for this asset pack.",
+      "captured": "2026-11-20",
+      "kind": "real-product",
+      "evidence": [
+        "../../../docs/product/en/operate/observability.md"
+      ],
+      "cloud_execution": "historical, not re-run for GTM",
+      "pixel_edits": "none",
+      "theme": "dark"
+    }
+  ]
+}

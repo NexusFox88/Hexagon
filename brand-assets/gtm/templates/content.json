@@ -1,0 +1,56 @@
+{
+  "launch": {
+    "headline": [
+      "Your agent fleet.",
+      "Your infrastructure stack."
+    ],
+    "description": "Self-managed Agent fleet control plane.",
+    "concept": "fleet",
+    "kicker": "INTRODUCING HEXAGON"
+  },
+  "feature": {
+    "headline": [
+      "Bring your stack.",
+      "Keep your control."
+    ],
+    "description": "Choose your Sandbox, Harness and model endpoint.",
+    "concept": "stack",
+    "kicker": "INSIDE HEXAGON"
+  },
+  "code": {
+    "headline": [
+      "An API for",
+      "agent execution."
+    ],
+    "description": "Create a Session. Submit a Run. Observe the result.",
+    "concept": "delivery",
+    "kicker": "DEVELOPER WORKFLOW"
+  },
+  "explainer": {
+    "headline": [
+      "Control here.",
+      "Execute there."
+    ],
+    "description": "The control plane owns lifecycle. The Sandbox runs the Harness.",
+    "concept": "control",
+    "kicker": "ARCHITECTURE NOTES"
+  },
+  "carousel": {
+    "headline": [
+      "From request",
+      "to result."
+    ],
+    "description": "A five-part tour of headless agent infrastructure.",
+    "concept": "delivery",
+    "kicker": "FIELD GUIDE / 01"
+  },
+  "release": {
+    "headline": [
+      "Inside the",
+      "developer preview."
+    ],
+    "description": "Session initialization, tool access and execution observability.",
+    "concept": "continuity",
+    "kicker": "PRODUCT NOTES"
+  }
+}

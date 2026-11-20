@@ -1,0 +1,3361 @@
+{
+  "version": 1,
+  "brand": "Hexagon",
+  "language": "en",
+  "visual_system": "WEBSITE-REUSE.md",
+  "typography": [
+    "Funnel Display",
+    "IBM Plex Mono",
+    "Geist"
+  ],
+  "headline_source": "../brand-copy.json",
+  "paths_relative_to": "brand-assets/gtm",
+  "generated_assets": "index.generated.json",
+  "claims": "claims.json",
+  "provenance": "product/provenance.json",
+  "assets": [
+    {
+      "id": "concepts.fleet.art-dark",
+      "file": "concepts/fleet/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Fleet in formation.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "9bbef6d58c8d9f987ccd341503e4078a02dd6f62abb940fcf14bdf3ab3b388e7"
+    },
+    {
+      "id": "concepts.fleet.wide-dark",
+      "file": "concepts/fleet/wide-dark.svg",
+      "export": "concepts/fleet/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Fleet in formation. Independent agents. Coordinated execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "eae4680d98210f3dc21953de61d26e98f4b67d67ae93d34e4d9cb45e3acca8ef"
+    },
+    {
+      "id": "concepts.fleet.square-dark",
+      "file": "concepts/fleet/square-dark.svg",
+      "export": "concepts/fleet/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Fleet in formation. Independent agents. Coordinated execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "286caa2802d85d5a23dada3ac736dc374339aee996cafdb79b4d6c1b34026f18"
+    },
+    {
+      "id": "concepts.fleet.portrait-dark",
+      "file": "concepts/fleet/portrait-dark.svg",
+      "export": "concepts/fleet/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Fleet in formation. Independent agents. Coordinated execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "cda52a493e4ce0af5623d2ab28bdaefe62187f02b0bd7662ed16d5918098f399"
+    },
+    {
+      "id": "concepts.fleet.art-light",
+      "file": "concepts/fleet/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Fleet in formation.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "c2bcf5e6685dbc677c6fb3c6ee5491a432bf734bc5a7c586078e7db1b6d686e1"
+    },
+    {
+      "id": "concepts.fleet.wide-light",
+      "file": "concepts/fleet/wide-light.svg",
+      "export": "concepts/fleet/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Fleet in formation. Independent agents. Coordinated execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "747b5119752fba163d099ade7a30459ce36b589ecf58a2b593ba5e769d88a5e7"
+    },
+    {
+      "id": "concepts.fleet.square-light",
+      "file": "concepts/fleet/square-light.svg",
+      "export": "concepts/fleet/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Fleet in formation. Independent agents. Coordinated execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "6f882689f46bc8837abdd53d1e2fa248cf0494b6de9a7cbd1efe9a7cb3c2b297"
+    },
+    {
+      "id": "concepts.fleet.portrait-light",
+      "file": "concepts/fleet/portrait-light.svg",
+      "export": "concepts/fleet/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Fleet in formation. Independent agents. Coordinated execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "fleet"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "4d3a74d04b55fbd829f7c20c2837a645c3cd5822d5f16001c084925169d3d60c"
+    },
+    {
+      "id": "concepts.stack.art-dark",
+      "file": "concepts/stack/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Bring your stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "12e849bed5195ecb6dedb53bf48cf0d4ff68691dcb94b5a5f69aadb664c054c2"
+    },
+    {
+      "id": "concepts.stack.wide-dark",
+      "file": "concepts/stack/wide-dark.svg",
+      "export": "concepts/stack/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Bring your stack. Sandbox. Harness. LLM. Independently configurable.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "138ebf162f879ce7e6899345f80cb402ed4d78123b61cdf1e08d41da9e9d777d"
+    },
+    {
+      "id": "concepts.stack.square-dark",
+      "file": "concepts/stack/square-dark.svg",
+      "export": "concepts/stack/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Bring your stack. Sandbox. Harness. LLM. Independently configurable.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "14bb5dbfd5e1060caebbab3bb432c14c482a59d05f02830058aad1cb22332803"
+    },
+    {
+      "id": "concepts.stack.portrait-dark",
+      "file": "concepts/stack/portrait-dark.svg",
+      "export": "concepts/stack/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Bring your stack. Sandbox. Harness. LLM. Independently configurable.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "92e5ecf8d73db27bbefc8f56e5de10e8567aa118b919c7070d4c8cdaa13fa699"
+    },
+    {
+      "id": "concepts.stack.art-light",
+      "file": "concepts/stack/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Bring your stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "5c46148137b9d56061173659d8d02a4208f9591c7427477a624a168103f28b14"
+    },
+    {
+      "id": "concepts.stack.wide-light",
+      "file": "concepts/stack/wide-light.svg",
+      "export": "concepts/stack/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Bring your stack. Sandbox. Harness. LLM. Independently configurable.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "cf0ea8b3f50a60cd5155e10e9151056fdcbdfe45307b4e2b75550d15e858ed77"
+    },
+    {
+      "id": "concepts.stack.square-light",
+      "file": "concepts/stack/square-light.svg",
+      "export": "concepts/stack/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Bring your stack. Sandbox. Harness. LLM. Independently configurable.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "2e3123c9f4829f225a9adf162bacc1a823161e382592aaf13779f732de566dc1"
+    },
+    {
+      "id": "concepts.stack.portrait-light",
+      "file": "concepts/stack/portrait-light.svg",
+      "export": "concepts/stack/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Bring your stack. Sandbox. Harness. LLM. Independently configurable.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "stack"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "cbcf773a0af1a7f402a75c6e81c99d20cd22d4bb4629ab4013e8233c951a12d4"
+    },
+    {
+      "id": "concepts.control.art-dark",
+      "file": "concepts/control/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "One control plane.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "b93ec58be84264943a31f3aaefb300c8d746b3e9320b4c0cf0691691c1942bdc"
+    },
+    {
+      "id": "concepts.control.wide-dark",
+      "file": "concepts/control/wide-dark.svg",
+      "export": "concepts/control/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "One control plane. Coordinate lifecycle, access and execution records.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "eef5f55a0c308ed3ee85f5a23b2c2d50bc4701b535ddbaa3b0e21b60f2345fc2"
+    },
+    {
+      "id": "concepts.control.square-dark",
+      "file": "concepts/control/square-dark.svg",
+      "export": "concepts/control/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "One control plane. Coordinate lifecycle, access and execution records.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "29ca2ffffaa7ba06c934135ebd6aa9e051c9c1cb6fa1152cf58661fe948bb89d"
+    },
+    {
+      "id": "concepts.control.portrait-dark",
+      "file": "concepts/control/portrait-dark.svg",
+      "export": "concepts/control/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "One control plane. Coordinate lifecycle, access and execution records.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "fc2f660c1b4c2fc4c048d0d87ab869aab0b0e9a9ba3871c034d645a5eef1e52c"
+    },
+    {
+      "id": "concepts.control.art-light",
+      "file": "concepts/control/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "One control plane.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "d91a8184e9682114aa8ff11b657e954da342476b4f66397052907c13488ea911"
+    },
+    {
+      "id": "concepts.control.wide-light",
+      "file": "concepts/control/wide-light.svg",
+      "export": "concepts/control/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "One control plane. Coordinate lifecycle, access and execution records.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "a438f2d6a2afbdb113e7731b489a4e0ed9e0539e6e6db2b7523f8a9a069b2514"
+    },
+    {
+      "id": "concepts.control.square-light",
+      "file": "concepts/control/square-light.svg",
+      "export": "concepts/control/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "One control plane. Coordinate lifecycle, access and execution records.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "41d42eb004f46653f2558d8f907b725f454d52c4bacaa36dc4b4cde3b612ff05"
+    },
+    {
+      "id": "concepts.control.portrait-light",
+      "file": "concepts/control/portrait-light.svg",
+      "export": "concepts/control/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "One control plane. Coordinate lifecycle, access and execution records.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "control"
+      ],
+      "evidence": "../../docs/product/en/concepts/execution-architecture.md",
+      "sha256": "f54e6f755d68fffa545a6144dc0e3b6091e9e50b563bf43764a0e10bc778aeb2"
+    },
+    {
+      "id": "concepts.isolation.art-dark",
+      "file": "concepts/isolation/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Boundaries by design.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "a653de616c0232f3a6e99860da1a3b776d58a3135ad0405372b6c7d9ca9c0c32"
+    },
+    {
+      "id": "concepts.isolation.wide-dark",
+      "file": "concepts/isolation/wide-dark.svg",
+      "export": "concepts/isolation/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Boundaries by design. Separate cloud workspaces for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "1f0b20f89ceb878d7193016e243b38d8184e83ce824e5723ca59bda8ccd218e0"
+    },
+    {
+      "id": "concepts.isolation.square-dark",
+      "file": "concepts/isolation/square-dark.svg",
+      "export": "concepts/isolation/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Boundaries by design. Separate cloud workspaces for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "fe2ffd088ed6ddd360a0a7e604724fd2fdbc221bb7e1fdef599767d7eb0d8385"
+    },
+    {
+      "id": "concepts.isolation.portrait-dark",
+      "file": "concepts/isolation/portrait-dark.svg",
+      "export": "concepts/isolation/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Boundaries by design. Separate cloud workspaces for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "32af075ead07344d98290c6ef6152bc36942d43eb0f1614a1f70d17269a949fd"
+    },
+    {
+      "id": "concepts.isolation.art-light",
+      "file": "concepts/isolation/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Boundaries by design.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "f3c6aada19e932c8494e4f4a3c5cd864f11e05cc4b0e275dbf2a264b6be41be3"
+    },
+    {
+      "id": "concepts.isolation.wide-light",
+      "file": "concepts/isolation/wide-light.svg",
+      "export": "concepts/isolation/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Boundaries by design. Separate cloud workspaces for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "2d5486561fd54b82519aa51fa390067101e91e01a6a76bcd440a25ee72be3baa"
+    },
+    {
+      "id": "concepts.isolation.square-light",
+      "file": "concepts/isolation/square-light.svg",
+      "export": "concepts/isolation/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Boundaries by design. Separate cloud workspaces for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "801512e283aca2242419be7636d5072b0ef38b67a7434da606222b144b285597"
+    },
+    {
+      "id": "concepts.isolation.portrait-light",
+      "file": "concepts/isolation/portrait-light.svg",
+      "export": "concepts/isolation/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Boundaries by design. Separate cloud workspaces for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "isolation"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "23cc906a8b76aa7ee359a74db8e413c4daa34f0a8cef8e3f7bb93a1f755f251d"
+    },
+    {
+      "id": "concepts.continuity.art-dark",
+      "file": "concepts/continuity/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Keep the thread.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md",
+      "sha256": "79eed76af9b23ecba64779b68c901275ba694f2f32de256ae20be40de3adbf03"
+    },
+    {
+      "id": "concepts.continuity.wide-dark",
+      "file": "concepts/continuity/wide-dark.svg",
+      "export": "concepts/continuity/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Keep the thread. Inspect identity and pinned Session initialization.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md",
+      "sha256": "21748478bf5c98412e315b49938037d1f0608d97f1254beaed6a17100a396c42"
+    },
+    {
+      "id": "concepts.continuity.square-dark",
+      "file": "concepts/continuity/square-dark.svg",
+      "export": "concepts/continuity/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Keep the thread. Inspect identity and pinned Session initialization.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md",
+      "sha256": "8822f9ac75f64657fc8c7939e13e0d97e399e84dfeb467a284799b3952542f5a"
+    },
+    {
+      "id": "concepts.continuity.portrait-dark",
+      "file": "concepts/continuity/portrait-dark.svg",
+      "export": "concepts/continuity/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Keep the thread. Inspect identity and pinned Session initialization.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md",
+      "sha256": "11e2bad8e7db16b4b8e28b550b52cabf83aea5ec3c1237270aaedb6927791a36"
+    },
+    {
+      "id": "concepts.continuity.art-light",
+      "file": "concepts/continuity/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Keep the thread.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md",
+      "sha256": "7ca1b5116b334f44d57bc85d138e042f088a8cbd7ee8133d81ffab49e8e3600c"
+    },
+    {
+      "id": "concepts.continuity.wide-light",
+      "file": "concepts/continuity/wide-light.svg",
+      "export": "concepts/continuity/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Keep the thread. Inspect identity and pinned Session initialization.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md",
+      "sha256": "f72835e4a773ddf4f83faeb8fc860f15b882ef773b53883fbfae947bd65994c6"
+    },
+    {
+      "id": "concepts.continuity.square-light",
+      "file": "concepts/continuity/square-light.svg",
+      "export": "concepts/continuity/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Keep the thread. Inspect identity and pinned Session initialization.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md",
+      "sha256": "58128aec60ba515992a234809c69474c161c76464c36c268bd3155a1493a7b2f"
+    },
+    {
+      "id": "concepts.continuity.portrait-light",
+      "file": "concepts/continuity/portrait-light.svg",
+      "export": "concepts/continuity/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Keep the thread. Inspect identity and pinned Session initialization.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "continuity"
+      ],
+      "evidence": "../../docs/product/en/concepts/initialization.md",
+      "sha256": "6bfedca3337c371d2c03d6e788dfc52dbd651042f1897934a101c77137bab3fc"
+    },
+    {
+      "id": "concepts.wake.art-dark",
+      "file": "concepts/wake/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Work. Rest. Resume.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md",
+      "sha256": "a38246d4cbd2846db860bfccb73d7836432ec1d0439ec640d0c0c7f733877785"
+    },
+    {
+      "id": "concepts.wake.wide-dark",
+      "file": "concepts/wake/wide-dark.svg",
+      "export": "concepts/wake/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Work. Rest. Resume. Pause and wake follow provider-specific strategies.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md",
+      "sha256": "48ba575e3bd4f29e17430e2f993e72386d14e22c30b76ec47f7e26200bfd8cea"
+    },
+    {
+      "id": "concepts.wake.square-dark",
+      "file": "concepts/wake/square-dark.svg",
+      "export": "concepts/wake/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Work. Rest. Resume. Pause and wake follow provider-specific strategies.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md",
+      "sha256": "62bce746d8779cb0bd7430e7cba598fe341bcfcf0c02e27ef63c1daf9645205e"
+    },
+    {
+      "id": "concepts.wake.portrait-dark",
+      "file": "concepts/wake/portrait-dark.svg",
+      "export": "concepts/wake/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Work. Rest. Resume. Pause and wake follow provider-specific strategies.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md",
+      "sha256": "1537096a084e2fe854d9b940b0a53232e1ab5d7f5e744af548b0dff30cd5afb2"
+    },
+    {
+      "id": "concepts.wake.art-light",
+      "file": "concepts/wake/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Work. Rest. Resume.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md",
+      "sha256": "488900e0102d81cbc73a029432c3f5412c3c0b955208d640c27ee09398d5887a"
+    },
+    {
+      "id": "concepts.wake.wide-light",
+      "file": "concepts/wake/wide-light.svg",
+      "export": "concepts/wake/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Work. Rest. Resume. Pause and wake follow provider-specific strategies.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md",
+      "sha256": "5a7174d62f1f7052956551ff4a402037022acba5164dec35ff880ef096838e1b"
+    },
+    {
+      "id": "concepts.wake.square-light",
+      "file": "concepts/wake/square-light.svg",
+      "export": "concepts/wake/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Work. Rest. Resume. Pause and wake follow provider-specific strategies.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md",
+      "sha256": "21e0283932e0ad70a62b16359549466aebe6cdc3633ef6f8f72ed40b6bf5d202"
+    },
+    {
+      "id": "concepts.wake.portrait-light",
+      "file": "concepts/wake/portrait-light.svg",
+      "export": "concepts/wake/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Work. Rest. Resume. Pause and wake follow provider-specific strategies.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "wake"
+      ],
+      "evidence": "../../docs/product/en/concepts/serverless-lifecycle.md",
+      "sha256": "72ecf33513b0cfad0f43dc0e7021e9e361dba43e1176e4b116fbee1fcfc7c2ba"
+    },
+    {
+      "id": "concepts.tools.art-dark",
+      "file": "concepts/tools/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Access with intent.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "d2f9f6fad7af26faa91894f028e8afa73f99c397f77db3e0421791e5285dec2f"
+    },
+    {
+      "id": "concepts.tools.wide-dark",
+      "file": "concepts/tools/wide-dark.svg",
+      "export": "concepts/tools/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Access with intent. Bind tools to Sessions. Authorize operations.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "e515b5443bf299e888f02291bcf287e5de413a3aeb750a623b3dfead1ec976fa"
+    },
+    {
+      "id": "concepts.tools.square-dark",
+      "file": "concepts/tools/square-dark.svg",
+      "export": "concepts/tools/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Access with intent. Bind tools to Sessions. Authorize operations.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "b1f22fa52ccb6af648f5379e575453abfe94b2672e1f24ec7b303b94f2918412"
+    },
+    {
+      "id": "concepts.tools.portrait-dark",
+      "file": "concepts/tools/portrait-dark.svg",
+      "export": "concepts/tools/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Access with intent. Bind tools to Sessions. Authorize operations.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "3413178cdc5de8f6ad3ff2cce6bba319c9a630d59450ac0a9cc8b1dcb4747092"
+    },
+    {
+      "id": "concepts.tools.art-light",
+      "file": "concepts/tools/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Access with intent.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "96b3e0b40bf52e03e1f13e211aadb01f2636566dd3236cf90d9da462ba1ef342"
+    },
+    {
+      "id": "concepts.tools.wide-light",
+      "file": "concepts/tools/wide-light.svg",
+      "export": "concepts/tools/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Access with intent. Bind tools to Sessions. Authorize operations.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "402d36133a73d6775fd6cca04bf10abc4e00c80b6948c3a63009e46a9a914cc8"
+    },
+    {
+      "id": "concepts.tools.square-light",
+      "file": "concepts/tools/square-light.svg",
+      "export": "concepts/tools/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Access with intent. Bind tools to Sessions. Authorize operations.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "06dd09cbf0f3bf7a618453345144a2b3c76592c22c10c63d5acfb17c9f932c2c"
+    },
+    {
+      "id": "concepts.tools.portrait-light",
+      "file": "concepts/tools/portrait-light.svg",
+      "export": "concepts/tools/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Access with intent. Bind tools to Sessions. Authorize operations.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "tools"
+      ],
+      "evidence": "../../docs/product/en/concepts/security-boundaries.md",
+      "sha256": "5a36f280a5655f7377fbeba3d2dc3f11bfc85b74a6ca3aa61e8c5e7f0508c189"
+    },
+    {
+      "id": "concepts.delivery.art-dark",
+      "file": "concepts/delivery/art-dark.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Deliver more than text.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md",
+      "sha256": "4e55ce4e58b0cbae3aa9484f858d42b4682d64a73eb12d22b98b63a57a37626b"
+    },
+    {
+      "id": "concepts.delivery.wide-dark",
+      "file": "concepts/delivery/wide-dark.svg",
+      "export": "concepts/delivery/wide-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Deliver more than text. Return answers, events and exported artifacts.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md",
+      "sha256": "aaeb6fc3b845cf4a0b668ad6858d46ff317da3f53c2bb4d15a1ff7f3e7ace2f6"
+    },
+    {
+      "id": "concepts.delivery.square-dark",
+      "file": "concepts/delivery/square-dark.svg",
+      "export": "concepts/delivery/square-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Deliver more than text. Return answers, events and exported artifacts.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md",
+      "sha256": "82f12110559f041d8349299f17deb0b73b54088f337c101afb2de57dc3f11364"
+    },
+    {
+      "id": "concepts.delivery.portrait-dark",
+      "file": "concepts/delivery/portrait-dark.svg",
+      "export": "concepts/delivery/portrait-dark.png",
+      "kind": "concept-card",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Deliver more than text. Return answers, events and exported artifacts.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md",
+      "sha256": "00e5a3c4520fba1db372e86c5717b969682fd6520682c31dae6d3d1bc8f6ad98"
+    },
+    {
+      "id": "concepts.delivery.art-light",
+      "file": "concepts/delivery/art-light.svg",
+      "export": null,
+      "kind": "concept-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "Deliver more than text.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md",
+      "sha256": "1c0a5ce91a610e08118a9b90bff6a52fd0b051c3bc4ff9bac53fa988eb3d0898"
+    },
+    {
+      "id": "concepts.delivery.wide-light",
+      "file": "concepts/delivery/wide-light.svg",
+      "export": "concepts/delivery/wide-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Deliver more than text. Return answers, events and exported artifacts.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md",
+      "sha256": "3e617d64294d0907e7c127c93dc520fcdee79d1130fdd05d2547459a2839f9ad"
+    },
+    {
+      "id": "concepts.delivery.square-light",
+      "file": "concepts/delivery/square-light.svg",
+      "export": "concepts/delivery/square-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Deliver more than text. Return answers, events and exported artifacts.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md",
+      "sha256": "16fb28bab7a4e5ce0d65cbaa2f67b9f9aa528872961d61a658b55f2e6bf65fc3"
+    },
+    {
+      "id": "concepts.delivery.portrait-light",
+      "file": "concepts/delivery/portrait-light.svg",
+      "export": "concepts/delivery/portrait-light.png",
+      "kind": "concept-card",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Deliver more than text. Return answers, events and exported artifacts.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "topics": [
+        "delivery"
+      ],
+      "evidence": "../../docs/product/en/concepts/persistence.md",
+      "sha256": "3842f8b7966c492eded372a26c0f51d4186b0efd20fb3a15544e72c0edaa5754"
+    },
+    {
+      "id": "exports.launch-wide-dark",
+      "file": "exports/launch-wide-dark.svg",
+      "export": "exports/launch-wide-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "4d46efb480fb755c698db555dbbd77ac16b3bca8394218124872e3ce175d8eef"
+    },
+    {
+      "id": "exports.launch-video-dark",
+      "file": "exports/launch-video-dark.svg",
+      "export": "exports/launch-video-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "d50ba8f35c1d9569951cecb40ba5126a86533e046ce6a094503d4fa047c40a5b"
+    },
+    {
+      "id": "exports.launch-square-dark",
+      "file": "exports/launch-square-dark.svg",
+      "export": "exports/launch-square-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "9fbe517199c8445a27b963890117057d61c44ef85230ddc81020b516437db8a6"
+    },
+    {
+      "id": "exports.launch-portrait-dark",
+      "file": "exports/launch-portrait-dark.svg",
+      "export": "exports/launch-portrait-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "da42052bc519fa72cab144813d114d709e9b3ce33f3f091259f9d3fde47691b4"
+    },
+    {
+      "id": "exports.launch-story-dark",
+      "file": "exports/launch-story-dark.svg",
+      "export": "exports/launch-story-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "f7d80b1ec6578936cb011e73e9111d743f3ab39b0fd72f3bae46f6ce40c9c5b4"
+    },
+    {
+      "id": "exports.launch-wide-light",
+      "file": "exports/launch-wide-light.svg",
+      "export": "exports/launch-wide-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "4d4a9f55aac3b58c1f777065bc3052f898cfbac2ac85cf3bc0d2dbb43368ac1d"
+    },
+    {
+      "id": "exports.launch-video-light",
+      "file": "exports/launch-video-light.svg",
+      "export": "exports/launch-video-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "9bf6ae1619639d8b3ef4a1dd62c1b04a39e52b6150dfdaee528b0a3abf44f272"
+    },
+    {
+      "id": "exports.launch-square-light",
+      "file": "exports/launch-square-light.svg",
+      "export": "exports/launch-square-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "a3a13500ea935febe1db79e8c3d4131d952a1da40e5a974ec5915351b8794b29"
+    },
+    {
+      "id": "exports.launch-portrait-light",
+      "file": "exports/launch-portrait-light.svg",
+      "export": "exports/launch-portrait-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "c81c30ce57f1715706a0bf1ad7e307ee6ee47ebe694480b345ffe5a02f28d492"
+    },
+    {
+      "id": "exports.launch-story-light",
+      "file": "exports/launch-story-light.svg",
+      "export": "exports/launch-story-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Your agent fleet. Your infrastructure stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "launch",
+      "topics": [
+        "fleet"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "57db4408c24ac796cdb4b0b9d435515f967573457a62d30e1a74169411f57b65"
+    },
+    {
+      "id": "exports.feature-wide-dark",
+      "file": "exports/feature-wide-dark.svg",
+      "export": "exports/feature-wide-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "ad228e2bbee8a073b69c3262133b08abbee12d5c5293e1babcf96d579a5930ce"
+    },
+    {
+      "id": "exports.feature-video-dark",
+      "file": "exports/feature-video-dark.svg",
+      "export": "exports/feature-video-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "7734bf1f5235143090e7571d904b594c65842bd03a93e7eae4db447ab1b894a1"
+    },
+    {
+      "id": "exports.feature-square-dark",
+      "file": "exports/feature-square-dark.svg",
+      "export": "exports/feature-square-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "82588790a788e4f1b1c8c8d2282da2d886d103254cbbd826b0254acb058350ee"
+    },
+    {
+      "id": "exports.feature-portrait-dark",
+      "file": "exports/feature-portrait-dark.svg",
+      "export": "exports/feature-portrait-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "82e882814c73111a74139726b398d8ac28d8216ebe65bf1eb9b3e076da2be909"
+    },
+    {
+      "id": "exports.feature-story-dark",
+      "file": "exports/feature-story-dark.svg",
+      "export": "exports/feature-story-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "e40c1f3de7a220f599b9555c242d8c3769d3240c953b2f94a94a9824bb0863fd"
+    },
+    {
+      "id": "exports.feature-wide-light",
+      "file": "exports/feature-wide-light.svg",
+      "export": "exports/feature-wide-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "94aab473ba3e784ca366fd727c3540b0607f871b2c8b099a44df553c3d3a0259"
+    },
+    {
+      "id": "exports.feature-video-light",
+      "file": "exports/feature-video-light.svg",
+      "export": "exports/feature-video-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "16889349ccba638b7fdb5d51bb4ab35762e85b55a9d525e7e46272789b1cf5eb"
+    },
+    {
+      "id": "exports.feature-square-light",
+      "file": "exports/feature-square-light.svg",
+      "export": "exports/feature-square-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "6f7250f9cd1a438a671e3720b06af221d74a53946268bbed2dc48b352e0300ce"
+    },
+    {
+      "id": "exports.feature-portrait-light",
+      "file": "exports/feature-portrait-light.svg",
+      "export": "exports/feature-portrait-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "9bfaae098179a3c1047b2bf43846eb75aeb391d49d6438000cd82c52fee02459"
+    },
+    {
+      "id": "exports.feature-story-light",
+      "file": "exports/feature-story-light.svg",
+      "export": "exports/feature-story-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Bring your stack. Keep your control.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "feature",
+      "topics": [
+        "stack"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "f02bc2e14de1b6a54330568c533889a77caa07170aca11dc6b08419b192aad56"
+    },
+    {
+      "id": "exports.code-wide-dark",
+      "file": "exports/code-wide-dark.svg",
+      "export": "exports/code-wide-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "32182f43d407fd559bddd8f5c538b7763f98248363049d790370b1afcfe702b6"
+    },
+    {
+      "id": "exports.code-video-dark",
+      "file": "exports/code-video-dark.svg",
+      "export": "exports/code-video-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "00ad6c499b86bfba92fb2286de906336037cc3e9556e0f826385cad7d21402a9"
+    },
+    {
+      "id": "exports.code-square-dark",
+      "file": "exports/code-square-dark.svg",
+      "export": "exports/code-square-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "ed0d1397f305893a27c302cec9521db8a804132bc706d8d115b744ae68c73e71"
+    },
+    {
+      "id": "exports.code-portrait-dark",
+      "file": "exports/code-portrait-dark.svg",
+      "export": "exports/code-portrait-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "f2269fb7f53bedecab3f73f9737f531368a6c19948fdfb205c0d50a6f94d57fd"
+    },
+    {
+      "id": "exports.code-story-dark",
+      "file": "exports/code-story-dark.svg",
+      "export": "exports/code-story-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "7588b23466714fb74f5e9cc6a8c7ba48548b471e992c475ad58a603bec6c8870"
+    },
+    {
+      "id": "exports.code-wide-light",
+      "file": "exports/code-wide-light.svg",
+      "export": "exports/code-wide-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "d63b67c5dda206f37c524cd9d7bc8ddb0a7456d21fa96bbd106a2045b5465909"
+    },
+    {
+      "id": "exports.code-video-light",
+      "file": "exports/code-video-light.svg",
+      "export": "exports/code-video-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "858c78fdfab13f00a5cd69ec666bbc89e9828c18b44d53c31a37703f06200301"
+    },
+    {
+      "id": "exports.code-square-light",
+      "file": "exports/code-square-light.svg",
+      "export": "exports/code-square-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "988ca58063b634486347ea9fc9dd5a86d8f237735dfc0a266e1ed368669f6c74"
+    },
+    {
+      "id": "exports.code-portrait-light",
+      "file": "exports/code-portrait-light.svg",
+      "export": "exports/code-portrait-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "2e8319211153d4403439dc396b7ee973e54f7041759c966f8a19bb8efca677b1"
+    },
+    {
+      "id": "exports.code-story-light",
+      "file": "exports/code-story-light.svg",
+      "export": "exports/code-story-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "An API for agent execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "code",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "db20125564a8919e06b32233d9a6b4ca7ffbd5c3e2010be103897bf8ac06895b"
+    },
+    {
+      "id": "exports.explainer-wide-dark",
+      "file": "exports/explainer-wide-dark.svg",
+      "export": "exports/explainer-wide-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "2983a2f22bf5f7d918161b71edcbc1631330e5818da69660d8e7ed4011148bc4"
+    },
+    {
+      "id": "exports.explainer-video-dark",
+      "file": "exports/explainer-video-dark.svg",
+      "export": "exports/explainer-video-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "092aebdb15a7f0538cf435e8f7ba8ce874502fd9c75028190939b2166d423083"
+    },
+    {
+      "id": "exports.explainer-square-dark",
+      "file": "exports/explainer-square-dark.svg",
+      "export": "exports/explainer-square-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "c74721c9c234a29ae3109d5a497ed62c37de78b806875b0bf5b9d4bb7e23904f"
+    },
+    {
+      "id": "exports.explainer-portrait-dark",
+      "file": "exports/explainer-portrait-dark.svg",
+      "export": "exports/explainer-portrait-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "56d06842c8a7972746a0789efe5b082683daa6a282a821954d4e5306ae852888"
+    },
+    {
+      "id": "exports.explainer-story-dark",
+      "file": "exports/explainer-story-dark.svg",
+      "export": "exports/explainer-story-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "c4cd6e8667bdab316ad8be08f1943ae28fa74545016be0d3d1f42ed935b04d70"
+    },
+    {
+      "id": "exports.explainer-wide-light",
+      "file": "exports/explainer-wide-light.svg",
+      "export": "exports/explainer-wide-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "6c5970d84a928f1419f90ee0797ce804bff595bd31591f5b252462bc9b0e6516"
+    },
+    {
+      "id": "exports.explainer-video-light",
+      "file": "exports/explainer-video-light.svg",
+      "export": "exports/explainer-video-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "85443cbde19aaafc409abfd823368d9adb22e34dd68eac61f6cb066959f613ea"
+    },
+    {
+      "id": "exports.explainer-square-light",
+      "file": "exports/explainer-square-light.svg",
+      "export": "exports/explainer-square-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "364160447ad9212696a0d8471f5857700e1463bfbe67950f8c268a0427329df9"
+    },
+    {
+      "id": "exports.explainer-portrait-light",
+      "file": "exports/explainer-portrait-light.svg",
+      "export": "exports/explainer-portrait-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "e02b8d5748a3dfb7054678ad8d1990b464b79913dfc4e22f8ca7288caf47dff9"
+    },
+    {
+      "id": "exports.explainer-story-light",
+      "file": "exports/explainer-story-light.svg",
+      "export": "exports/explainer-story-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Control here. Execute there.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "explainer",
+      "topics": [
+        "control"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "94676391ae488f8abf22c83417854d48ceca69d8f7b701d3fd96ae360767aa93"
+    },
+    {
+      "id": "exports.carousel-wide-dark",
+      "file": "exports/carousel-wide-dark.svg",
+      "export": "exports/carousel-wide-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "03e5712f597ea172e7eac423e9b0b6fe483ca8b528d10971303b42595d5ee2b8"
+    },
+    {
+      "id": "exports.carousel-video-dark",
+      "file": "exports/carousel-video-dark.svg",
+      "export": "exports/carousel-video-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "3e42a2d8a9aa294fb28441985879e5a1468696007d274d4eb8880d73545c1ef1"
+    },
+    {
+      "id": "exports.carousel-square-dark",
+      "file": "exports/carousel-square-dark.svg",
+      "export": "exports/carousel-square-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "8965939527cf73e451f8dfd88ae684fa2004194d17b936d6f81be85de6590d17"
+    },
+    {
+      "id": "exports.carousel-portrait-dark",
+      "file": "exports/carousel-portrait-dark.svg",
+      "export": "exports/carousel-portrait-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "32d3a02149f370b8f577f355706a02e63e0c3334702dd2e150700ed2c6a98ad9"
+    },
+    {
+      "id": "exports.carousel-story-dark",
+      "file": "exports/carousel-story-dark.svg",
+      "export": "exports/carousel-story-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "96bd523a8016627881e55e472c0f1a7a363a316caa048897dafcb3fc7231b42d"
+    },
+    {
+      "id": "exports.carousel-wide-light",
+      "file": "exports/carousel-wide-light.svg",
+      "export": "exports/carousel-wide-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "cb5b48238b57d232372ca83d58021264da9a084284c73c81370a8be6714422a9"
+    },
+    {
+      "id": "exports.carousel-video-light",
+      "file": "exports/carousel-video-light.svg",
+      "export": "exports/carousel-video-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "2a6d8b5412261b185764618486bf497ef7d2173e5b926a3205e946a96936e0eb"
+    },
+    {
+      "id": "exports.carousel-square-light",
+      "file": "exports/carousel-square-light.svg",
+      "export": "exports/carousel-square-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "2f1bb1d211a154e8cd1725aab4366ce1c19b68b7cec50f2027e93b567ca30f06"
+    },
+    {
+      "id": "exports.carousel-portrait-light",
+      "file": "exports/carousel-portrait-light.svg",
+      "export": "exports/carousel-portrait-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "613f2d54e626ceda013691e1175bb182f977b2114e5eb492b960d73658d13c97"
+    },
+    {
+      "id": "exports.carousel-story-light",
+      "file": "exports/carousel-story-light.svg",
+      "export": "exports/carousel-story-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "From request to result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "carousel",
+      "topics": [
+        "delivery"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "93b303a32a1b0d99b065a1667cc7b4369e1fdfae4696e30659d888ffdbbedafe"
+    },
+    {
+      "id": "exports.release-wide-dark",
+      "file": "exports/release-wide-dark.svg",
+      "export": "exports/release-wide-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "c2530bd1a3d73172ae583a9aa5c5d867bc8ef10270176a4604ca5b159c51128f"
+    },
+    {
+      "id": "exports.release-video-dark",
+      "file": "exports/release-video-dark.svg",
+      "export": "exports/release-video-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "71141598035694a93b90cbe9ce5e9db7021b772a9d7d12a72d1a70cf8ed2fd57"
+    },
+    {
+      "id": "exports.release-square-dark",
+      "file": "exports/release-square-dark.svg",
+      "export": "exports/release-square-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "216866ca743237a88f7909444161473802d85bab3bca27e16857c1d97ad4b88e"
+    },
+    {
+      "id": "exports.release-portrait-dark",
+      "file": "exports/release-portrait-dark.svg",
+      "export": "exports/release-portrait-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "dde01cf13c96f340a6c3e7faea1fa32d4423cb00993dc0a0be64e643a347be76"
+    },
+    {
+      "id": "exports.release-story-dark",
+      "file": "exports/release-story-dark.svg",
+      "export": "exports/release-story-dark.png",
+      "kind": "campaign-template",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "03f2a3574aa534f3a8cacb0b788b7afb1615f0065dc1d5ba6c412c056b98c679"
+    },
+    {
+      "id": "exports.release-wide-light",
+      "file": "exports/release-wide-light.svg",
+      "export": "exports/release-wide-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 640,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "156c620ae3b6dea2c84548b6fc96d36da5a09d9f861e8c192c892090b57b09ca"
+    },
+    {
+      "id": "exports.release-video-light",
+      "file": "exports/release-video-light.svg",
+      "export": "exports/release-video-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "d76cea55220428c97a6b088707356cdae2123af64157277eaa92d8c9a07af7db"
+    },
+    {
+      "id": "exports.release-square-light",
+      "file": "exports/release-square-light.svg",
+      "export": "exports/release-square-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1080,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "ee5aa75033cf247c02a447f086aa9ccf0c4db54ae65925c5a98b5b243bf58d22"
+    },
+    {
+      "id": "exports.release-portrait-light",
+      "file": "exports/release-portrait-light.svg",
+      "export": "exports/release-portrait-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "4adb6fcfda81fa8f41bf6c6d065f87efc069dec27a0620f009cc7abb479a6d95"
+    },
+    {
+      "id": "exports.release-story-light",
+      "file": "exports/release-story-light.svg",
+      "export": "exports/release-story-light.png",
+      "kind": "campaign-template",
+      "theme": "light",
+      "width": 1080,
+      "height": 1920,
+      "language": "en",
+      "alt": "Inside the developer preview.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "template": "release",
+      "topics": [
+        "continuity"
+      ],
+      "content_source": "templates/content.json",
+      "sha256": "3c8461a72d3a4633cdc604252a4fc4e7cd8d0683a191452d22a28a43b5d91110"
+    },
+    {
+      "id": "exports.carousel-01-dark",
+      "file": "exports/carousel-01-dark.svg",
+      "export": "exports/carousel-01-dark.png",
+      "kind": "carousel-slide",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Start with your stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 1,
+      "topics": [
+        "stack"
+      ],
+      "sha256": "0bf1832748c0c6d7961d8f406f954dad04078b76d154fb59895c9c5234af5d90"
+    },
+    {
+      "id": "exports.carousel-01-light",
+      "file": "exports/carousel-01-light.svg",
+      "export": "exports/carousel-01-light.png",
+      "kind": "carousel-slide",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Start with your stack.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 1,
+      "topics": [
+        "stack"
+      ],
+      "sha256": "1d8bd6f66474f2090d598961109dffde45f84d1f4c36f7d12a5c1769a6479ca4"
+    },
+    {
+      "id": "exports.carousel-02-dark",
+      "file": "exports/carousel-02-dark.svg",
+      "export": "exports/carousel-02-dark.png",
+      "kind": "carousel-slide",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Pin the definition.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 2,
+      "topics": [
+        "continuity"
+      ],
+      "sha256": "533f5fd6c01682f98fafd1cbf00f69802f545df11009d7075528cbacb5588e28"
+    },
+    {
+      "id": "exports.carousel-02-light",
+      "file": "exports/carousel-02-light.svg",
+      "export": "exports/carousel-02-light.png",
+      "kind": "carousel-slide",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Pin the definition.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 2,
+      "topics": [
+        "continuity"
+      ],
+      "sha256": "8a3d2645ca359c7bd646c159056470eaab24105fe869d749b129417501168e2b"
+    },
+    {
+      "id": "exports.carousel-03-dark",
+      "file": "exports/carousel-03-dark.svg",
+      "export": "exports/carousel-03-dark.png",
+      "kind": "carousel-slide",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Submit the work.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 3,
+      "topics": [
+        "control"
+      ],
+      "sha256": "1686baa5333c36ec65d79c4db26ed23a191bc3f4e7beb3f1d2d2164030b3fcfc"
+    },
+    {
+      "id": "exports.carousel-03-light",
+      "file": "exports/carousel-03-light.svg",
+      "export": "exports/carousel-03-light.png",
+      "kind": "carousel-slide",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Submit the work.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 3,
+      "topics": [
+        "control"
+      ],
+      "sha256": "a00c554c341c98829e43968e018979596998a8fded66f9e83a7923ae7821fcb5"
+    },
+    {
+      "id": "exports.carousel-04-dark",
+      "file": "exports/carousel-04-dark.svg",
+      "export": "exports/carousel-04-dark.png",
+      "kind": "carousel-slide",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Observe execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 4,
+      "topics": [
+        "tools"
+      ],
+      "sha256": "94b03335842e1ebe37519c89645697688e8637df7e777fe05b9220e0bbd1e98d"
+    },
+    {
+      "id": "exports.carousel-04-light",
+      "file": "exports/carousel-04-light.svg",
+      "export": "exports/carousel-04-light.png",
+      "kind": "carousel-slide",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Observe execution.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 4,
+      "topics": [
+        "tools"
+      ],
+      "sha256": "a79cee5395dc56e66c16c9314cec3ee22717072c5583121299dc215ac0ecc11f"
+    },
+    {
+      "id": "exports.carousel-05-dark",
+      "file": "exports/carousel-05-dark.svg",
+      "export": "exports/carousel-05-dark.png",
+      "kind": "carousel-slide",
+      "theme": "dark",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Keep the result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 5,
+      "topics": [
+        "delivery"
+      ],
+      "sha256": "4c55779bd41f52a436acae735deb2345914c0401c6062e86695c9b183f07988a"
+    },
+    {
+      "id": "exports.carousel-05-light",
+      "file": "exports/carousel-05-light.svg",
+      "export": "exports/carousel-05-light.png",
+      "kind": "carousel-slide",
+      "theme": "light",
+      "width": 1080,
+      "height": 1350,
+      "language": "en",
+      "alt": "Keep the result.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 5,
+      "topics": [
+        "delivery"
+      ],
+      "sha256": "ea7b00a9517a41bde825ba8fdebd5af1df000e01618f67440a515bd8788be102"
+    },
+    {
+      "id": "product.stories.first-session-full",
+      "file": "product/stories/first-session-full.svg",
+      "export": "product/stories/first-session-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Configure once. Call the API.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "screenshots/console-playground.png",
+      "provenance": "product/provenance.json",
+      "limits": "Configuration view only; no request was submitted during capture.",
+      "crop": "none",
+      "topics": [
+        "first-session"
+      ],
+      "sha256": "b92e08119e934a7a0fed54c0c2a6d0b64fbe9129265ed80856a928e455dd93f2"
+    },
+    {
+      "id": "product.stories.first-session-detail",
+      "file": "product/stories/first-session-detail.svg",
+      "export": "product/stories/first-session-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Configure once. Call the API.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "screenshots/console-playground.png",
+      "provenance": "product/provenance.json",
+      "limits": "Configuration view only; no request was submitted during capture.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "first-session"
+      ],
+      "sha256": "ccfcc78341e55048f5bed0d13bbf7156c1f0eedfc746f374801daba4769da397"
+    },
+    {
+      "id": "product.stories.initialization-full",
+      "file": "product/stories/initialization-full.svg",
+      "export": "product/stories/initialization-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Know the agent you started.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/initialization.png",
+      "provenance": "product/provenance.json",
+      "limits": "A configuration snapshot is not proof of future cloud availability.",
+      "crop": "none",
+      "topics": [
+        "initialization"
+      ],
+      "sha256": "52c81b6727c9b5e0ea3d1ad13c03e79c20482a63476094666d611d691f10eb4b"
+    },
+    {
+      "id": "product.stories.initialization-detail",
+      "file": "product/stories/initialization-detail.svg",
+      "export": "product/stories/initialization-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Know the agent you started.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/initialization.png",
+      "provenance": "product/provenance.json",
+      "limits": "A configuration snapshot is not proof of future cloud availability.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "initialization"
+      ],
+      "sha256": "397fa1a327d398966d31bb83951f86dc726cf45842b3927ba4844da165c815d7"
+    },
+    {
+      "id": "product.stories.tool-access-full",
+      "file": "product/stories/tool-access-full.svg",
+      "export": "product/stories/tool-access-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "See the tool behind the call.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/tool-calls.png",
+      "provenance": "product/provenance.json",
+      "limits": "Historical read-only MCP calls do not demonstrate an OAuth or write-approval flow.",
+      "crop": "none",
+      "topics": [
+        "tool-access"
+      ],
+      "sha256": "1e6c1bad268ff6d7f784e66704547bce16f6f417b0a3bead8e0328801b7ccaaf"
+    },
+    {
+      "id": "product.stories.tool-access-detail",
+      "file": "product/stories/tool-access-detail.svg",
+      "export": "product/stories/tool-access-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "See the tool behind the call.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/tool-calls.png",
+      "provenance": "product/provenance.json",
+      "limits": "Historical read-only MCP calls do not demonstrate an OAuth or write-approval flow.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "tool-access"
+      ],
+      "sha256": "1e7c0ea053a1a9b9dda7c93d25cfbdf42f093b1aca07aa06f34528524f1696da"
+    },
+    {
+      "id": "product.stories.continuation-full",
+      "file": "product/stories/continuation-full.svg",
+      "export": "product/stories/continuation-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Continue the same thread.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/continuation.png",
+      "provenance": "product/provenance.json",
+      "limits": "Historical continuation view. This image alone does not prove pause, memory or file integrity; use the dated recovery evidence.",
+      "crop": "none",
+      "topics": [
+        "continuation"
+      ],
+      "sha256": "86e2920fb53e1ba3759e54466aa43e53738ca11b2b3ac9d262579b3b4cddc8bb"
+    },
+    {
+      "id": "product.stories.continuation-detail",
+      "file": "product/stories/continuation-detail.svg",
+      "export": "product/stories/continuation-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Continue the same thread.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/continuation.png",
+      "provenance": "product/provenance.json",
+      "limits": "Historical continuation view. This image alone does not prove pause, memory or file integrity; use the dated recovery evidence.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "continuation"
+      ],
+      "sha256": "31058d1c02c14e7f5c38656ac277652b76a049b5d05c58f1197c2842b65260d5"
+    },
+    {
+      "id": "product.stories.harnesses-full",
+      "file": "product/stories/harnesses-full.svg",
+      "export": "product/stories/harnesses-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Choose an execution runtime.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "screenshots/console-harnesses.png",
+      "provenance": "product/provenance.json",
+      "limits": "Catalog presence does not certify every Sandbox, model or SDK combination.",
+      "crop": "none",
+      "topics": [
+        "harnesses"
+      ],
+      "sha256": "2811d574a2d0e38fc79545b51c6a11767161298992f0afff20c8c1c8d37a4d60"
+    },
+    {
+      "id": "product.stories.harnesses-detail",
+      "file": "product/stories/harnesses-detail.svg",
+      "export": "product/stories/harnesses-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Choose an execution runtime.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "screenshots/console-harnesses.png",
+      "provenance": "product/provenance.json",
+      "limits": "Catalog presence does not certify every Sandbox, model or SDK combination.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "harnesses"
+      ],
+      "sha256": "516177d5c06fb578958a83181686925b227dfcfa1ef7c6174cdeee393a501d72"
+    },
+    {
+      "id": "product.stories.artifacts-full",
+      "file": "product/stories/artifacts-full.svg",
+      "export": "product/stories/artifacts-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "The result includes files.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/artifacts.png",
+      "provenance": "product/provenance.json",
+      "limits": "A UI capture does not independently verify file bytes or indefinite retention.",
+      "crop": "none",
+      "topics": [
+        "artifacts"
+      ],
+      "sha256": "955206e6518cac9e7375e3d85a23ac5666097b629463d05998afb89e545f58a7"
+    },
+    {
+      "id": "product.stories.artifacts-detail",
+      "file": "product/stories/artifacts-detail.svg",
+      "export": "product/stories/artifacts-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "The result includes files.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "gtm/product/captures/artifacts.png",
+      "provenance": "product/provenance.json",
+      "limits": "A UI capture does not independently verify file bytes or indefinite retention.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "artifacts"
+      ],
+      "sha256": "e993d0ed8aaf2a23338f6a51be53d287e1eb38f87aa3b9b76411462a0a80df2a"
+    },
+    {
+      "id": "product.stories.observability-full",
+      "file": "product/stories/observability-full.svg",
+      "export": "product/stories/observability-full.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Inspect execution in context.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "screenshots/console-session.png",
+      "provenance": "product/provenance.json",
+      "limits": "Retained acceptance data; no new cloud Run was executed for this asset pack.",
+      "crop": "none",
+      "topics": [
+        "observability"
+      ],
+      "sha256": "ed6b39dad6c27ad056b1f160b99059c4064e5c0c2d101c09cfbcfd27e821000a"
+    },
+    {
+      "id": "product.stories.observability-detail",
+      "file": "product/stories/observability-detail.svg",
+      "export": "product/stories/observability-detail.png",
+      "kind": "product-story",
+      "theme": "dark",
+      "width": 1600,
+      "height": 1000,
+      "language": "en",
+      "alt": "Inspect execution in context.",
+      "source": "tooling/build.py",
+      "claim_type": "real-product-framing",
+      "capture": "screenshots/console-session.png",
+      "provenance": "product/provenance.json",
+      "limits": "Retained acceptance data; no new cloud Run was executed for this asset pack.",
+      "crop": [
+        322,
+        63,
+        1288,
+        666
+      ],
+      "topics": [
+        "observability"
+      ],
+      "sha256": "fc09a37a3c340b4a1afd3b108f7470b6454791c82f573a657843f5e22f43a539"
+    },
+    {
+      "id": "website.sequence-00-dark",
+      "file": "website/sequence-00-dark.svg",
+      "export": "website/sequence-00-dark.png",
+      "kind": "website-story",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "An agent fleet. On your terms.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 0,
+      "topics": [
+        "website",
+        "fleet"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "88274d8462244739b1385cc568b33441b1beb5db4d10ea585bbcaca3f18f2b65"
+    },
+    {
+      "id": "website.sequence-01-dark",
+      "file": "website/sequence-01-dark.svg",
+      "export": "website/sequence-01-dark.png",
+      "kind": "website-story",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Start inside your product.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 1,
+      "topics": [
+        "website",
+        "request"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "4bd7fa1b77a8049840ddf7fdb511c475d5adc4c01b292fc1786cbd666414129e"
+    },
+    {
+      "id": "website.sequence-02-dark",
+      "file": "website/sequence-02-dark.svg",
+      "export": "website/sequence-02-dark.png",
+      "kind": "website-story",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "One API. Separate workspaces.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 2,
+      "topics": [
+        "website",
+        "dispatch"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "807a2e6d1828f93b9c165137751ff5ed374863687c55cbd769c5edfb7197a197"
+    },
+    {
+      "id": "website.sequence-03-dark",
+      "file": "website/sequence-03-dark.svg",
+      "export": "website/sequence-03-dark.png",
+      "kind": "website-story",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Your runtime. Your Harness.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 3,
+      "topics": [
+        "website",
+        "harness"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "16ce9b9ea0db268ee8454349c39634aa1986ee8e3f8fc84c4c11440171e42e96"
+    },
+    {
+      "id": "website.sequence-04-dark",
+      "file": "website/sequence-04-dark.svg",
+      "export": "website/sequence-04-dark.png",
+      "kind": "website-story",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Access stays intentional.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 4,
+      "topics": [
+        "website",
+        "tools"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "41f7fe767a60bcb39a3b0987abc46741742e9611108c9594f61bbb306e6c730f"
+    },
+    {
+      "id": "website.sequence-05-dark",
+      "file": "website/sequence-05-dark.svg",
+      "export": "website/sequence-05-dark.png",
+      "kind": "website-story",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Bring the result home.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 5,
+      "topics": [
+        "website",
+        "return"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "e8c1719bdb7c3683925e62639ea29d4725ba1f9d30ff2bf9d3ada650570a94a0"
+    },
+    {
+      "id": "components.ascii-unit-dark",
+      "file": "components/ascii-unit-dark.svg",
+      "export": null,
+      "kind": "website-component",
+      "theme": "dark",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "ASCII execution unit",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "website",
+        "fleet"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "7e3d1b41c1c88b754fe4f794c0801c5964e2e316868dece9fb07224da2a00101"
+    },
+    {
+      "id": "components.dither-horizon-dark",
+      "file": "components/dither-horizon-dark.svg",
+      "export": null,
+      "kind": "website-component",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Ordered-dither horizon",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "website",
+        "texture"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "b73e0aaaff53103e03c4beca54cd2ca70ed423b4fbd6965ab3d1f8e833fe0f00"
+    },
+    {
+      "id": "website.sequence-00-light",
+      "file": "website/sequence-00-light.svg",
+      "export": "website/sequence-00-light.png",
+      "kind": "website-story",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "An agent fleet. On your terms.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 0,
+      "topics": [
+        "website",
+        "fleet"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "33e6973afd95fa93c7fa6502eb7eb38c74b1f91f75d5ba9f43ba664a801c93ea"
+    },
+    {
+      "id": "website.sequence-01-light",
+      "file": "website/sequence-01-light.svg",
+      "export": "website/sequence-01-light.png",
+      "kind": "website-story",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Start inside your product.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 1,
+      "topics": [
+        "website",
+        "request"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "a620e9fa1ca09845ad7c8e0253bcae4ad8b7fdc9dd904f4958802f228c958416"
+    },
+    {
+      "id": "website.sequence-02-light",
+      "file": "website/sequence-02-light.svg",
+      "export": "website/sequence-02-light.png",
+      "kind": "website-story",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "One API. Separate workspaces.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 2,
+      "topics": [
+        "website",
+        "dispatch"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "9c91a0c2b63e4d9f3023d2ebb08b139b59ea6b11b9cebbbf4eb15897514f8b27"
+    },
+    {
+      "id": "website.sequence-03-light",
+      "file": "website/sequence-03-light.svg",
+      "export": "website/sequence-03-light.png",
+      "kind": "website-story",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Your runtime. Your Harness.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 3,
+      "topics": [
+        "website",
+        "harness"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "bbec298d79bf26edca529066fa3ad0b39a3f8ea29739a28fb913b11b0c6ac3b6"
+    },
+    {
+      "id": "website.sequence-04-light",
+      "file": "website/sequence-04-light.svg",
+      "export": "website/sequence-04-light.png",
+      "kind": "website-story",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Access stays intentional.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 4,
+      "topics": [
+        "website",
+        "tools"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "33bd0ffba2eb8b6b3d72fa7e2f4a5c10da8c7f464202808765d406c0f7e8fdf7"
+    },
+    {
+      "id": "website.sequence-05-light",
+      "file": "website/sequence-05-light.svg",
+      "export": "website/sequence-05-light.png",
+      "kind": "website-story",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Bring the result home.",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "sequence": 5,
+      "topics": [
+        "website",
+        "return"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "76fbb24aff6b21d5a69684ac9d39dc05ab250316c1289f327a4e7aed75dbdaa4"
+    },
+    {
+      "id": "components.ascii-unit-light",
+      "file": "components/ascii-unit-light.svg",
+      "export": null,
+      "kind": "website-component",
+      "theme": "light",
+      "width": 720,
+      "height": 420,
+      "language": "en",
+      "alt": "ASCII execution unit",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "website",
+        "fleet"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "792f8c8b3c65d8a1ce0183ac83a9fdda707ef75f03a1682e9d383ffcc3576934"
+    },
+    {
+      "id": "components.dither-horizon-light",
+      "file": "components/dither-horizon-light.svg",
+      "export": null,
+      "kind": "website-component",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "language": "en",
+      "alt": "Ordered-dither horizon",
+      "source": "tooling/build.py",
+      "claim_type": "illustration",
+      "transparent": true,
+      "topics": [
+        "website",
+        "texture"
+      ],
+      "visual_source": "WEBSITE-REUSE.md",
+      "sha256": "3a0ce5d02f04d02c6994a382888965d76da8971f128549ad27baf90d66bc1261"
+    },
+    {
+      "id": "motion.flyby.dark..svg",
+      "file": "motion/flyby-dark.svg",
+      "kind": "brand-motion",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "illustration",
+      "source": "tooling/website-motion.py",
+      "visual_source": "WEBSITE-REUSE.md",
+      "duration_seconds": 4,
+      "sha256": "7d931a36024a1b12398c5a0864ef1f09a951658a3b62452a2ad332167aa94300"
+    },
+    {
+      "id": "motion.flyby.dark..mp4",
+      "file": "motion/flyby-dark.mp4",
+      "kind": "brand-motion",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "illustration",
+      "source": "tooling/website-motion.py",
+      "visual_source": "WEBSITE-REUSE.md",
+      "duration_seconds": 4,
+      "sha256": "d9dab7a1fdaacd6b6af8081c53c05258e5075f122ab97dec4deeedf66be31275"
+    },
+    {
+      "id": "motion.flyby.dark.-poster.png",
+      "file": "motion/flyby-dark-poster.png",
+      "kind": "brand-motion",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "illustration",
+      "source": "tooling/website-motion.py",
+      "visual_source": "WEBSITE-REUSE.md",
+      "duration_seconds": null,
+      "sha256": "3c80a530f01a471d386885b01f375ac56712e48868c3fee74fc63e5f70e71cfa"
+    },
+    {
+      "id": "motion.flyby.light..svg",
+      "file": "motion/flyby-light.svg",
+      "kind": "brand-motion",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "illustration",
+      "source": "tooling/website-motion.py",
+      "visual_source": "WEBSITE-REUSE.md",
+      "duration_seconds": 4,
+      "sha256": "cbcbc432ff5e9b0c781ca0c789f4d77087106f25bf7423ab2992cd9877185ac2"
+    },
+    {
+      "id": "motion.flyby.light..mp4",
+      "file": "motion/flyby-light.mp4",
+      "kind": "brand-motion",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "illustration",
+      "source": "tooling/website-motion.py",
+      "visual_source": "WEBSITE-REUSE.md",
+      "duration_seconds": 4,
+      "sha256": "16db03ca7aa9b044c8c860dd1c43bb202a176a2e57f3646ee96c8add28777d68"
+    },
+    {
+      "id": "motion.flyby.light.-poster.png",
+      "file": "motion/flyby-light-poster.png",
+      "kind": "brand-motion",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "illustration",
+      "source": "tooling/website-motion.py",
+      "visual_source": "WEBSITE-REUSE.md",
+      "duration_seconds": null,
+      "sha256": "af88d8181bddda08f339533989236c765697b0c565059547cd5c6987e5722320"
+    },
+    {
+      "id": "motion.formation.dark..svg",
+      "file": "motion/formation-dark.svg",
+      "kind": "brand-motion",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "illustration",
+      "source": "tooling/motion.py",
+      "duration_seconds": 4,
+      "sha256": "3d2053dc3db1667141dc4d461fe6535bcac980d4965f9d440e50cb8da7af556a"
+    },
+    {
+      "id": "motion.formation.dark..mp4",
+      "file": "motion/formation-dark.mp4",
+      "kind": "brand-motion",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "illustration",
+      "source": "tooling/motion.py",
+      "duration_seconds": 4,
+      "sha256": "10a8fa8042f27b62fc5c2c3e5c60ca5061669b7d4d76c964a27a7df0fe32af24"
+    },
+    {
+      "id": "motion.formation.dark.-poster.png",
+      "file": "motion/formation-dark-poster.png",
+      "kind": "brand-motion",
+      "theme": "dark",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "illustration",
+      "source": "tooling/motion.py",
+      "duration_seconds": null,
+      "sha256": "8c4e91a4a0f4f2587633c20864c952c62f380724cf6891e5b55b91510562dc44"
+    },
+    {
+      "id": "motion.formation.light..svg",
+      "file": "motion/formation-light.svg",
+      "kind": "brand-motion",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "illustration",
+      "source": "tooling/motion.py",
+      "duration_seconds": 4,
+      "sha256": "30013b28dfa78976da74bd4dec2036a05db1b3f41838085a38c896513af20996"
+    },
+    {
+      "id": "motion.formation.light..mp4",
+      "file": "motion/formation-light.mp4",
+      "kind": "brand-motion",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "illustration",
+      "source": "tooling/motion.py",
+      "duration_seconds": 4,
+      "sha256": "65d0f73ffc3ee811a9fab18e8eb70a0929d1797800e215d1e6b14073f7bbf570"
+    },
+    {
+      "id": "motion.formation.light.-poster.png",
+      "file": "motion/formation-light-poster.png",
+      "kind": "brand-motion",
+      "theme": "light",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "illustration",
+      "source": "tooling/motion.py",
+      "duration_seconds": null,
+      "sha256": "7492a28421fa8fbe75ce13e29242062bb02acad04aa87e0c96ecce9bc40867a5"
+    },
+    {
+      "id": "product.walkthrough",
+      "file": "product/tool-session-walkthrough.mp4",
+      "kind": "live-ui-recording",
+      "width": 1280,
+      "height": 720,
+      "claim_type": "retained-product-ui",
+      "duration_seconds": 10.708333,
+      "limits": "Sampled live UI inspection; 24 captured frames encoded at 24 fps. Includes real loading states. No new cloud task.",
+      "sha256": "d82741d7e3062fe521d27ef2e618a822b1638b6de1fe380eafecca20662dbcfc"
+    },
+    {
+      "id": "capture.artifacts.png",
+      "file": "product/captures/artifacts.png",
+      "kind": "real-product-capture",
+      "claim_type": "retained-product-ui",
+      "source": "Live Console browser capture, 2026-11-20",
+      "provenance": "product/provenance.json",
+      "sha256": "66a9287e42ce8e35d0b439bfdbc6e6ebdd6d16b93b9b74dd53728e6c7ebfbf7b"
+    },
+    {
+      "id": "capture.continuation.png",
+      "file": "product/captures/continuation.png",
+      "kind": "real-product-capture",
+      "claim_type": "retained-product-ui",
+      "source": "Live Console browser capture, 2026-11-20",
+      "provenance": "product/provenance.json",
+      "sha256": "d2e6b834f3fd492515a4d6c9afcb38de65ada324c64c348d3a330f052b41b9fb"
+    },
+    {
+      "id": "capture.initialization.png",
+      "file": "product/captures/initialization.png",
+      "kind": "real-product-capture",
+      "claim_type": "retained-product-ui",
+      "source": "Live Console browser capture, 2026-11-20",
+      "provenance": "product/provenance.json",
+      "sha256": "4037ae0c36cad9443c0a6c0e4ce489b70f1e744d439afa5a79be61c5a0a71917"
+    },
+    {
+      "id": "capture.tool-calls.png",
+      "file": "product/captures/tool-calls.png",
+      "kind": "real-product-capture",
+      "claim_type": "retained-product-ui",
+      "source": "Live Console browser capture, 2026-11-20",
+      "provenance": "product/provenance.json",
+      "sha256": "5db19427c1634fd53904c9f83a7da1fa6576713a8cda8fcf7eb1762318516f66"
+    },
+    {
+      "id": "capture.tools.png",
+      "file": "product/captures/tools.png",
+      "kind": "real-product-capture",
+      "claim_type": "retained-product-ui",
+      "source": "Live Console browser capture, 2026-11-20",
+      "provenance": "product/provenance.json",
+      "sha256": "64afa2c23d377fc4468600da5454592e8e3c5725cf493e1b9512c3598dd1738e"
+    }
+  ]
+}
