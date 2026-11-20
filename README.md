@@ -13,6 +13,7 @@
 </p>
 
 <p align="center">
+  <a href="https://hexagon.autos"><strong>Official website ↗</strong></a> ·
   <a href="docs/product/en/start/first-session.md"><strong>Run your first Session →</strong></a> ·
   <a href="docs/product/en/index.md">Documentation</a> ·
   <a href="#see-your-fleet">Console</a> ·

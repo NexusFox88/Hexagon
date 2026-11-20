@@ -2,7 +2,7 @@
 
 **面向应用、可自托管的 Agent 控制平面。** 通过 Python、TypeScript 或 REST 创建有状态的 Session，在云 Sandbox 执行 Agent 任务，读取持久事件，并获取结果与产物。Console 管理连接和执行，所选 Harness 在 Sandbox 内运行 Agent。
 
-[English](README.md) · [产品文档](docs/product/zh-CN/index.md) · [第一个 Session](docs/product/zh-CN/start/first-session.md) · [编程 Agent 指南](docs/product/zh-CN/agents.md)
+[**访问官网 ↗**](https://hexagon.autos) · [English](README.md) · [产品文档](docs/product/zh-CN/index.md) · [第一个 Session](docs/product/zh-CN/start/first-session.md) · [编程 Agent 指南](docs/product/zh-CN/agents.md)
 
 **当前处于 Developer Preview 准备阶段，不是稳定公开发行版。** 本 checkout 有限定范围的真实云证据，不证明所有 Sandbox × Harness 组合兼容。[release-policy.json](release-policy.json)中的公开发布批准仍未完成。项目代码采用 [Apache-2.0](LICENSE)，并保留适用的[第三方声明](THIRD_PARTY_NOTICES.md)。
 
