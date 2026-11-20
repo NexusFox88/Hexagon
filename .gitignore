@@ -33,3 +33,7 @@ master.key
 /testing/evidence/**/*.jpeg
 /testing/evidence/**/*.webp
 /testing/evidence/**/*.json
+
+# Video exports remain local; do not upload them to the repository.
+*.mp4
+*.MP4

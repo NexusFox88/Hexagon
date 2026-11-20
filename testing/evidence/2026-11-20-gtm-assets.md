@@ -40,3 +40,7 @@ Channel sizes are chosen production presets, not validated upload-limit document
 - `npm run check --prefix brand-assets/gtm/tooling` passed for 164 SVGs / 144 PNGs. Scoped English scan and XML parsing passed. `git diff --check -- brand-assets` passed.
 - Re-ran `npx vitest run testing/source-language.test.ts`: still failed with 95 entries in the separately modified documentation/configuration/tooling files, with no GTM entry. The full repository test remains failed; unrelated files were not repaired as part of artwork production.
 - No website code, Console behavior, raw product capture, cloud resource or public deployment was changed. No commit or push was made.
+
+## Distribution correction
+
+The initial publication included five MP4 exports. Following the user's correction, all five were removed from the tracked file tree, retained locally and excluded with repository-wide MP4 ignore patterns. Public index entries and download links were removed; asset checks no longer require local video exports. The previous commit remains in Git history.

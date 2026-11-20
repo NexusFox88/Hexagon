@@ -20,3 +20,7 @@ Frames are generated at 12 unique poses per second and encoded at 24 fps. Use th
 ## Website-derived ASCII flyby
 
 `flyby-dark` and `flyby-light` reuse the original website ASCII execution-unit algorithm and Bayer-dither atmosphere. Each is available as a four-second 1280 x 720 MP4, an animated SVG and a static poster. The SVG disables motion when reduced motion is requested. MP4 is 24 fps encoded from 12 unique poses per second; it does not represent product execution. Use the static poster for reduced-motion contexts. See `../WEBSITE-REUSE.md`.
+
+## Video distribution
+
+MP4 files are local-only and ignored by Git. Do not upload, force-add or include MP4 files in the public asset index. Use the committed animated SVGs, PNG posters and product captures for repository distribution.

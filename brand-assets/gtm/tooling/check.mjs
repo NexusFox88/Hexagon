@@ -19,6 +19,6 @@ for(const [kind,count]of Object.entries(expected))assert.equal(index.assets.filt
 for(const c of read('claims.json').claims)for(const f of c.sources)assert(fs.existsSync(path.resolve(base,f)),f);
 const provenance=read('product/provenance.json');assert.equal(provenance.stories.length,7);
 for(const s of provenance.stories){assert(fs.existsSync(path.resolve(base,'product',s.capture)),s.capture);for(const e of s.evidence)assert(fs.existsSync(path.resolve(base,'product',e)),e);}
-for(const family of ['formation','flyby'])for(const theme of ['dark','light'])for(const ext of ['svg','mp4'])assert(fs.statSync(path.join(base,`motion/${family}-${theme}.${ext}`)).size>0);
-assert(fs.statSync(path.join(base,'product/tool-session-walkthrough.mp4')).size>0);
-console.log(`PASS: ${index.assets.length} indexed SVGs, ${index.assets.filter(a=>a.export).length} dimension-checked PNGs, 7 sourced stories, claim references, motion and walkthrough assets`);
+for(const family of ['formation','flyby'])for(const theme of ['dark','light'])for(const ext of ['svg'])assert(fs.statSync(path.join(base,`motion/${family}-${theme}.${ext}`)).size>0);
+assert(read('asset-index.json').assets.every(a=>!a.file.toLowerCase().endsWith('.mp4')),'MP4 exports must remain local');
+console.log(`PASS: ${index.assets.length} indexed SVGs, ${index.assets.filter(a=>a.export).length} dimension-checked PNGs, 7 sourced stories, claim references and public animation assets; MP4 excluded`);

@@ -48,3 +48,7 @@ Never infer zero billing from paused state, arbitrary memory survival from file 
 ## Repository ownership
 
 This folder contains shared masters and a local asset workbench. It is not the marketing website. Website implementation lives only in NexusFox88/Haxegon-Website. Do not recreate a website directory in the product repository. Do not commit, push, deploy, send outreach or post content unless the user explicitly authorizes those actions.
+
+## Video distribution
+
+MP4 files are local-only and ignored by Git. Do not upload, force-add or include MP4 files in the public asset index. Use the committed animated SVGs, PNG posters and product captures for repository distribution.

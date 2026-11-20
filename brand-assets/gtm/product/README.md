@@ -21,3 +21,7 @@ The capture environment used the real local Console in English and dark mode. Te
 `tool-session-walkthrough.mp4` is a sampled recording of actual browser interaction: Call history → Assigned Sessions → Call history → retained Session → Initialization. It contains 24 captured browser frames over approximately ten seconds, encoded as a 1280 x 720 / 24 fps video. It includes actual loading states. It is deliberately not described as a smooth 24 fps source recording or a live cloud acceptance run. There is no audio. Private intermediate frames are under `.local/gtm-recording/sampled`.
 
 Do not use this footage to claim a new Sandbox was created, a credential was authorized, compute was paused, or an Artifact hash was verified during the recording. New end-to-end demonstrations require a separate actual execution and a new evidence record.
+
+## Video distribution
+
+MP4 files are local-only and ignored by Git. Do not upload, force-add or include MP4 files in the public asset index. Use the committed animated SVGs, PNG posters and product captures for repository distribution.

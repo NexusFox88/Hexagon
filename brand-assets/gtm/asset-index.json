@@ -3165,19 +3165,6 @@
       "sha256": "7d931a36024a1b12398c5a0864ef1f09a951658a3b62452a2ad332167aa94300"
     },
     {
-      "id": "motion.flyby.dark..mp4",
-      "file": "motion/flyby-dark.mp4",
-      "kind": "brand-motion",
-      "theme": "dark",
-      "width": 1280,
-      "height": 720,
-      "claim_type": "illustration",
-      "source": "tooling/website-motion.py",
-      "visual_source": "WEBSITE-REUSE.md",
-      "duration_seconds": 4,
-      "sha256": "d9dab7a1fdaacd6b6af8081c53c05258e5075f122ab97dec4deeedf66be31275"
-    },
-    {
       "id": "motion.flyby.dark.-poster.png",
       "file": "motion/flyby-dark-poster.png",
       "kind": "brand-motion",
@@ -3202,19 +3189,6 @@
       "visual_source": "WEBSITE-REUSE.md",
       "duration_seconds": 4,
       "sha256": "cbcbc432ff5e9b0c781ca0c789f4d77087106f25bf7423ab2992cd9877185ac2"
-    },
-    {
-      "id": "motion.flyby.light..mp4",
-      "file": "motion/flyby-light.mp4",
-      "kind": "brand-motion",
-      "theme": "light",
-      "width": 1280,
-      "height": 720,
-      "claim_type": "illustration",
-      "source": "tooling/website-motion.py",
-      "visual_source": "WEBSITE-REUSE.md",
-      "duration_seconds": 4,
-      "sha256": "16db03ca7aa9b044c8c860dd1c43bb202a176a2e57f3646ee96c8add28777d68"
     },
     {
       "id": "motion.flyby.light.-poster.png",
@@ -3242,18 +3216,6 @@
       "sha256": "3d2053dc3db1667141dc4d461fe6535bcac980d4965f9d440e50cb8da7af556a"
     },
     {
-      "id": "motion.formation.dark..mp4",
-      "file": "motion/formation-dark.mp4",
-      "kind": "brand-motion",
-      "theme": "dark",
-      "width": 1280,
-      "height": 720,
-      "claim_type": "illustration",
-      "source": "tooling/motion.py",
-      "duration_seconds": 4,
-      "sha256": "10a8fa8042f27b62fc5c2c3e5c60ca5061669b7d4d76c964a27a7df0fe32af24"
-    },
-    {
       "id": "motion.formation.dark.-poster.png",
       "file": "motion/formation-dark-poster.png",
       "kind": "brand-motion",
@@ -3278,18 +3240,6 @@
       "sha256": "30013b28dfa78976da74bd4dec2036a05db1b3f41838085a38c896513af20996"
     },
     {
-      "id": "motion.formation.light..mp4",
-      "file": "motion/formation-light.mp4",
-      "kind": "brand-motion",
-      "theme": "light",
-      "width": 1280,
-      "height": 720,
-      "claim_type": "illustration",
-      "source": "tooling/motion.py",
-      "duration_seconds": 4,
-      "sha256": "65d0f73ffc3ee811a9fab18e8eb70a0929d1797800e215d1e6b14073f7bbf570"
-    },
-    {
       "id": "motion.formation.light.-poster.png",
       "file": "motion/formation-light-poster.png",
       "kind": "brand-motion",
@@ -3300,17 +3250,6 @@
       "source": "tooling/motion.py",
       "duration_seconds": null,
       "sha256": "7492a28421fa8fbe75ce13e29242062bb02acad04aa87e0c96ecce9bc40867a5"
-    },
-    {
-      "id": "product.walkthrough",
-      "file": "product/tool-session-walkthrough.mp4",
-      "kind": "live-ui-recording",
-      "width": 1280,
-      "height": 720,
-      "claim_type": "retained-product-ui",
-      "duration_seconds": 10.708333,
-      "limits": "Sampled live UI inspection; 24 captured frames encoded at 24 fps. Includes real loading states. No new cloud task.",
-      "sha256": "d82741d7e3062fe521d27ef2e618a822b1638b6de1fe380eafecca20662dbcfc"
     },
     {
       "id": "capture.artifacts.png",
