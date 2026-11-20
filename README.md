@@ -83,8 +83,8 @@ The catalog distinguishes published images, build recipes and linked verificatio
 **1. Start the control plane.** You need Node.js 22.19+, a dedicated PostgreSQL database and Python 3.10+ if using the Python SDK. Local development credential ingress uses `cloudflared`; see [installation prerequisites](docs/product/en/start/install.md).
 
 ```sh
-git clone https://github.com/NexusFox88/Haxegon.git
-cd Haxegon
+git clone https://github.com/NexusFox88/Hexagon.git
+cd Hexagon
 npm ci
 
 # Use an existing dedicated database and your PostgreSQL credentials.

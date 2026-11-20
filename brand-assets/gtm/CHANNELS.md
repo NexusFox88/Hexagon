@@ -18,5 +18,5 @@ These are deliberately chosen production canvases, not claims about current plat
 - `release` ships with developer-preview copy, not a fabricated version number. Supply the real change, evidence and date before announcing a release.
 - The five-slide carousel is ordered and uses consistent dimensions. Do not rearrange it into a claim about automatic authorization or universal recovery.
 - For press handoff, include the PNG, SVG, caption, capture date and provenance. Do not send private logs or credential-bearing exports.
-- The repository URL is `https://github.com/NexusFox88/Haxegon`. The displayed product name is Hexagon.
+- The repository URL is `https://github.com/NexusFox88/Hexagon`. The displayed product name is Hexagon.
 - Platform-native alt text is required; use the asset index as a starting point and describe the purpose of the final image.
