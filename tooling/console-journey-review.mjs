@@ -1,6 +1,6 @@
 // Run with ego-browser nodejs; update taskSpace ID to the current task-owned browser.
 const task=await taskSpace(27),p=task.page('p1');
-const fs=await import('node:fs/promises'),root='/Users/hexagon-maintainer/CodeProject/Hexagon';
+const fs=await import('node:fs/promises'),root=process.env.HEXAGON_REPOSITORY_ROOT || process.cwd();
 await p.reload();const owner=JSON.parse(await fs.readFile(root+'/.local/control-plane/owner.json','utf8'));await p.fill('#api-token',owner.token);await p.click('#login-form button[type=submit]');await p.waitForFunction(()=>!document.querySelector('#workspace').hidden&&!document.querySelector('#content .loading-state'));
 const results=[];
 for(const locale of ['en','zh-CN']){

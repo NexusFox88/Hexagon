@@ -3,7 +3,7 @@
 const task = await taskSpace(21);
 const page = task.page('p1');
 const fs = await import('node:fs/promises');
-const root = '/Users/hexagon-maintainer/CodeProject/Hexagon';
+const root = process.env.HEXAGON_REPOSITORY_ROOT || process.cwd();
 await page.reload();
 const owner = JSON.parse(await fs.readFile(root+'/.local/control-plane/owner.json','utf8'));
 await page.fill('#api-token',owner.token);
